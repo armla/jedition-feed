@@ -1,0 +1,183 @@
+{
+  "source_listing_records_marked_exclusive": 48,
+  "active_published_sale_exclusive_records": 46,
+  "usd_500k_plus_exclusive_records": 38,
+  "unique_fully_eligible_exclusive_properties": 34,
+  "exceptions": [
+    {
+      "reference": "LXER24201",
+      "title": "Cielo Abierto @ Panorama",
+      "price_usd": 7000.0,
+      "source_type": "Apartment",
+      "status": "Active",
+      "published": true,
+      "transaction": "Rent",
+      "exclusion_reasons": [
+        "not a sale",
+        "below USD 500k floor"
+      ]
+    },
+    {
+      "reference": "LXAC14001",
+      "title": "The Sacred View of Osa in Corcovado",
+      "price_usd": 6125000.0,
+      "source_type": "Other;Commercial",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "commercial classification",
+        "unmapped JamesEdition type"
+      ]
+    },
+    {
+      "reference": "LXGR24312",
+      "title": "Luxury Beachfront Residence in Playa Brasilito",
+      "price_usd": 2500.0,
+      "source_type": "Apartment",
+      "status": "Active",
+      "published": true,
+      "transaction": "Rent",
+      "exclusion_reasons": [
+        "not a sale",
+        "below USD 500k floor"
+      ]
+    },
+    {
+      "reference": "LXAR14101",
+      "title": "Villa Ylang Ylang with two additional Casitas at Cocles",
+      "price_usd": 495000.0,
+      "source_type": "Single Family",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "below USD 500k floor"
+      ]
+    },
+    {
+      "reference": "LXAC13758",
+      "title": "Playa Chiquita Haven income Villas",
+      "price_usd": 795000.0,
+      "source_type": "Commercial",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "commercial classification",
+        "unmapped JamesEdition type"
+      ]
+    },
+    {
+      "reference": "LXSC13906",
+      "title": "Turnkey Boutique Hotel in the Heart of Santa Teresa",
+      "price_usd": 1200000.0,
+      "source_type": "Other;Commercial",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "commercial classification",
+        "unmapped JamesEdition type"
+      ]
+    },
+    {
+      "reference": "LXPR13880",
+      "title": "Surf, Sun & Style The Point 18 Villa Steps from The Beach",
+      "price_usd": 459000.0,
+      "source_type": "Condominium;Single Family",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "below USD 500k floor"
+      ]
+    },
+    {
+      "reference": "LXPL13862",
+      "title": "Beachfront Titled Property in Jaco",
+      "price_usd": 3250000.0,
+      "source_type": "Condominium;Lots And Land;Commercial",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "commercial classification"
+      ]
+    },
+    {
+      "reference": "LXGC14125",
+      "title": "COSTA JUICE | Scalable Lifestyle Brand-Full Acquisition or Strategic Partnership",
+      "price_usd": 195500.0,
+      "source_type": "Commercial",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "below USD 500k floor",
+        "commercial classification",
+        "unmapped JamesEdition type"
+      ]
+    },
+    {
+      "reference": "LXSR13635",
+      "title": "Boutique Development Opportunity near Santa Teresa",
+      "price_usd": 190000.0,
+      "source_type": "Vacation Home;Villa;Investment property",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "below USD 500k floor"
+      ]
+    },
+    {
+      "reference": "LXEL13690",
+      "title": "Gift of Nature Land at Playa Cabuya",
+      "price_usd": 165000.0,
+      "source_type": "Lots And Land;Farm / Agriculture",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "below USD 500k floor"
+      ]
+    },
+    {
+      "reference": "LXEL13694",
+      "title": "Expansive Hillside Lot Above Santa Teresa",
+      "price_usd": 275000.0,
+      "source_type": "Lots And Land;Investment property;Farm / Agriculture",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "below USD 500k floor"
+      ]
+    },
+    {
+      "reference": "LXSF13753",
+      "title": "Prime Valley View Property",
+      "price_usd": 375000.0,
+      "source_type": "Lots And Land",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "below USD 500k floor"
+      ]
+    },
+    {
+      "reference": "LXSL13689",
+      "title": "Jungle and Mountain Views Lots in Betel - Manzanillo",
+      "price_usd": 120000.0,
+      "source_type": "Lots And Land;Investment property;Lot / Residential Land;Farm / Agriculture",
+      "status": "Active",
+      "published": true,
+      "transaction": "Sale",
+      "exclusion_reasons": [
+        "below USD 500k floor"
+      ]
+    }
+  ]
+}
