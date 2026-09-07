@@ -4,13 +4,13 @@ This repository independently generates and hosts The Agency Costa Rica’s cura
 
 ## Delivery URL
 
-GitHub Pages publishes the XML at:
+GitHub publishes the XML from a dedicated live-output branch at:
 
 ```text
-https://armla.github.io/jedition-feed/feeds/<random-token>.xml
+https://raw.githubusercontent.com/armla/jedition-feed/jamesedition-live/public/feeds/<random-token>.xml
 ```
 
-The current token is held in `.state/feed_token.txt`. It is an **unlinked obscurity control**, not a credential: GitHub Pages content is public by design. Provide the complete URL only to JamesEdition and authorized internal operators.
+The current token is held in `.state/feed_token.txt`. It is an **unlinked obscurity control**, not a credential: GitHub raw content is public by design. Provide the complete URL only to JamesEdition and authorized internal operators.
 
 ## Nightly schedule
 
@@ -37,7 +37,7 @@ A failed source call, incomplete enrichment, or failed XML validation exits with
 
 ## Security posture
 
-`public/robots.txt` requests all ordinary search and AI crawlers to avoid the site and explicitly permits the JamesEdition crawler path. `public/index.html` contains `noindex,nofollow` directives, and no normal page links to the XML. These measures reduce discovery but **do not make a GitHub Pages file private**. See [SECURITY.md](SECURITY.md) before sharing the URL or adding integrations.
+No normal page links to the tokenized XML. The dedicated `jamesedition-live` branch is the only branch the scheduled workflow can update. **GitHub raw delivery cannot set `X-Robots-Tag` headers or rely on a repository-level `robots.txt` for an individual feed file.** The token therefore reduces accidental discovery only; it does not make the public file private or stop deliberate scraping. See [SECURITY.md](SECURITY.md) before sharing the URL or adding integrations.
 
 ## Operator actions
 
