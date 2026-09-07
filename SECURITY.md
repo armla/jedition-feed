@@ -6,7 +6,7 @@
 
 ## Executive Assessment
 
-A public XML property feed should be treated as **publicly readable data**. A random file path, `robots.txt`, and no-index tags reduce accidental discovery but do not provide authentication or confidentiality. Anyone who obtains the URL, reads the public repository history, or observes JamesEdition’s request can download it. This is usually acceptable for data intended for a marketplace, but it becomes a material risk if the feed contains precise private addresses, unapproved owner/contact data, internal listing notes, source API credentials, webhook URLs, or commercially sensitive inventory selection logic.
+A public XML property feed should be treated as **publicly readable data**. A random file path reduces accidental discovery but does not provide authentication or confidentiality. GitHub raw delivery does not provide custom `X-Robots-Tag` headers, and a repository `robots.txt` does not control indexing of an individual `raw.githubusercontent.com` file. Anyone who obtains the URL, reads the public repository history, or observes JamesEdition’s request can download it. This is usually acceptable for data intended for a marketplace, but it becomes a material risk if the feed contains precise private addresses, unapproved owner/contact data, internal listing notes, source API credentials, webhook URLs, or commercially sensitive inventory selection logic.
 
 The principal threat is not an attacker “hacking” the XML itself. It is **unintended disclosure** through a public repository, a publicly accessible feed URL, overly broad source fields, insecure workflow permissions, or exposed third-party secrets. The correct strategy is therefore field minimization, secret isolation, repository governance, workflow hardening, and a tested recovery process.
 
@@ -30,13 +30,12 @@ The principal threat is not an attacker “hacking” the XML itself. It is **un
 The current JamesEdition design provides these practical safeguards:
 
 1. The feed has a random tokenized path and no ordinary site navigation points to it.
-2. `robots.txt` disallows general search indexing and named AI crawlers while permitting the documented JamesEdition crawler.
-3. The default site page includes `noindex,nofollow,noarchive,nosnippet,notranslate` metadata.
-4. Every listing carries `<hide_address>yes</hide_address>`.
-5. The XML is only replaced after required-field, ID uniqueness, location, price, image-count, and parsing checks pass.
-6. An upstream source failure preserves the last verified public XML rather than publishing an empty or partial set.
-7. The generator excludes raw inventory snapshots, logs, local diagnostics, and credentials from tracked source files.
-8. The feed uses a durable MLS reference so price and content changes reconcile as updates rather than creating duplicate portal listings.
+2. The protected `main` branch contains source code and cannot be modified by the scheduled job; the job writes only to the dedicated `jamesedition-live` output branch.
+3. Every listing carries `<hide_address>yes</hide_address>`.
+4. The XML is only replaced after required-field, ID uniqueness, location, price, image-count, and parsing checks pass.
+5. An upstream source failure preserves the last verified public XML rather than publishing an empty or partial set.
+6. The generator excludes raw inventory snapshots, logs, local diagnostics, and credentials from tracked source files.
+7. The feed uses a durable MLS reference so price and content changes reconcile as updates rather than creating duplicate portal listings.
 
 ## Controls Still Required
 
