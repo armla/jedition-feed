@@ -1,0 +1,7 @@
+# The Agency Costa Rica — JamesEdition feed production ownership
+# Branch protection should require review from this owner for all changes.
+* @armla
+/.github/ @armla
+/generate_jamesedition_feed.py @armla
+/public/ @armla
+/.state/ @armla
