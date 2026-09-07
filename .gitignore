@@ -1,0 +1,32 @@
+# Secrets and local environment
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Local diagnostics and temporary output
+/tmp/
+*.log
+*.tmp
+*.bak
+.DS_Store
+
+# Local test and diagnostic scripts/results
+/test_*.py
+/diagnose_*.py
+/inspect_*.py
+/audit_*.py
+/export_*.py
+*.csv
+
+# Runtime data not intended for public version control
+api_snapshot.json
