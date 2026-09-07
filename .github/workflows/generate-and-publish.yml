@@ -2,140 +2,89 @@ name: Generate and publish JamesEdition feed
 
 on:
   schedule:
-    # Costa Rica is UTC−6 year-round: 22:58 local = 04:58 UTC on the following calendar day.
+    # Costa Rica is UTC−6 throughout the year: 22:58 local = 04:58 UTC the following calendar day.
     - cron: "58 4 * * *"
   workflow_dispatch:
-    inputs:
-      rotate_feed_token:
-        description: "Generate a new randomized feed URL"
-        required: false
-        default: false
-        type: boolean
 
+# Source code remains protected on main. The job may only update the dedicated live-output branch.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: "jamesedition-feed-publish"
+  group: jamesedition-feed-publish
   cancel-in-progress: false
 
 jobs:
   generate:
+    name: Generate, validate, and publish feed
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Check out source
+      - name: Check out protected feed source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          fetch-depth: 0
+          path: source
+          fetch-depth: 1
+
+      - name: Check out public live-output branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: jamesedition-live
+          path: publication
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.11"
 
-      - name: Load the stable randomized feed URL
-        env:
-          ROTATE_TOKEN: ${{ inputs.rotate_feed_token }}
+      - name: Load persistent feed state
         run: |
           set -euo pipefail
-          mkdir -p public/feeds .state
-          if [ "${ROTATE_TOKEN:-false}" = "true" ]; then
-            echo "ERROR: Feed URL rotation requires a reviewed repository update and portal coordination." >&2
-            exit 1
-          elif [ -s .state/feed_token.txt ]; then
-            TOKEN="$(cat .state/feed_token.txt)"
-          else
-            echo "ERROR: Missing stable feed token." >&2
-            exit 1
-          fi
-          printf '%s\n' "$TOKEN" > "$RUNNER_TEMP/feed-token.txt"
+          mkdir -p publication/.state publication/public/feeds
+          for name in feed_token.txt enrichment_cache.json; do
+            if [ ! -s "publication/.state/${name}" ]; then
+              cp "source/.state/${name}" "publication/.state/${name}"
+            fi
+          done
+          test -s publication/.state/feed_token.txt
 
       - name: Generate and validate the JamesEdition XML
         run: |
           set -euo pipefail
-          TOKEN="$(cat "$RUNNER_TEMP/feed-token.txt")"
-          python3 generate_jamesedition_feed.py \
-            --output "public/feeds/${TOKEN}.xml" \
-            --state ".state/feed_state.json" \
-            --cache ".state/enrichment_cache.json"
+          TOKEN="$(cat publication/.state/feed_token.txt)"
+          python3 source/generate_jamesedition_feed.py \
+            --output "publication/public/feeds/${TOKEN}.xml" \
+            --state "publication/.state/feed_state.json" \
+            --cache "publication/.state/enrichment_cache.json"
 
-      - name: Preserve last known-good public feed on safe exit
+      - name: Validate the publication payload
         run: |
           set -euo pipefail
-          TOKEN="$(cat "$RUNNER_TEMP/feed-token.txt")"
-          test -s "public/feeds/${TOKEN}.xml"
+          TOKEN="$(cat publication/.state/feed_token.txt)"
+          test -s "publication/public/feeds/${TOKEN}.xml"
           python3 - <<'PY'
           from pathlib import Path
-          import xml.etree.ElementTree as ET
-          import os
-          token = Path(os.environ['RUNNER_TEMP'], 'feed-token.txt').read_text().strip()
-          xml = Path(f'public/feeds/{token}.xml').read_bytes()
+          from xml.etree import ElementTree as ET
+          token = Path('publication/.state/feed_token.txt').read_text().strip()
+          xml = Path(f'publication/public/feeds/{token}.xml').read_bytes()
           root = ET.fromstring(xml)
           assert root.tag == 'jamesedition_feed'
-          assert len(root.findall('./adverts/advert')) == 50
+          adverts = root.findall('./adverts/advert')
+          assert len(adverts) == 50
+          assert len({item.attrib['reference'] for item in adverts}) == 50
+          assert all(len(item.findall('./media/image')) >= 2 for item in adverts)
+          assert all(len(item.findall('./media/image')) <= 12 for item in adverts)
           PY
 
-      - name: Write crawler exclusion files
+      - name: Publish only validated live-output changes
         run: |
-          cat > public/robots.txt <<'EOF'
-          User-agent: *
-          Disallow: /
-
-          User-agent: JamesEdition Feed Crawler 1.0
-          Allow: /feeds/
-
-          User-agent: GPTBot
-          Disallow: /
-          User-agent: ChatGPT-User
-          Disallow: /
-          User-agent: Google-Extended
-          Disallow: /
-          User-agent: ClaudeBot
-          Disallow: /
-          User-agent: Anthropic-AI
-          Disallow: /
-          User-agent: CCBot
-          Disallow: /
-          User-agent: PerplexityBot
-          Disallow: /
-          EOF
-          cat > public/index.html <<'EOF'
-          <!doctype html>
-          <html lang="en"><head>
-            <meta charset="utf-8">
-            <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,notranslate">
-            <title>Not found</title>
-          </head><body></body></html>
-          EOF
-          touch public/.nojekyll
-
-      - name: Configure Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
-
-      - name: Archive Pages artifact
-        run: |
-          tar \
-            --dereference --hard-dereference \
-            --directory public \
-            -cvf "$RUNNER_TEMP/artifact.tar" \
-            --exclude=.git \
-            --exclude=.github \
-            .
-
-      - name: Upload Pages artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        with:
-          name: github-pages
-          path: ${{ runner.temp }}/artifact.tar
-          retention-days: 1
-          if-no-files-found: error
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+          set -euo pipefail
+          cd publication
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/ .state/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh JamesEdition feed"
+            git push origin HEAD:jamesedition-live
+          fi
