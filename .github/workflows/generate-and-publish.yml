@@ -1,0 +1,141 @@
+name: Generate and publish JamesEdition feed
+
+on:
+  schedule:
+    # Costa Rica is UTC−6 year-round: 22:58 local = 04:58 UTC on the following calendar day.
+    - cron: "58 4 * * *"
+  workflow_dispatch:
+    inputs:
+      rotate_feed_token:
+        description: "Generate a new randomized feed URL"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "jamesedition-feed-publish"
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+
+      - name: Create or preserve the random feed URL
+        env:
+          FEED_TOKEN: ${{ secrets.JAMESEDITION_FEED_TOKEN }}
+          ROTATE_TOKEN: ${{ inputs.rotate_feed_token }}
+        run: |
+          set -euo pipefail
+          mkdir -p public/feeds .state
+          if [ "${ROTATE_TOKEN:-false}" = "true" ]; then
+            TOKEN="je-$(openssl rand -hex 20)"
+          elif [ -n "${FEED_TOKEN:-}" ]; then
+            TOKEN="$FEED_TOKEN"
+          elif [ -s .state/feed_token.txt ]; then
+            TOKEN="$(cat .state/feed_token.txt)"
+          else
+            # A GitHub Actions secret is preferred. When absent, retain this per-repository random path.
+            # GitHub Pages cannot access Actions secrets at request time, so the filename itself is necessarily public.
+            TOKEN="je-$(openssl rand -hex 20)"
+          fi
+          echo "$TOKEN" > .state/feed_token.txt
+
+      - name: Generate and validate the JamesEdition XML
+        run: |
+          set -euo pipefail
+          TOKEN="$(cat .state/feed_token.txt)"
+          python3 generate_jamesedition_feed.py \
+            --output "public/feeds/${TOKEN}.xml" \
+            --state ".state/feed_state.json" \
+            --cache ".state/enrichment_cache.json"
+
+      - name: Preserve last known-good public feed on safe exit
+        run: |
+          set -euo pipefail
+          TOKEN="$(cat .state/feed_token.txt)"
+          test -s "public/feeds/${TOKEN}.xml"
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          token = Path('.state/feed_token.txt').read_text().strip()
+          xml = Path(f'public/feeds/{token}.xml').read_bytes()
+          root = ET.fromstring(xml)
+          assert root.tag == 'jamesedition_feed'
+          assert len(root.findall('./adverts/advert')) == 50
+          PY
+
+      - name: Write crawler exclusion files
+        run: |
+          cat > public/robots.txt <<'EOF'
+          User-agent: *
+          Disallow: /
+
+          User-agent: JamesEdition Feed Crawler 1.0
+          Allow: /feeds/
+
+          User-agent: GPTBot
+          Disallow: /
+          User-agent: ChatGPT-User
+          Disallow: /
+          User-agent: Google-Extended
+          Disallow: /
+          User-agent: ClaudeBot
+          Disallow: /
+          User-agent: Anthropic-AI
+          Disallow: /
+          User-agent: CCBot
+          Disallow: /
+          User-agent: PerplexityBot
+          Disallow: /
+          EOF
+          cat > public/index.html <<'EOF'
+          <!doctype html>
+          <html lang="en"><head>
+            <meta charset="utf-8">
+            <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,notranslate">
+            <title>Not found</title>
+          </head><body></body></html>
+          EOF
+          touch public/.nojekyll
+
+      - name: Commit validated public output and state
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/ .state/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh JamesEdition feed"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
