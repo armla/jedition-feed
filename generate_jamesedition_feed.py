@@ -23,7 +23,7 @@ import tempfile
 import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -218,6 +218,8 @@ def candidate_rows(inventory: list[Any]) -> list[dict[str, Any]]:
                 "region": clean(property_record.get("state") or listing.get("state")),
                 "city": clean(property_record.get("city") or listing.get("city")),
                 "address": clean(property_record.get("address") or listing.get("address")),
+                "community": clean(listing.get("community") or property_record.get("community") or property_record.get("address")),
+                "region_description": clean(listing.get("region_description") or property_record.get("region_description")),
                 "bedrooms": numeric(property_record.get("bedrooms") or listing.get("bedrooms")),
                 "bathrooms": numeric(first_value(property_record, "fullbathrooms", "bathrooms") or first_value(listing, "fullbathrooms", "bathrooms")),
                 "living_area": numeric(first_value(property_record, "totalarea", "area_m2", "living_area") or first_value(listing, "totalarea", "area_m2", "living_area")),
@@ -401,18 +403,151 @@ def validate_xml(xml_content: bytes) -> dict[str, int]:
     return {"adverts": len(adverts), "videos": videos}
 
 
+def load_json_object(path: Path) -> dict[str, Any]:
+    """Load a non-sensitive JSON state object, returning a safe empty value on error."""
+    try:
+        value = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    except (OSError, json.JSONDecodeError):
+        value = {}
+    return value if isinstance(value, dict) else {}
+
+
+def costa_rica_date() -> str:
+    """Return the business date in Costa Rica (UTC-6, without daylight saving time)."""
+    return (datetime.now(timezone.utc) - timedelta(hours=6)).date().isoformat()
+
+
+def activity_payload(row: dict[str, Any], feed_url: str) -> dict[str, Any]:
+    """Create the stable, portal-specific outbound activity payload for one listing."""
+    return {
+        "event_type": "portal_listing_published",
+        "activity_type": "External Website",
+        "activity_name": "External Website - James Edition",
+        "portal": "JamesEdition",
+        # Zapier/Salesforce must use this stable key to ignore delivery retries safely.
+        "publication_key": f"JamesEdition:{row['reference']}",
+        "date": costa_rica_date(),
+        "listing_id": row["reference"],
+        "name": row["title"],
+        "price_usd": row["price"],
+        "currency": row["currency"],
+        "listing_type": row["listing_type"],
+        "property_type": row["property_type"],
+        "property_subtype": row["source_property_type"],
+        "address": row["address"],
+        "community": row.get("community", ""),
+        "city": row["city"],
+        "state": row["region"],
+        "country": "Costa Rica",
+        "region": row["region"],
+        "region_description": row.get("region_description", ""),
+        "latitude": row["latitude"],
+        "longitude": row["longitude"],
+        "url": row["external_url"],
+        "portal_feed_url": feed_url,
+    }
+
+
+def post_activity(webhook_url: str, payload: dict[str, Any]) -> None:
+    """POST one activity payload and reject non-success responses without logging the secret URL."""
+    request = Request(
+        webhook_url,
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={"Content-Type": "application/json", "User-Agent": "TACR-JamesEdition-Feed/1.0"},
+        method="POST",
+    )
+    with urlopen(request, timeout=15) as response:
+        status = response.status if hasattr(response, "status") else response.getcode()
+        if not 200 <= status < 300:
+            raise RuntimeError(f"Activity webhook returned HTTP {status}.")
+
+
+def sync_publication_activities(
+    selected: list[dict[str, Any]],
+    activity_state_path: Path,
+    webhook_url: str,
+    feed_url: str,
+) -> dict[str, int]:
+    """Create first-entry activities without allowing delivery failures to block a valid feed.
+
+    The activity state is committed on the dedicated live-output branch. A missing state
+    with a configured webhook intentionally backfills the current roster once, because
+    the initial JamesEdition launch predates this activity automation. Subsequent runs
+    emit only listings that newly enter the feed. Failed posts remain pending for retry.
+    Salesforce/Zapier must deduplicate on the stable ``publication_key``.
+    """
+    if not webhook_url:
+        print("Marketing activity webhook is not configured; no Salesforce activities sent.", file=sys.stderr)
+        return {"queued": 0, "sent": 0, "failed": 0, "enabled": 0}
+
+    activity_state = load_json_object(activity_state_path)
+    previous_references = {
+        ref for ref in activity_state.get("current_references", []) if isinstance(ref, str) and ref
+    }
+    pending = activity_state.get("pending", {})
+    pending = pending if isinstance(pending, dict) else {}
+    selected_by_reference = {row["reference"]: row for row in selected}
+
+    # Entries in the initial feed are deliberately queued once to backfill launch activity.
+    new_references = set(selected_by_reference) - previous_references
+    for reference in sorted(new_references):
+        pending.setdefault(reference, activity_payload(selected_by_reference[reference], feed_url))
+
+    sent = 0
+    failed = 0
+    for reference in sorted(list(pending)):
+        payload = pending[reference]
+        if not isinstance(payload, dict):
+            failed += 1
+            continue
+        try:
+            post_activity(webhook_url, payload)
+        except Exception as exc:
+            failed += 1
+            print(f"WARNING: marketing activity delivery failed for {reference}: {exc}", file=sys.stderr)
+            continue
+        del pending[reference]
+        sent += 1
+        print(f"Marketing activity delivered for JamesEdition listing {reference}.", file=sys.stderr)
+
+    activity_state_path.parent.mkdir(parents=True, exist_ok=True)
+    activity_state_path.write_text(
+        json.dumps(
+            {
+                "portal": "JamesEdition",
+                "activity_name": "External Website - James Edition",
+                "updated_at_utc": datetime.now(timezone.utc).isoformat(),
+                "current_references": sorted(selected_by_reference),
+                "pending": pending,
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    return {"queued": len(new_references), "sent": sent, "failed": failed, "enabled": 1}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", required=True, help="Path to the public XML file.")
     parser.add_argument("--state", required=True, help="Path to non-sensitive generated feed metadata.")
     parser.add_argument("--cache", required=True, help="Path to the non-sensitive description enrichment cache.")
+    parser.add_argument(
+        "--activity-state",
+        required=True,
+        help="Path to non-sensitive JamesEdition first-publication activity state.",
+    )
     args = parser.parse_args()
     output = Path(args.output)
     state_path = Path(args.state)
     cache_path = Path(args.cache)
+    activity_state_path = Path(args.activity_state)
     output.parent.mkdir(parents=True, exist_ok=True)
     state_path.parent.mkdir(parents=True, exist_ok=True)
     cache_path.parent.mkdir(parents=True, exist_ok=True)
+    activity_state_path.parent.mkdir(parents=True, exist_ok=True)
 
     try:
         cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
@@ -480,7 +615,13 @@ def main() -> int:
         for row in selected
     }
     cache_path.write_text(json.dumps(next_cache, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(json.dumps({"status": "published", **state}, indent=2))
+    activity_stats = sync_publication_activities(
+        selected=selected,
+        activity_state_path=activity_state_path,
+        webhook_url=os.environ.get("JAMESEDITION_PUBLISH_WEBHOOK_URL", "").strip(),
+        feed_url=os.environ.get("JAMESEDITION_FEED_URL", "").strip(),
+    )
+    print(json.dumps({"status": "published", **state, "marketing_activities": activity_stats}, indent=2))
     return 0
 
 
