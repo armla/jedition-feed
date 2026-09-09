@@ -621,7 +621,7 @@
       <type>sale</type>
       <price currency="USD">4350000</price>
       <property_type>House</property_type>
-      <title>Atrium House: 360° Panoramic Views Where Forest Canopy Meets the Ocean</title>
+      <title>Atrium House Nosara: 360° Panoramic Views Where Forest Canopy Meets the Ocean</title>
       <description>Atrium House is a 756 m² architectural residence in Las Huacas, Nosara, Guanacaste, Costa Rica, designed by Benjamin Saxe of Studio Saxe around 360° panoramic views encompassing the Pacific Ocean and surrounding forest canopy. Set high along the ridge line above Playa Guiones, the home combines multi level indoor and outdoor living, a central passive cooling atrium, private pool, custom interiors, and preserved mature trees within a distinctive hillside design. Rather than imposing a conventional structure on its setting, Atrium House was integrated into the hilltop and positioned around mature trees to preserve the existing canopy. The architecture responds directly to the landscape, creating a close relationship between the residence, tropical vegetation, and broad ocean outlooks. At the center is the namesake atrium, a dramatic vertical space designed to serve both architectural and practical purposes. Ocean breezes are drawn upward through the structure, naturally regulating temperature and reducing energy dependency. This passive approach complements the home’s open living spaces and connection to the outdoors. The upper level social area floats above the tree line, opening the residence to sunset views across the Pacific and Playa Guiones while maintaining privacy. An open floor plan is complemented by custom furniture, tailored millwork, and curated art pieces. On the ground level, a second social space connects directly with the private pool, built in outdoor lounge, BBQ area, and surrounding tropical greenery. Atrium House sits alongside a local wildlife corridor, bringing sightings of howler monkeys, toucans, and native birds into the everyday experience of the property. Playa Guiones and the downtown area are approximately 3 to 4 kilometers away, with a drive of about five minutes. Defined by a sophisticated palette of natural stone, rich wood, custom millwork, and carefully curated finishes, Atrium House balances warmth and understated glamour with the relaxed elegance of coastal living. Each material has been deliberately selected to elevate the architectural experience and, as with any refined coastal residence, benefits from attentive care to preserve its beauty and character over time. Atrium House is offered turnkey and can serve as either a private estate or an income generating property within the Nosara luxury market, with private viewings arranged by appointment. Atrium House brings architecture, forest canopy, and panoramic Pacific views together in Las Huacas,</description>
       <location>
         <country>CR</country>
@@ -638,6 +638,9 @@
       <land_area unit="sqm">2092</land_area>
       <media>
         <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00004qNdez/x3s2bd987/1277x640/Dining-room-2.jpg</image_url>
+        </image>
+        <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00004qNdez/sa4ob5796/1277x640/Aerial-3.jpg</image_url>
         </image>
         <image>
@@ -645,9 +648,6 @@
         </image>
         <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00004qNdez/w0256v9a8/1277x640/Balcony-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00004qNdez/x3s2bd987/1277x640/Dining-room-2.jpg</image_url>
         </image>
         <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00004qNdez/49mncjboq/1277x640/Dining-room-3.jpg</image_url>
@@ -2229,6 +2229,57 @@
       <external_url>https://theagency.cr/property/oceanview-development-opportunity-santiago</external_url>
       <agent_reference>tacr-agent-005Qg00000NS8JyIAL</agent_reference>
     </advert>
+    <advert reference="LXCL14349" category="real estate">
+      <type>sale</type>
+      <price currency="USD">955000</price>
+      <property_type>Land</property_type>
+      <title>Gregal Signature Lot</title>
+      <description>Gregal Signature Lot is a premium homesite in Hacienda El Gregal, Curridabat, Costa Rica, defined by panoramic city and mountain views, memorable sunsets and a 100 percent usable site that is ready for construction. Its privileged position within the community provides an appealing setting for a custom residence shaped around the property’s open views and development potential. The lot’s fully usable topography is one of its principal advantages. With 100 percent of the property available for development, future owners have the flexibility to plan a residence that makes efficient use of the land while responding to their architectural preferences and lifestyle requirements. Panoramic views toward the city and mountains create a strong visual character throughout the property. Sunset views add another dimension to the setting, providing a natural focal point that can inform the orientation and design of the future home. Hacienda El Gregal offers landscaped gardens, interconnected hiking trails through primary forest and natural streams, together with a selection of community amenities. Residents have access to soccer fields, a playground, exercise equipment, a clubhouse and a tennis court. The community also features three levels of security and access from Pinares. The Curridabat location provides access to restaurants, retail and medical services at Momentum Pinares, Plaza Kronos and Ciudad del Este. Educational institutions in the surrounding area include Anglo American, Marian Baker, Saint Clare, UACA, Santa Paula, TEC and UCR. Gregal Signature Lot brings together panoramic city and mountain views, sunset outlooks, a fully usable building site and a privileged location within Hacienda El Gregal in Currida</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Curridabat</city>
+        <address>Hacienda El Gregal</address>
+        <latitude>9.915610</latitude>
+        <longitude>-84.014730</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <living_area unit="sqm">2035</living_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/k3ok8bu68/1277x640/TACR-8.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/tphmpij75/1277x640/TACR-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/sqpgd9wzc/1277x640/TACR-10.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/e90hvtzl1/1277x640/TACR-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/lrh3tlgsw/1277x640/TACR-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/5xtwafub1/1277x640/TACR-4.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/nw0ydxguk/1277x640/TACR-5.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/667qb7nv2/1277x640/TACR-6.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/7665dfsz0/1277x640/TACR-7.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvLh0u/d2reoyaja/1277x640/TACR-9.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/gregal-signature-lot</external_url>
+      <agent_reference>tacr-agent-005Qg000000DIGrIAO</agent_reference>
+    </advert>
     <advert reference="LXCL14348" category="real estate">
       <type>sale</type>
       <price currency="USD">854729</price>
@@ -3163,69 +3214,6 @@
       </media>
       <external_url>https://theagency.cr/property/absolute-home-valle-del-sol</external_url>
       <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
-    </advert>
-    <advert reference="LXHR14327" category="real estate">
-      <type>sale</type>
-      <price currency="USD">4250000</price>
-      <property_type>House</property_type>
-      <title>Iremia Resort Style Home @ Los Reyes</title>
-      <description>Iremia Resort Style Home at Los Reyes is a fully furnished five bedroom modern residence in Costa Rica, conceived around generous proportions, natural light, landscaped gardens, and an extensive collection of spaces for entertainment and wellness. Set within Los Reyes, the home brings together a pool and jacuzzi, sauna, gym, fire pit, multiple kitchens, expansive terraces, golf course views, and direct golf course access. With 1,126 m² of construction plus an additional 90 m² on a 2,292.53 m² lot, Iremia offers the scale and amenities of resort style living within a private residential setting. A substantial pivoting entrance door opens to the formal living and dining areas, where triple height ceilings establish the sense of volume that continues throughout the residence. Teak details, Italian porcelain surfaces, European window systems with double glazing, and carefully integrated lighting contribute to the contemporary architecture. The dining area incorporates dedicated wine and coffee spaces, while an internal garden beneath a glazed skylight adds another architectural element to the interior. The main kitchen centers on a large island and features custom cabinetry, an integrated pantry, and General Electric Café appliances. A separate chef’s kitchen provides additional privacy and functionality, with independent access toward the terrace. Outdoors, the entertaining spaces expand further with an additional kitchen, integrated bar, BBQ area, and generous areas for exterior furnishings. The terrace connects directly with the pool and jacuzzi, surrounded by professionally designed landscaping. The wellness and recreation areas are a defining part of Iremia. Alongside the pool and jacuzzi are a teak sauna, garden facing gym, gas fire pit, and dedicated BBQ area. The pool and spa use a Pentair IntelliCenter automation system that allows operation from a touchscreen panel or mobile application, while solar collectors provide heating with a gas system available for additional jacuzzi temperature. These spaces are arranged to support entertaining as naturally as quieter time at home. The first level includes two secondary bedrooms, each with a private bathroom, closet, air conditioning, and garden access, as well as a television room overlooking the garden. Upstairs, the spacious primary suite opens to a private balcony with golf course views and includes a walk in closet and private bathroom. Two additional suites on this level each have a private bathroom, closet, and balcony with golf course views, with an intimate television lounge positioned between the bedrooms. An elevator connects the two levels, complemented by a teak staircase. Practical areas have received the same level of consideration. The residence includes a large laundry room, service bedroom, double height storage room, machine room, covered garage for six vehicles, automatic irrigation, fiber optic internet, water storage with pump, and an electric gate operated through a mobile application. The home is offered fully furnished, including custom made cabinetry and furnishings from brands and suppliers including Natuzzi, La Artística, Bali, Altea Design, Akiro, Beautyrest, and Samsung. Iremia Resort Style Home brings together contemporary architecture, five bedroom accommodation, extensive wellness and entertaining amenities, and direct golf course access in a substantial residence at Los R</description>
-      <location>
-        <country>CR</country>
-        <region>Alajuela</region>
-        <city>Alajuela</city>
-        <address>Hacienda Los Reyes</address>
-        <latitude>9.948065</latitude>
-        <longitude>-84.263506</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>5</bedrooms>
-      <bathrooms>6</bathrooms>
-      <living_area unit="sqm">1218</living_area>
-      <land_area unit="sqm">2292</land_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/qnq9pk2gz/1277x640/Aerial-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/0njapdm5n/1277x640/Aerial-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/v1520915r/1277x640/Aerial-5.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/9bi0r27hz/1277x640/Dining-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/2fhofzoxc/1277x640/Dining-room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/zazpc2b7b/1277x640/Elevator-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/4uhb8r7ws/1277x640/Facade-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/lrozbckzi/1277x640/Facade-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/5tkg8ajdo/1277x640/Fire-pit-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/im5rr54us/1277x640/Half-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/v5tajj5sr/1277x640/Half-Bathroom-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DlGJZm/ej6o3fvq9/1277x640/Hallway-1.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=dQYt5aPSJxY</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/iremia-resort-style-home-los-reyes</external_url>
-      <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
     </advert>
   </adverts>
 </jamesedition_feed>

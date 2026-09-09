@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-09-09T09:15:32.039634+00:00",
+  "generated_at_utc": "2026-09-09T19:40:41.100637+00:00",
   "selection_policy": "exclusive-first; $500,000 USD minimum; 50-listing cap",
   "reference_count": 50,
-  "exclusive_count": 35,
-  "nonexclusive_count": 15,
-  "videos": 68,
+  "exclusive_count": 36,
+  "nonexclusive_count": 14,
+  "videos": 67,
   "references": [
     "LXPR13860",
     "LXGR14344",
@@ -40,6 +40,7 @@
     "LXPL13961",
     "LXER13573",
     "LXSL14026",
+    "LXCL14349",
     "LXCL14348",
     "LXHR13712",
     "LXER10961",
@@ -54,8 +55,7 @@
     "LXER13040",
     "LXGR14010",
     "LXER11158",
-    "LXER12666",
-    "LXHR14327"
+    "LXER12666"
   ],
-  "source_fingerprint": "2391f1f7c7e5904a0c61aa9197d03d236cfa225536fdf8fd5080bee6eacea8f4"
+  "source_fingerprint": "e88143bbdba734a28c4cf2a10d3a824b93ac1e17a2ec95d325e4e44b879bee05"
 }
