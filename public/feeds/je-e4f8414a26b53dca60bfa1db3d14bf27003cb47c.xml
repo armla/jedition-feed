@@ -748,7 +748,7 @@
       <price currency="USD">1690000</price>
       <property_type>Apartment</property_type>
       <title>Lumina Terrace @ Solaris</title>
-      <description>The only apartment available in Solaris with a private terrace of this scale, Lumina Terrace is exactly as extraordinary as it sounds. Set in the mountains between Escazú and Santa Ana, Costa Rica, this singular residence brings together privacy, volume, open air living, and unobstructed views across the Central Valley, all within one of the west side of San José’s most exclusive residential communities. Designed to blur the line between interior comfort and life under the open sky, the residence moves with ease from one space to the next. A generous living area, a dedicated media lounge, and a show stopping double island kitchen create a home that feels both polished and highly livable. The kitchen is finished in stone and precision cabinetry, fully equipped with a complete suite of brand new KitchenAid appliances, and designed for the kind of daily rhythm where cooking becomes part of the experience. Floor to ceiling windows frame the Central Valley and surrounding mountains from every room, filling the interiors with natural light and keeping the landscape in constant view. The private terrace is the defining feature of Lumina Terrace, oversized, covered, and entirely your own. With translucid glass railings that soften the boundary between apartment and valley, it is a space made for quiet mornings, long evenings, and entertaining without losing the sense of privacy that makes the residence so distinctive. The bedroom layout continues the same sense of ease and intention. Each of the three bedrooms includes a private ensuite bathroom and panoramic views, giving every room its own sense of retreat. The primary suite is especially composed, with wide plank oak floors, a spa level bathroom, double vanity, freestanding soaking tub facing the valley, rain shower, and matte black hardware. Three underground parking spaces and a dedicated storage room add convenience without interrupting the elegance of the home. Solaris itself adds another layer to the experience, with a rooftop, movie theater, recreational pool, semi Olympic pool, two tennis courts, gym, spa, sauna, steam room, business center, and organic garden. The location places Lumina Terrace in the mountains between Escazú and Santa Ana, on the west side of San José, Costa Rica. It is a setting that connects the privacy and elevation of mountain living with access to two of the capital region’s most established lifestyle areas, giving the residence a strong sense of place without feeling removed from the city’s daily conveniences. Lumina Terrace at Solaris is not simply defined by its terrace, its views, or its scale. It is a residence shaped by the feeling of living above the valley, with room to breathe, room to gather, and a level of privacy that makes everyday life feel distinctly elevated in Escazú and Santa Ana</description>
+      <description>The only apartment available in Solaris with a private terrace of this amazing scale, Lumina Terrace is exactly as extraordinary as it sounds. Set in the mountains between Escazú and Santa Ana, Costa Rica, this singular residence brings together privacy, volume, open air living, and unobstructed views across the Central Valley, all within one of the west side of San José’s most exclusive residential communities. Designed to blur the line between interior comfort and life under the open sky, the residence moves with ease from one space to the next. A generous living area, a dedicated media lounge, and a show stopping double island kitchen create a home that feels both polished and highly livable. The kitchen is finished in stone and precision cabinetry, fully equipped with a complete suite of brand new KitchenAid appliances, and designed for the kind of daily rhythm where cooking becomes part of the experience. Floor to ceiling windows frame the Central Valley and surrounding mountains from every room, filling the interiors with natural light and keeping the landscape in constant view. The private terrace is the defining feature of Lumina Terrace, oversized, covered, and entirely your own. With translucid glass railings that soften the boundary between apartment and valley, it is a space made for quiet mornings, long evenings, and entertaining without losing the sense of privacy that makes the residence so distinctive. The bedroom layout continues the same sense of ease and intention. Each of the three bedrooms includes a private ensuite bathroom and panoramic views, giving every room its own sense of retreat. The primary suite is especially composed, with wide plank oak floors, a spa level bathroom, double vanity, freestanding soaking tub facing the valley, rain shower, and matte black hardware. Three underground parking spaces and a dedicated storage room add convenience without interrupting the elegance of the home. Solaris itself adds another layer to the experience, with a rooftop, movie theater, recreational pool, semi Olympic pool, two tennis courts, gym, spa, sauna, steam room, business center, and organic garden. The location places Lumina Terrace in the mountains between Escazú and Santa Ana, on the west side of San José, Costa Rica. It is a setting that connects the privacy and elevation of mountain living with access to two of the capital region’s most established lifestyle areas, giving the residence a strong sense of place without feeling removed from the city’s daily conveniences. Lumina Terrace at Solaris is not simply defined by its terrace, its views, or its scale. It is a residence shaped by the feeling of living above the valley, with room to breathe, room to gather, and a level of privacy that makes everyday life feel distinctly elevated in Escazú and Santa Ana</description>
       <location>
         <country>CR</country>
         <region>San Jose</region>
@@ -2229,6 +2229,57 @@
       <external_url>https://theagency.cr/property/oceanview-development-opportunity-santiago</external_url>
       <agent_reference>tacr-agent-005Qg00000NS8JyIAL</agent_reference>
     </advert>
+    <advert reference="LXCL14348" category="real estate">
+      <type>sale</type>
+      <price currency="USD">854729</price>
+      <property_type>Land</property_type>
+      <title>The One Lot el Gregal</title>
+      <description>The One Lot El Gregal is a premium residential lot in Hacienda El Gregal, Curridabat, offering panoramic views across the city and surrounding mountains together with a fully usable and buildable site. Its combination of open views, development flexibility and location within one of the established residential communities on the eastern side of San José creates a compelling setting for a custom home. One of the property’s defining characteristics is that 100 percent of the land is usable and buildable. This gives future owners considerable flexibility when planning a residence, allowing the architectural concept to make efficient use of the available space and respond directly to personal requirements and design preferences. Broad city and mountain views provide a distinctive backdrop throughout the property, with expansive outlooks that contribute to the sense of space and privacy described for the lot. Hacienda El Gregal in Curridabat offers landscaped gardens, interconnected hiking trails through primary forest and natural streams, along with multiple community amenities. These include soccer fields, a playground, exercise equipment, a clubhouse and a tennis court. The community also features three levels of security and access from Pinares. Curridabat provides additional everyday convenience through nearby restaurants, retail and medical services at Momentum Pinares, Plaza Kronos and Ciudad del Este. The area also offers proximity to educational institutions including Anglo American, Marian Baker, Saint Clare, UACA, Santa Paula, TEC and UCR. The One Lot El Gregal brings together panoramic city and mountain views, a 100 percent usable building site and a privileged position within Hacienda El Gregal in Currid</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Curridabat</city>
+        <address>Hacienda El Gregal</address>
+        <latitude>9.915610</latitude>
+        <longitude>-84.014730</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <land_area unit="sqm">2147</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/smhdyhv27/1277x640/TACR-8.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/qe5mq6bui/1277x640/TACR-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/5wgfhawhd/1277x640/TACR-10.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/3odopz91o/1277x640/TACR-9.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/v5njdy4e7/1277x640/TACR-7.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/t1hzzfr3u/1277x640/TACR-6.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/lrchl3dm1/1277x640/TACR-5.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/3x2vfpmhq/1277x640/TACR-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/j3s9vedho/1277x640/TACR-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DvKpDc/j05ge9cxv/1277x640/TACR-4.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/the-one-lot-el-gregal</external_url>
+      <agent_reference>tacr-agent-005Qg000000DIGrIAO</agent_reference>
+    </advert>
     <advert reference="LXHR13712" category="real estate">
       <type>sale</type>
       <price currency="USD">2990000</price>
@@ -3175,72 +3226,6 @@
       </media>
       <external_url>https://theagency.cr/property/iremia-resort-style-home-los-reyes</external_url>
       <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
-    </advert>
-    <advert reference="LXER13414" category="real estate">
-      <type>sale</type>
-      <price currency="USD">4000000</price>
-      <property_type>House</property_type>
-      <title>Escazu Gardenview Estate</title>
-      <description>This exquisite detached home, located in the heart of Escazú, is situated on a sprawling 4950 square meter property, enveloped by meticulously landscaped gardens. Escazú Gardenview Estate showcases fine marble and wood finishes, enhancing its elegant appeal, while large, bright spaces offer a light and airy ambiance. Upon entering Escazú Gardenview Estate, you are welcomed by a spacious entrance hall that leads into an impressive living room featuring double height ceilings, intricate wood details, and expansive views of the lush garden. The living area, adorned with Romanesque columns and ceiling brick features, becomes the heart of the home bathed in natural light from large surrounding windows, creating a seamless blend with the tropical gardens outside. Designed for entertaining, Escazú Gardenview Estate includes two distinct dining rooms, each filled with light and surrounded by windows, along with a generously sized kitchen boasting ample storage space. The expansive terrace, partly covered, extends into the extraordinary backyard with mature trees, landscaped gardens, and abundant grassy areas. The private quarters of Escazú Gardenview Estate consist of a cozy family/TV room and four bedrooms. Two bedrooms share a bathroom, while the two master suites each feature a small living room, walk-in closet, and full bathroom. All bedrooms are fitted with wooden floors and large windows, with the master bedroom showcasing a charming brick wall. The master suite also includes a gym area, an exercise endless pool, and a private terrace with stunning garden views. Additional features of Escazú Gardenview Estate include a large office with elegant built-in cabinets and an independent bar area, perfect for both work and leisure. Double rooms for the service staff, multiple storage areas, and a separate guard house at the entrance enhance the home’s practicality. The property offers ample parking with six covered and eight external spaces. Living in Escazú offers an unparalleled blend of modern convenience and natural beauty. Known for its upscale amenities, excellent dining options, and vibrant cultural scene, Escazú provides a high quality of life just minutes from the capital city, San José. Residents enjoy a serene, suburban atmosphere with easy access to top-rated schools, shopping centers, and healthcare facilities, making it a coveted location for luxury living in Costa Rica. The lush surroundings and breathtaking views of the Central Valley further enhance the charm of this prestigious community. Escazú Gardenview Estate offers a luxurious and exclusive lifestyle in one of Costa Rica's most prestigious areas, combining classic elegance with modern amenities and an unparalleled natu</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Escazú</city>
-        <address>San Rafael</address>
-        <latitude>9.929730</latitude>
-        <longitude>-84.133040</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>4</bedrooms>
-      <bathrooms>6</bathrooms>
-      <living_area unit="sqm">1048</living_area>
-      <land_area unit="sqm">4950</land_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/dggooty7m/1277x640/Living-room-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/u0ryk6dcx/1277x640/Living-room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/f6p6av6o2/1277x640/Living-room-4.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/5jr3gi63u/1277x640/Living-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/mrjhvu37y/1277x640/Garden-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/j0hezndci/1277x640/Garden-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/7zzp5xxp4/1277x640/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/93lkjh5ct/1277x640/Half-bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/ji63qak30/1277x640/Master-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/qls9w74yg/1277x640/Master-Bedroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/sox01g2s4/1277x640/Master-Bedroom-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000004uRfE/wvssyvrb8/1277x640/Office-1.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=PW8no6XNfRM</video_url>
-        </video>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=wnB2rzEjUOI</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/escazu-gardenview-estate</external_url>
-      <agent_reference>tacr-agent-005Qg000000DIGrIAO</agent_reference>
     </advert>
   </adverts>
 </jamesedition_feed>
