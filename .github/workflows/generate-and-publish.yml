@@ -50,13 +50,18 @@ jobs:
           test -s publication/.state/feed_token.txt
 
       - name: Generate and validate the JamesEdition XML
+        env:
+          # Dedicated Zapier Catch Hook. The URL is held only in GitHub Actions Secrets.
+          JAMESEDITION_PUBLISH_WEBHOOK_URL: ${{ secrets.JAMESEDITION_PUBLISH_WEBHOOK_URL }}
         run: |
           set -euo pipefail
           TOKEN="$(cat publication/.state/feed_token.txt)"
+          export JAMESEDITION_FEED_URL="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/jamesedition-live/public/feeds/${TOKEN}.xml"
           python3 source/generate_jamesedition_feed.py \
             --output "publication/public/feeds/${TOKEN}.xml" \
             --state "publication/.state/feed_state.json" \
-            --cache "publication/.state/enrichment_cache.json"
+            --cache "publication/.state/enrichment_cache.json" \
+            --activity-state "publication/.state/jamesedition_publication_activity_state.json"
 
       - name: Validate the publication payload
         run: |

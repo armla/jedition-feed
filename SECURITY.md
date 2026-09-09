@@ -36,6 +36,7 @@ The current JamesEdition design provides these practical safeguards:
 5. An upstream source failure preserves the last verified public XML rather than publishing an empty or partial set.
 6. The generator excludes raw inventory snapshots, logs, local diagnostics, and credentials from tracked source files.
 7. The feed uses a durable MLS reference so price and content changes reconcile as updates rather than creating duplicate portal listings.
+8. The first-publication activity implementation uses a dedicated secret, a per-portal `publication_key`, and a committed retry queue on the live-output branch. It cannot create a daily duplicate after a successful activity record.
 
 ## Controls Still Required
 
@@ -45,7 +46,7 @@ The current JamesEdition design provides these practical safeguards:
 | **1** | Restrict repository write and admin access to the smallest necessary group; review collaborator access quarterly. | Write access is the main pathway to feed manipulation and secret exposure. |
 | **1** | Enable GitHub secret scanning, push protection, Dependabot alerts, and repository vulnerability alerts. | Prevents common credential and dependency exposures before deployment. |
 | **2** | Review the exact coordinate policy for high-profile residences, owner-occupied properties, and unbuilt land. | Exact coordinates can undermine address obfuscation even when the street address is hidden. |
-| **2** | Use a dedicated, signed outbound Salesforce/Zapier publication webhook if marketing activity automation is activated. | Stops arbitrary third parties from creating activities or leads. |
+| **2** | Add `JAMESEDITION_PUBLISH_WEBHOOK_URL` as a dedicated Zapier Catch Hook and configure Salesforce to deduplicate by `publication_key`. | Activates the protected implementation without sharing Encuentra24’s endpoint or creating duplicate activities. |
 | **2** | Pin GitHub Actions to immutable commit SHAs and restrict Actions to GitHub-verified or explicitly approved publishers. | Reduces software supply-chain risk. |
 | **3** | Maintain an incident runbook: rotate the feed path, regenerate the feed, revoke/rotate leaked secret, then request portal URL update. | Makes a URL or credential disclosure recoverable quickly. |
 | **3** | Set a monthly review of repository history and public feed fields. | Ensures former inventory, stale contacts, or source changes do not leave inappropriate data public. |

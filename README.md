@@ -16,6 +16,14 @@ The current token is held in `.state/feed_token.txt`. It is an **unlinked obscur
 
 The generator runs automatically at **10:58 PM Costa Rica time**, which is **04:58 UTC** the following calendar day. GitHub’s scheduled workflow service can occasionally start a few minutes late; the job is configured so overlapping runs never publish concurrently. Operators may also use **Run workflow** in GitHub Actions for a manual update.
 
+## Salesforce marketing activities
+
+The workflow supports one **External Website - James Edition** publication activity for each listing when it first enters the JamesEdition feed. It does not create a new activity for a price, copy, photo, or routine daily-feed update.
+
+To activate it, create a **dedicated** Zapier Catch Hook for JamesEdition, map the hook to Salesforce using `listing_id` as the property key, and deduplicate using `publication_key` (`JamesEdition:<MLS ID>`). Add the private Catch Hook URL as the GitHub Actions repository secret named `JAMESEDITION_PUBLISH_WEBHOOK_URL`. Do not reuse the Encuentra24 hook or add the URL to a tracked file.
+
+The initial activation intentionally backfills the current valid JamesEdition roster once, so each listing already published before this automation receives its missing activity. The durable live-branch state then prevents daily duplicates. If delivery fails, the listing remains in the non-sensitive retry queue and is retried on the next successful feed run; a delivery failure never invalidates the XML feed.
+
 ## Publication rules
 
 The generator uses the following confirmed JamesEdition policy:
@@ -41,8 +49,7 @@ No normal page links to the tokenized XML. The dedicated `jamesedition-live` bra
 
 ## Operator actions
 
-1. Confirm GitHub Pages is set to **GitHub Actions** under **Settings → Pages**.
-2. After the first successful run, copy the tokenized Pages URL from `.state/feed_token.txt` and provide it to JamesEdition.
-3. Use the **Run workflow** control to refresh on demand. Use its `rotate_feed_token` option only when the URL has been disclosed or should be retired; then update JamesEdition with the new URL.
-4. Review failed workflow logs promptly. A safe failure preserves the previous XML but may leave availability, price, or inventory changes pending until the next success.
-5. Do not add passwords, API tokens, CRM credentials, or Zapier URLs to tracked files. Store any future webhook URL only in GitHub Actions Secrets.
+1. Provide the current tokenized raw-GitHub URL from `.state/feed_token.txt` to JamesEdition.
+2. Configure the dedicated `JAMESEDITION_PUBLISH_WEBHOOK_URL` secret before activating Salesforce publication activities.
+3. Use the **Run workflow** control to refresh on demand. Review workflow logs promptly; a safe failure preserves the previous XML but may leave availability, price, or inventory changes pending until the next success.
+4. Do not add passwords, API tokens, CRM credentials, or Zapier URLs to tracked files. Store the activity URL only in GitHub Actions Secrets.

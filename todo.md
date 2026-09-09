@@ -16,10 +16,10 @@
 
 - [x] Deploy the nightly GitHub Actions publisher to the dedicated `jamesedition-live` branch.
 - [x] Confirm a complete production update and public crawler retrieval from the tokenized raw GitHub URL.
+- [x] Implement idempotent first-publication activity delivery for **External Website - James Edition**.
 - [ ] Confirm whether the four exclusive listings with a commercial source classification should be eligible for JamesEdition; they are excluded under the current conservative policy.
 - [ ] Establish an approved coordinate precision policy for high-profile or owner-occupied residences.
-- [ ] Enable repository security features where available under the current GitHub plan: Dependabot alerts, secret scanning, and push protection.
-- [ ] Add a dedicated signed Salesforce/Zapier webhook only if first-publication marketing activities are required.
+- [ ] Add the dedicated `JAMESEDITION_PUBLISH_WEBHOOK_URL` secret and activate the JamesEdition Zapier-to-Salesforce mapping; this will backfill the current feed roster once.
 
 ## Maintenance
 
