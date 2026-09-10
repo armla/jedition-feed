@@ -467,7 +467,9 @@ def sync_publication_activities(
     activity_state_path: Path,
     webhook_url: str,
     feed_url: str,
-) -> dict[str, int]:
+    mode: str = "live",
+    test_reference: str = "",
+) -> dict[str, Any]:
     """Create first-entry activities without allowing delivery failures to block a valid feed.
 
     The activity state is committed on the dedicated live-output branch. A missing state
@@ -476,9 +478,30 @@ def sync_publication_activities(
     emit only listings that newly enter the feed. Failed posts remain pending for retry.
     Salesforce/Zapier must deduplicate on the stable ``publication_key``.
     """
+    if mode == "off":
+        print("Marketing activity delivery is intentionally disabled for this feed run.", file=sys.stderr)
+        return {"mode": "off", "queued": 0, "sent": 0, "failed": 0, "enabled": 0}
     if not webhook_url:
         print("Marketing activity webhook is not configured; no Salesforce activities sent.", file=sys.stderr)
-        return {"queued": 0, "sent": 0, "failed": 0, "enabled": 0}
+        return {"mode": mode, "queued": 0, "sent": 0, "failed": 0, "enabled": 0}
+
+    selected_by_reference = {row["reference"]: row for row in selected}
+    if mode == "test":
+        reference = clean(test_reference)
+        if not reference:
+            raise ValueError("A test activity requires --activity-test-reference.")
+        row = selected_by_reference.get(reference)
+        if row is None:
+            raise ValueError(f"Test listing {reference} is not in the validated feed roster.")
+        payload = activity_payload(row, feed_url)
+        # Use the production key so a successful test is naturally deduplicated during backfill.
+        payload.update({
+            "event_type": "portal_listing_published",
+            "is_test": True,
+        })
+        post_activity(webhook_url, payload)
+        print(f"Marketing activity test delivered for JamesEdition listing {reference}.", file=sys.stderr)
+        return {"mode": "test", "queued": 1, "sent": 1, "failed": 0, "enabled": 1}
 
     activity_state = load_json_object(activity_state_path)
     previous_references = {
@@ -486,8 +509,6 @@ def sync_publication_activities(
     }
     pending = activity_state.get("pending", {})
     pending = pending if isinstance(pending, dict) else {}
-    selected_by_reference = {row["reference"]: row for row in selected}
-
     # Entries in the initial feed are deliberately queued once to backfill launch activity.
     new_references = set(selected_by_reference) - previous_references
     for reference in sorted(new_references):
@@ -526,7 +547,7 @@ def sync_publication_activities(
         + "\n",
         encoding="utf-8",
     )
-    return {"queued": len(new_references), "sent": sent, "failed": failed, "enabled": 1}
+    return {"mode": "live", "queued": len(new_references), "sent": sent, "failed": failed, "enabled": 1}
 
 
 def main() -> int:
@@ -538,6 +559,17 @@ def main() -> int:
         "--activity-state",
         required=True,
         help="Path to non-sensitive JamesEdition first-publication activity state.",
+    )
+    parser.add_argument(
+        "--activity-mode",
+        choices=("off", "test", "live"),
+        default="off",
+        help="Activity delivery mode. Scheduled runs must remain off until explicit activation.",
+    )
+    parser.add_argument(
+        "--activity-test-reference",
+        default="",
+        help="Validated MLS reference to send in the one-listing test mode.",
     )
     args = parser.parse_args()
     output = Path(args.output)
@@ -620,6 +652,8 @@ def main() -> int:
         activity_state_path=activity_state_path,
         webhook_url=os.environ.get("JAMESEDITION_PUBLISH_WEBHOOK_URL", "").strip(),
         feed_url=os.environ.get("JAMESEDITION_FEED_URL", "").strip(),
+        mode=args.activity_mode,
+        test_reference=args.activity_test_reference,
     )
     print(json.dumps({"status": "published", **state, "marketing_activities": activity_stats}, indent=2))
     return 0
