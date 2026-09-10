@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-09-09T19:40:41.100637+00:00",
+  "generated_at_utc": "2026-09-10T09:14:11.305746+00:00",
   "selection_policy": "exclusive-first; $500,000 USD minimum; 50-listing cap",
   "reference_count": 50,
   "exclusive_count": 36,
   "nonexclusive_count": 14,
-  "videos": 67,
+  "videos": 68,
   "references": [
     "LXPR13860",
     "LXGR14344",
@@ -57,5 +57,5 @@
     "LXER11158",
     "LXER12666"
   ],
-  "source_fingerprint": "e88143bbdba734a28c4cf2a10d3a824b93ac1e17a2ec95d325e4e44b879bee05"
+  "source_fingerprint": "1193c11d38d02f7414985a258808ce66bf08b5180ca8744f83fc157d7c11ec4b"
 }
