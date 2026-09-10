@@ -5,6 +5,21 @@ on:
     # Costa Rica is UTC−6 throughout the year: 22:58 local = 04:58 UTC the following calendar day.
     - cron: "58 4 * * *"
   workflow_dispatch:
+    inputs:
+      activity_mode:
+        description: "Activity delivery: off (default), test (one MLS ID), or live (first-publication events)"
+        required: false
+        default: "off"
+        type: choice
+        options:
+          - "off"
+          - "test"
+          - "live"
+      activity_test_reference:
+        description: "MLS ID used only when activity_mode is test"
+        required: false
+        default: ""
+        type: string
 
 # Source code remains protected on main. The job may only update the dedicated live-output branch.
 permissions:
@@ -53,6 +68,8 @@ jobs:
         env:
           # Dedicated Zapier Catch Hook. The URL is held only in GitHub Actions Secrets.
           JAMESEDITION_PUBLISH_WEBHOOK_URL: ${{ secrets.JAMESEDITION_PUBLISH_WEBHOOK_URL }}
+          ACTIVITY_MODE: ${{ inputs.activity_mode || 'off' }}
+          ACTIVITY_TEST_REFERENCE: ${{ inputs.activity_test_reference || '' }}
         run: |
           set -euo pipefail
           TOKEN="$(cat publication/.state/feed_token.txt)"
@@ -61,7 +78,9 @@ jobs:
             --output "publication/public/feeds/${TOKEN}.xml" \
             --state "publication/.state/feed_state.json" \
             --cache "publication/.state/enrichment_cache.json" \
-            --activity-state "publication/.state/jamesedition_publication_activity_state.json"
+            --activity-state "publication/.state/jamesedition_publication_activity_state.json" \
+            --activity-mode "$ACTIVITY_MODE" \
+            --activity-test-reference "$ACTIVITY_TEST_REFERENCE"
 
       - name: Validate the publication payload
         run: |

@@ -26,6 +26,19 @@ Use `publication_key` as the idempotency key. Its value is always `JamesEdition:
 | `name`, `price_usd`, `currency`, `property_type`, `property_subtype` | Snapshot fields for the activity record. |
 | `city`, `state`, `region`, `latitude`, `longitude` | Location context; retain only fields permitted by the Salesforce data policy. |
 
+## Controlled One-Listing Test
+
+Before activating the backlog, use **Actions → Generate and publish JamesEdition feed → Run workflow** with the following values:
+
+```text
+activity_mode:           test
+activity_test_reference: LXPR13860
+```
+
+This sends exactly one production-shaped event for the selected active, exclusive listing. It contains `is_test: true` for operational visibility, preserves the normal `publication_key` (`JamesEdition:LXPR13860`) for real deduplication, and does **not** write activity state. It cannot enqueue or backfill the other 49 current listings.
+
+Confirm that Salesforce creates one activity named **External Website - James Edition** on the property matched by `listing_id`. Once confirmed, repeat **Run workflow** with `activity_mode: live`. The initial live run will backfill every current listing not already represented by its `publication_key`; Salesforce should ignore the tested listing because its production deduplication key already exists.
+
 ## GitHub Activation
 
 In the GitHub repository **Settings → Secrets and variables → Actions**, create a new repository secret:
@@ -35,7 +48,7 @@ Name:  JAMESEDITION_PUBLISH_WEBHOOK_URL
 Value: <the dedicated Zapier Catch Hook URL>
 ```
 
-Do not paste the URL into a GitHub issue, repository file, commit, or chat. After saving the secret, open **Actions → Generate and publish JamesEdition feed → Run workflow**. The workflow will generate and validate the XML before posting activity events. A failure to post an activity does not invalidate the XML; unsuccessful events are retained in the non-sensitive live-branch retry queue and are retried on the next successful feed run.
+Do not paste the URL into a GitHub issue, repository file, commit, or chat. Scheduled runs continue with activity delivery off by default. Use the controlled test above before an explicit `live` activation. The workflow always generates and validates the XML before posting activity events. A failure to post an activity in live mode does not invalidate the XML; unsuccessful events are retained in the non-sensitive live-branch retry queue and are retried on the next successful live run.
 
 ## Verification Standard
 
