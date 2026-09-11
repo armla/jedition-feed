@@ -11,6 +11,7 @@
 - [x] Prepare a nightly workflow for 10:58 PM Costa Rica time (04:58 UTC).
 - [x] Add ownership policy, pinned action revisions, and monthly GitHub Actions dependency review.
 - [x] Apply main-branch protections: pull-request review, code-owner review, stale-review dismissal, linear history, no force pushes, no deletions, and conversation resolution.
+- [x] Define a separate 100-listing JamesEdition portal roster that excludes the current 50-record ELITE roster on every generation run.
 
 ## Operating Decisions Pending
 
@@ -20,6 +21,7 @@
 - [ ] Confirm whether the four exclusive listings with a commercial source classification should be eligible for JamesEdition; they are excluded under the current conservative policy.
 - [ ] Establish an approved coordinate precision policy for high-profile or owner-occupied residences.
 - [ ] Add the dedicated `JAMESEDITION_PUBLISH_WEBHOOK_URL` secret and activate the JamesEdition Zapier-to-Salesforce mapping; this will backfill the current feed roster once.
+- [ ] Publish and validate the 100-record portal feed on `jamesedition-portal-live`, using `JAMESEDITION_PUBLISH_WEBHOOK_URL_PORTAL` for its separate Salesforce activity channel. The first successful scheduled run must create the one-time 100-record activity backfill; later runs must be incremental.
 
 ## Maintenance
 

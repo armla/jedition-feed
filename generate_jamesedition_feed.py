@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Generate The Agency Costa Rica's curated JamesEdition ELITE XML feed.
+"""Generate segregated, validated JamesEdition XML feeds for The Agency Costa Rica.
 
 Design rules:
 - Independent from all other portals.
-- Exclusive-first, then curated non-exclusive listings until the 50-listing cap.
+- Exclusive-first, then curated non-exclusive listings until the requested listing cap.
+- An optional reference-exclusion file keeps independently contracted rosters disjoint.
 - First 12 eligible portal images in source media order.
 - Horizontal tour video first, then supplementary listing video fields.
 - English SSR description extraction and authoritative coordinate-map enrichment.
@@ -35,7 +36,7 @@ INVENTORY_URL = "https://api.lxcostarica.com/api/v1/listings"
 COORDINATES_URL = "https://live.theagency.cr/api/public/coordinates"
 BRANDED_PROPERTY_ROOT = "https://theagency.cr/property/"
 MIN_PRICE_USD = 500_000
-MAX_LISTINGS = 50
+DEFAULT_MAX_LISTINGS = 50
 MAX_IMAGES = 12
 REQUEST_HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
@@ -162,6 +163,29 @@ def ordinary_rank(row: dict[str, Any]) -> tuple[Any, ...]:
     return (band, priority, 0 if row["featured"] else 1, -row["price"], row["reference"])
 
 
+def load_reference_set(path: Path | None) -> set[str]:
+    """Load newline-delimited MLS references from a non-sensitive local file."""
+    if path is None:
+        return set()
+    try:
+        return {clean(line) for line in path.read_text(encoding="utf-8").splitlines() if clean(line)}
+    except OSError as exc:
+        raise RuntimeError(f"Unable to load required roster exclusion file: {exc}") from exc
+
+
+def select_roster(records: list[dict[str, Any]], max_listings: int, excluded_references: set[str]) -> list[dict[str, Any]]:
+    """Return a deterministic, complete roster and enforce contractual feed separation."""
+    eligible = [row for row in records if row["reference"] not in excluded_references]
+    eligible.sort(key=lambda row: (0 if row["exclusive"] else 1, ordinary_rank(row)))
+    selected = eligible[:max_listings]
+    if len(selected) != max_listings:
+        raise RuntimeError(f"Only {len(selected)} complete listings available; retained existing public feed.")
+    overlap = sorted({row["reference"] for row in selected} & excluded_references)
+    if overlap:
+        raise RuntimeError(f"Roster separation failed; excluded references selected: {', '.join(overlap)}")
+    return selected
+
+
 def candidate_rows(inventory: list[Any]) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     for property_record in inventory:
@@ -189,6 +213,7 @@ def candidate_rows(inventory: list[Any]) -> list[dict[str, Any]]:
                 and country.lower() in ("costa rica", "cr")
                 and property_type
                 and reference
+                and len(images) >= 2
             ):
                 continue
             if any(word in source_property_type.lower() for word in ("commercial", "hotel", "restaurant", "store")):
@@ -375,11 +400,11 @@ def build_xml(records: list[dict[str, Any]]) -> bytes:
     return b'<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding="utf-8") + b"\n"
 
 
-def validate_xml(xml_content: bytes) -> dict[str, int]:
+def validate_xml(xml_content: bytes, expected_count: int) -> dict[str, int]:
     root = ET.fromstring(xml_content)
     adverts = root.findall("./adverts/advert")
-    if len(adverts) != MAX_LISTINGS:
-        raise ValueError(f"Expected exactly {MAX_LISTINGS} adverts; generated {len(adverts)}.")
+    if len(adverts) != expected_count:
+        raise ValueError(f"Expected exactly {expected_count} adverts; generated {len(adverts)}.")
     references: set[str] = set()
     videos = 0
     for advert in adverts:
@@ -417,15 +442,21 @@ def costa_rica_date() -> str:
     return (datetime.now(timezone.utc) - timedelta(hours=6)).date().isoformat()
 
 
-def activity_payload(row: dict[str, Any], feed_url: str) -> dict[str, Any]:
+def activity_payload(row: dict[str, Any], feed_url: str, feed_label: str = "ELITE") -> dict[str, Any]:
     """Create the stable, portal-specific outbound activity payload for one listing."""
+    publication_key = (
+        f"JamesEdition:{row['reference']}"
+        if feed_label == "ELITE"
+        else f"JamesEdition:{feed_label}:{row['reference']}"
+    )
     return {
         "event_type": "portal_listing_published",
         "activity_type": "External Website",
         "activity_name": "External Website - James Edition",
         "portal": "JamesEdition",
+        "feed_tier": feed_label,
         # Zapier/Salesforce must use this stable key to ignore delivery retries safely.
-        "publication_key": f"JamesEdition:{row['reference']}",
+        "publication_key": publication_key,
         "date": costa_rica_date(),
         "listing_id": row["reference"],
         "name": row["title"],
@@ -467,6 +498,7 @@ def sync_publication_activities(
     activity_state_path: Path,
     webhook_url: str,
     feed_url: str,
+    feed_label: str = "ELITE",
     mode: str = "live",
     test_reference: str = "",
 ) -> dict[str, Any]:
@@ -493,7 +525,7 @@ def sync_publication_activities(
         row = selected_by_reference.get(reference)
         if row is None:
             raise ValueError(f"Test listing {reference} is not in the validated feed roster.")
-        payload = activity_payload(row, feed_url)
+        payload = activity_payload(row, feed_url, feed_label)
         # Use the production key so a successful test is naturally deduplicated during backfill.
         payload.update({
             "event_type": "portal_listing_published",
@@ -512,7 +544,7 @@ def sync_publication_activities(
     # Entries in the initial feed are deliberately queued once to backfill launch activity.
     new_references = set(selected_by_reference) - previous_references
     for reference in sorted(new_references):
-        pending.setdefault(reference, activity_payload(selected_by_reference[reference], feed_url))
+        pending.setdefault(reference, activity_payload(selected_by_reference[reference], feed_url, feed_label))
 
     sent = 0
     failed = 0
@@ -536,6 +568,7 @@ def sync_publication_activities(
         json.dumps(
             {
                 "portal": "JamesEdition",
+                "feed_tier": feed_label,
                 "activity_name": "External Website - James Edition",
                 "updated_at_utc": datetime.now(timezone.utc).isoformat(),
                 "current_references": sorted(selected_by_reference),
@@ -556,6 +589,22 @@ def main() -> int:
     parser.add_argument("--state", required=True, help="Path to non-sensitive generated feed metadata.")
     parser.add_argument("--cache", required=True, help="Path to the non-sensitive description enrichment cache.")
     parser.add_argument(
+        "--max-listings",
+        type=int,
+        default=DEFAULT_MAX_LISTINGS,
+        help="Exact number of validated listings required before publication.",
+    )
+    parser.add_argument(
+        "--exclude-references-file",
+        default="",
+        help="Optional newline-delimited MLS references that must never appear in this feed.",
+    )
+    parser.add_argument(
+        "--feed-label",
+        default="ELITE",
+        help="Stable tier identifier used in activity keys and feed-state metadata.",
+    )
+    parser.add_argument(
         "--activity-state",
         required=True,
         help="Path to non-sensitive JamesEdition first-publication activity state.",
@@ -572,6 +621,12 @@ def main() -> int:
         help="Validated MLS reference to send in the one-listing test mode.",
     )
     args = parser.parse_args()
+    if args.max_listings < 1 or args.max_listings > 500:
+        raise ValueError("--max-listings must be between 1 and 500.")
+    feed_label = clean(args.feed_label).upper()
+    if not re.fullmatch(r"[A-Z0-9_-]{1,30}", feed_label):
+        raise ValueError("--feed-label may contain only A-Z, digits, underscore, and hyphen.")
+    excluded_references = load_reference_set(Path(args.exclude_references_file) if args.exclude_references_file else None)
     output = Path(args.output)
     state_path = Path(args.state)
     cache_path = Path(args.cache)
@@ -598,28 +653,30 @@ def main() -> int:
         print(f"SAFE EXIT: source unavailable or invalid: {exc}", file=sys.stderr)
         return 0
 
-    candidates = candidate_rows(inventory)
+    candidates = [row for row in candidate_rows(inventory) if row["reference"] not in excluded_references]
+    if len(candidates) < args.max_listings:
+        raise RuntimeError(
+            f"Only {len(candidates)} eligible listings remain after roster exclusion; retained existing public feed."
+        )
     complete: list[dict[str, Any]] = []
-    # The known first 50 candidates comprise the current published roster.  Do not fetch a broad
-    # reserve universe nightly; that increases upstream load and compromises job-time reliability.
+    # Enrich a bounded reserve over the requested roster so a transient page failure does not
+    # incorrectly deprive this feed of its required listing count.
+    enrichment_limit = min(len(candidates), max(args.max_listings + 30, int(args.max_listings * 1.3)))
     with ThreadPoolExecutor(max_workers=8) as executor:
         future_map = {
             executor.submit(enrich_candidate, dict(row), coordinates, cache.get(row["reference"])): row
-            for row in candidates[:MAX_LISTINGS]
+            for row in candidates[:enrichment_limit]
         }
         for future in as_completed(future_map):
             enriched = future.result()
             if enriched is not None:
                 complete.append(enriched)
 
-    # Concurrent work must be returned to the deterministic exclusive-first rank before publishing.
-    complete.sort(key=lambda row: (0 if row["exclusive"] else 1, ordinary_rank(row)))
-    selected = complete[:MAX_LISTINGS]
-    if len(selected) != MAX_LISTINGS:
-        raise RuntimeError(f"Only {len(selected)} complete listings available; retained existing public feed.")
+    # Concurrent enrichment returns out of order; selection restores deterministic tier priority.
+    selected = select_roster(complete, args.max_listings, excluded_references)
 
     xml_content = build_xml(selected)
-    stats = validate_xml(xml_content)
+    stats = validate_xml(xml_content, args.max_listings)
     with tempfile.NamedTemporaryFile("wb", delete=False, dir=output.parent, prefix="feed-", suffix=".xml") as temp:
         temp.write(xml_content)
         temporary_name = temp.name
@@ -627,7 +684,8 @@ def main() -> int:
 
     state = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "selection_policy": "exclusive-first; $500,000 USD minimum; 50-listing cap",
+        "feed_label": feed_label,
+        "selection_policy": f"exclusive-first; $500,000 USD minimum; {args.max_listings}-listing cap; excluded roster references: {len(excluded_references)}",
         "reference_count": len(selected),
         "exclusive_count": sum(row["exclusive"] for row in selected),
         "nonexclusive_count": sum(not row["exclusive"] for row in selected),
@@ -652,6 +710,7 @@ def main() -> int:
         activity_state_path=activity_state_path,
         webhook_url=os.environ.get("JAMESEDITION_PUBLISH_WEBHOOK_URL", "").strip(),
         feed_url=os.environ.get("JAMESEDITION_FEED_URL", "").strip(),
+        feed_label=feed_label,
         mode=args.activity_mode,
         test_reference=args.activity_test_reference,
     )

@@ -29,14 +29,15 @@ The principal threat is not an attacker “hacking” the XML itself. It is **un
 
 The current JamesEdition design provides these practical safeguards:
 
-1. The feed has a random tokenized path and no ordinary site navigation points to it.
-2. The protected `main` branch contains source code and cannot be modified by the scheduled job; the job writes only to the dedicated `jamesedition-live` output branch.
+1. Each feed has a random tokenized path and no ordinary site navigation points to it.
+2. The protected `main` branch contains source code and cannot be modified by scheduled jobs; ELITE and portal jobs write only to their separate `jamesedition-live` and `jamesedition-portal-live` output branches.
 3. Every listing carries `<hide_address>yes</hide_address>`.
 4. The XML is only replaced after required-field, ID uniqueness, location, price, image-count, and parsing checks pass.
 5. An upstream source failure preserves the last verified public XML rather than publishing an empty or partial set.
 6. The generator excludes raw inventory snapshots, logs, local diagnostics, and credentials from tracked source files.
 7. The feed uses a durable MLS reference so price and content changes reconcile as updates rather than creating duplicate portal listings.
-8. The first-publication activity implementation uses a dedicated secret, a per-portal `publication_key`, and a committed retry queue on the live-output branch. It cannot create a daily duplicate after a successful activity record.
+8. The first-publication activity implementation uses separate ELITE and portal secrets, tier-specific `publication_key` values, and separate committed retry queues on their live-output branches. It cannot create a daily duplicate after a successful activity record.
+9. The portal feed extracts the active ELITE MLS roster from the validated ELITE XML on every run and refuses publication if any of its 100 records overlap.
 
 ## Controls Still Required
 
@@ -46,7 +47,7 @@ The current JamesEdition design provides these practical safeguards:
 | **1** | Restrict repository write and admin access to the smallest necessary group; review collaborator access quarterly. | Write access is the main pathway to feed manipulation and secret exposure. |
 | **1** | Enable GitHub secret scanning, push protection, Dependabot alerts, and repository vulnerability alerts. | Prevents common credential and dependency exposures before deployment. |
 | **2** | Review the exact coordinate policy for high-profile residences, owner-occupied properties, and unbuilt land. | Exact coordinates can undermine address obfuscation even when the street address is hidden. |
-| **2** | Add `JAMESEDITION_PUBLISH_WEBHOOK_URL` as a dedicated Zapier Catch Hook and configure Salesforce to deduplicate by `publication_key`. | Activates the protected implementation without sharing Encuentra24’s endpoint or creating duplicate activities. |
+| **2** | Add dedicated ELITE and portal JamesEdition Catch Hooks and configure Salesforce to deduplicate by tier-specific `publication_key`. | Keeps ELITE, portal, and Encuentra24 delivery endpoints and activity histories isolated. |
 | **2** | Pin GitHub Actions to immutable commit SHAs and restrict Actions to GitHub-verified or explicitly approved publishers. | Reduces software supply-chain risk. |
 | **3** | Maintain an incident runbook: rotate the feed path, regenerate the feed, revoke/rotate leaked secret, then request portal URL update. | Makes a URL or credential disclosure recoverable quickly. |
 | **3** | Set a monthly review of repository history and public feed fields. | Ensures former inventory, stale contacts, or source changes do not leave inappropriate data public. |
