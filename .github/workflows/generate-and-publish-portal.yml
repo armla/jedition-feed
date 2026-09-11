@@ -64,11 +64,17 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p portal-publication/.state portal-publication/public/feeds
-          for name in portal_feed_token.txt portal_enrichment_cache.json; do
-            if [ ! -s "portal-publication/.state/${name}" ]; then
-              cp "source/.state/${name}" "portal-publication/.state/${name}"
+          if [ ! -s "portal-publication/.state/portal_feed_token.txt" ]; then
+            cp "source/.state/portal_feed_token.txt" "portal-publication/.state/portal_feed_token.txt"
+          fi
+          # The first portal run has no cache yet. Later runs retain the cached verified enrichments.
+          if [ ! -s "portal-publication/.state/portal_enrichment_cache.json" ]; then
+            if [ -s "source/.state/portal_enrichment_cache.json" ]; then
+              cp "source/.state/portal_enrichment_cache.json" "portal-publication/.state/portal_enrichment_cache.json"
+            else
+              printf '{}\n' > "portal-publication/.state/portal_enrichment_cache.json"
             fi
-          done
+          fi
           test -s portal-publication/.state/portal_feed_token.txt
 
       - name: Build ELITE exclusion roster
