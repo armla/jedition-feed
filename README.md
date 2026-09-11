@@ -1,6 +1,6 @@
-# The Agency Costa Rica — JamesEdition ELITE Feed
+# The Agency Costa Rica — JamesEdition Feeds
 
-This repository independently generates and hosts The Agency Costa Rica’s curated JamesEdition XML feed. It does not share runtime state, selection rules, credentials, webhooks, or workflows with the Encuentra24 feed.
+This repository independently generates and hosts The Agency Costa Rica’s segregated JamesEdition XML feeds. It does not share runtime state, selection rules, credentials, webhooks, or workflows with the Encuentra24 feed.
 
 ## Delivery URL
 
@@ -10,17 +10,26 @@ GitHub publishes the XML from a dedicated live-output branch at:
 https://raw.githubusercontent.com/armla/jedition-feed/jamesedition-live/public/feeds/<random-token>.xml
 ```
 
-The current token is held in `.state/feed_token.txt`. It is an **unlinked obscurity control**, not a credential: GitHub raw content is public by design. Provide the complete URL only to JamesEdition and authorized internal operators.
+The ELITE token is held in `.state/feed_token.txt`; the portal token is held separately in `.state/portal_feed_token.txt`. Each is an **unlinked obscurity control**, not a credential: GitHub raw content is public by design. Provide the complete URL only to JamesEdition and authorized internal operators.
+
+## Segregated rosters
+
+| Feed | Capacity | Selection and exclusion rule | Live-output branch | Activity channel |
+| --- | ---: | --- | --- | --- |
+| **ELITE** | 50 | Exclusive-first, then curated non-exclusive records. | `jamesedition-live` | `JAMESEDITION_PUBLISH_WEBHOOK_URL` |
+| **Portal** | 100 | The next validated records after **every current ELITE MLS reference is excluded**. It cannot publish any record presently in the ELITE feed. | `jamesedition-portal-live` | `JAMESEDITION_PUBLISH_WEBHOOK_URL_PORTAL` |
+
+The portal workflow rebuilds the exclusion roster directly from the last validated ELITE XML on every run. It validates exactly 100 unique records, then fails safely rather than publishing when even one ELITE reference would overlap or the full validated portal capacity cannot be met.
 
 ## Nightly schedule
 
-The generator runs automatically at **10:58 PM Costa Rica time**, which is **04:58 UTC** the following calendar day. GitHub’s scheduled workflow service can occasionally start a few minutes late; the job is configured so overlapping runs never publish concurrently. Operators may also use **Run workflow** in GitHub Actions for a manual update.
+Both generators run automatically at **10:58 PM Costa Rica time**, which is **04:58 UTC** the following calendar day. GitHub’s scheduled workflow service can occasionally start a few minutes late; each job is independently configured so overlapping runs never publish concurrently. Operators may also use **Run workflow** in GitHub Actions for a manual update.
 
 ## Salesforce marketing activities
 
-The workflow supports one **External Website - James Edition** publication activity for each listing when it first enters the JamesEdition feed. It does not create a new activity for a price, copy, photo, or routine daily-feed update. Scheduled runs default to **activity off**, so adding a webhook secret cannot accidentally trigger a bulk backfill.
+Each workflow supports one **External Website - James Edition** publication activity for each listing when it first enters its respective JamesEdition feed. It does not create a new activity for a price, copy, photo, or routine daily-feed update. The existing ELITE workflow remains scheduled with activity delivery **off** until explicitly activated; the separate portal workflow is scheduled in **live** mode and will backfill its first validated 100-record roster once, then send only newly entering portal records.
 
-To activate it, create a **dedicated** Zapier Catch Hook for JamesEdition, map the hook to Salesforce using `listing_id` as the property key, and deduplicate using `publication_key` (`JamesEdition:<MLS ID>`). Add the private Catch Hook URL as the GitHub Actions repository secret named `JAMESEDITION_PUBLISH_WEBHOOK_URL`. Do not reuse the Encuentra24 hook or add the URL to a tracked file.
+To activate it, create a **dedicated** Zapier Catch Hook for each channel, map the hook to Salesforce using `listing_id` as the property key, and deduplicate using `publication_key`. ELITE keys retain the established `JamesEdition:<MLS ID>` format; portal keys use `JamesEdition:PORTAL:<MLS ID>`. Add the private Catch Hook URLs as the GitHub Actions repository secrets named `JAMESEDITION_PUBLISH_WEBHOOK_URL` and `JAMESEDITION_PUBLISH_WEBHOOK_URL_PORTAL`, respectively. Do not reuse the Encuentra24 hook or add either URL to a tracked file.
 
 For a controlled proof, use **Run workflow** with `activity_mode = test` and one current `activity_test_reference`; this sends exactly one real, production-shaped event and does not alter activity state or trigger a backfill. After Salesforce confirms the activity, run with `activity_mode = live` to backfill the current valid JamesEdition roster once. The durable live-branch state then prevents daily duplicates. If delivery fails in live mode, the listing remains in the non-sensitive retry queue and is retried on the next successful feed run; a delivery failure never invalidates the XML feed.
 
@@ -49,7 +58,7 @@ No normal page links to the tokenized XML. The dedicated `jamesedition-live` bra
 
 ## Operator actions
 
-1. Provide the current tokenized raw-GitHub URL from `.state/feed_token.txt` to JamesEdition.
-2. Configure the dedicated `JAMESEDITION_PUBLISH_WEBHOOK_URL` secret before activating Salesforce publication activities.
-3. Use the **Run workflow** control to refresh on demand. Choose `test` only for a single validated MLS ID and `live` only after confirming the Salesforce test activity; scheduled runs remain `off` until live mode is explicitly activated. Review workflow logs promptly; a safe failure preserves the previous XML but may leave availability, price, or inventory changes pending until the next success.
+1. Provide the current tokenized raw-GitHub URL from the relevant feed-token file to JamesEdition.
+2. Configure the separate dedicated webhook secrets before activating Salesforce publication activities.
+3. Use the matching **Run workflow** control to refresh on demand. Choose `test` only for a single validated MLS ID and `live` only after confirming the relevant Salesforce test activity. The ELITE scheduled workflow remains off until activated; the portal scheduled workflow is live by design. Review workflow logs promptly; a safe failure preserves the previous XML but may leave availability, price, or inventory changes pending until the next success.
 4. Do not add passwords, API tokens, CRM credentials, or Zapier URLs to tracked files. Store the activity URL only in GitHub Actions Secrets.

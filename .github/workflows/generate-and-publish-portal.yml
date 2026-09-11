@@ -1,0 +1,138 @@
+name: Generate and publish JamesEdition portal feed
+
+on:
+  schedule:
+    # Costa Rica is UTC−6 throughout the year: 22:58 local = 04:58 UTC the following calendar day.
+    - cron: "58 4 * * *"
+  workflow_dispatch:
+    inputs:
+      activity_mode:
+        description: "Activity delivery: off, test (one MLS ID), or live (first-publication events)"
+        required: false
+        default: "off"
+        type: choice
+        options:
+          - "off"
+          - "test"
+          - "live"
+      activity_test_reference:
+        description: "MLS ID used only when activity_mode is test"
+        required: false
+        default: ""
+        type: string
+
+# Source code remains protected on main. The job may only update the dedicated live-output branch.
+permissions:
+  contents: write
+
+concurrency:
+  group: jamesedition-portal-feed-publish
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: Generate, validate, and publish portal feed
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out protected feed source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          path: source
+          fetch-depth: 1
+
+      - name: Check out ELITE roster for exclusion
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: jamesedition-live
+          path: elite-publication
+          fetch-depth: 1
+
+      - name: Check out portal live-output branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: jamesedition-portal-live
+          path: portal-publication
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+
+      - name: Load persistent portal feed state
+        run: |
+          set -euo pipefail
+          mkdir -p portal-publication/.state portal-publication/public/feeds
+          for name in portal_feed_token.txt portal_enrichment_cache.json; do
+            if [ ! -s "portal-publication/.state/${name}" ]; then
+              cp "source/.state/${name}" "portal-publication/.state/${name}"
+            fi
+          done
+          test -s portal-publication/.state/portal_feed_token.txt
+
+      - name: Build ELITE exclusion roster
+        run: |
+          set -euo pipefail
+          TOKEN="$(cat elite-publication/.state/feed_token.txt)"
+          test -s "elite-publication/public/feeds/${TOKEN}.xml"
+          python3 source/extract_feed_references.py \
+            --input "elite-publication/public/feeds/${TOKEN}.xml" \
+            --output portal-publication/.state/elite_references.txt \
+            --expected-count 50
+
+      - name: Generate and validate the JamesEdition portal XML
+        env:
+          # Dedicated Zapier Catch Hook for non-ELITE portal records. The URL stays in Actions Secrets.
+          JAMESEDITION_PUBLISH_WEBHOOK_URL: ${{ secrets.JAMESEDITION_PUBLISH_WEBHOOK_URL_PORTAL }}
+          # Automated runs are live by design; manual dispatch stays safe until explicitly selected.
+          ACTIVITY_MODE: ${{ github.event_name == 'schedule' && 'live' || inputs.activity_mode || 'off' }}
+          ACTIVITY_TEST_REFERENCE: ${{ inputs.activity_test_reference || '' }}
+        run: |
+          set -euo pipefail
+          TOKEN="$(cat portal-publication/.state/portal_feed_token.txt)"
+          export JAMESEDITION_FEED_URL="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/jamesedition-portal-live/public/feeds/${TOKEN}.xml"
+          python3 source/generate_jamesedition_feed.py \
+            --output "portal-publication/public/feeds/${TOKEN}.xml" \
+            --state "portal-publication/.state/portal_feed_state.json" \
+            --cache "portal-publication/.state/portal_enrichment_cache.json" \
+            --activity-state "portal-publication/.state/jamesedition_portal_publication_activity_state.json" \
+            --max-listings 100 \
+            --exclude-references-file "portal-publication/.state/elite_references.txt" \
+            --feed-label "PORTAL" \
+            --activity-mode "$ACTIVITY_MODE" \
+            --activity-test-reference "$ACTIVITY_TEST_REFERENCE"
+
+      - name: Validate portal roster segregation and XML quality
+        run: |
+          set -euo pipefail
+          TOKEN="$(cat portal-publication/.state/portal_feed_token.txt)"
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          portal = ET.parse(Path('portal-publication/public/feeds') / (Path('portal-publication/.state/portal_feed_token.txt').read_text().strip() + '.xml'))
+          elite = set(Path('portal-publication/.state/elite_references.txt').read_text().split())
+          adverts = portal.findall('./adverts/advert')
+          references = [item.attrib['reference'] for item in adverts]
+          assert len(adverts) == 100
+          assert len(set(references)) == 100
+          assert not (set(references) & elite)
+          assert all(len(item.findall('./media/image')) >= 2 for item in adverts)
+          assert all(len(item.findall('./media/image')) <= 12 for item in adverts)
+          assert all(item.findtext('description', '').strip() for item in adverts)
+          assert all(item.findtext('location/latitude', '').strip() and item.findtext('location/longitude', '').strip() for item in adverts)
+          print('PASS: 100 validated portal records have no overlap with the 50-record ELITE roster.')
+          PY
+
+      - name: Publish only validated portal-output changes
+        run: |
+          set -euo pipefail
+          cd portal-publication
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/ .state/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh JamesEdition portal feed"
+            git push origin HEAD:jamesedition-portal-live
+          fi
