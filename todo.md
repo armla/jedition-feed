@@ -21,7 +21,7 @@
 - [ ] Confirm whether the four exclusive listings with a commercial source classification should be eligible for JamesEdition; they are excluded under the current conservative policy.
 - [ ] Establish an approved coordinate precision policy for high-profile or owner-occupied residences.
 - [ ] Add the dedicated `JAMESEDITION_PUBLISH_WEBHOOK_URL` secret and activate the JamesEdition Zapier-to-Salesforce mapping; this will backfill the current feed roster once.
-- [ ] Publish and validate the 100-record portal feed on `jamesedition-portal-live`, using `JAMESEDITION_PUBLISH_WEBHOOK_URL_PORTAL` for its separate Salesforce activity channel. The first successful scheduled run must create the one-time 100-record activity backfill; later runs must be incremental.
+- [x] Publish and validate the 100-record portal feed on `jamesedition-portal-live`, using `JAMESEDITION_PUBLISH_WEBHOOK_URL_PORTAL` for its separate Salesforce activity channel. The initial validated roster created 100 distinct portal activities; its reconciled state prevents replay, and later runs are incremental.
 
 ## Maintenance
 
