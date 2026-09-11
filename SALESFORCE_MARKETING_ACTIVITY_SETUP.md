@@ -1,6 +1,6 @@
 # JamesEdition Salesforce Marketing Activity Activation
 
-**Status:** The JamesEdition feed now contains the activity-delivery logic, but it is **not yet activated** because no dedicated Zapier Catch Hook has been configured as a GitHub Actions secret. No Salesforce activities have been sent by this implementation so far.
+**Status:** The ELITE and portal feeds have separate activity-delivery channels. The portal implementation uses its own Zapier Catch Hook and must never share an activity state or deduplication key with ELITE.
 
 ## Intended Behavior
 
@@ -12,7 +12,7 @@ The first successful run after activation deliberately backfills the current fee
 
 Create a new **Webhooks by Zapier — Catch Hook** specifically for JamesEdition. Do not reuse the Encuentra24 publication hook. Map the incoming event to the related Salesforce property/listing using `listing_id` as the MLS ID. Create the marketing/publication activity with the name **External Website - James Edition**.
 
-Use `publication_key` as the idempotency key. Its value is always `JamesEdition:<MLS ID>`. The Zap must search for an existing activity with that key before creating one, or use a Salesforce external-ID/upsert field where available. This protects against duplicate activities if Zapier or GitHub retries an HTTP request.
+Use `publication_key` as the idempotency key. For ELITE, the value remains `JamesEdition:<MLS ID>`; for the standard portal feed, it is `JamesEdition:PORTAL:<MLS ID>`. The Zap must search for an existing activity with that key before creating one, or use a Salesforce external-ID/upsert field where available. This protects against duplicate activities if Zapier or GitHub retries an HTTP request and keeps the two publication channels independently auditable.
 
 | Incoming field | Required Salesforce / Zapier handling |
 |---|---|
@@ -20,6 +20,7 @@ Use `publication_key` as the idempotency key. Its value is always `JamesEdition:
 | `listing_id` | Match the related property/listing by Agency MLS ID. |
 | `publication_key` | Deduplicate or upsert key. |
 | `portal` | Set source/website to `JamesEdition`. |
+| `feed_tier` | Preserve `ELITE` or `PORTAL` so the activity can be reported by commercial plan. |
 | `date` | Activity date in Costa Rica time. |
 | `url` | Branded Agency property URL. |
 | `portal_feed_url` | JamesEdition XML source URL. |
@@ -49,6 +50,17 @@ Value: <the dedicated Zapier Catch Hook URL>
 ```
 
 Do not paste the URL into a GitHub issue, repository file, commit, or chat. Scheduled runs continue with activity delivery off by default. Use the controlled test above before an explicit `live` activation. The workflow always generates and validates the XML before posting activity events. A failure to post an activity in live mode does not invalidate the XML; unsuccessful events are retained in the non-sensitive live-branch retry queue and are retried on the next successful live run.
+
+### Portal feed
+
+The 100-listing non-ELITE portal feed uses the already configured secret below. Its scheduled workflow runs in `live` mode: the first successful publication sends one activity for each of its validated current records, then later runs send only listings newly entering that feed.
+
+```text
+Name:  JAMESEDITION_PUBLISH_WEBHOOK_URL_PORTAL
+Value: <the dedicated JamesEdition portal Catch Hook URL>
+```
+
+Map it using the same Salesforce activity label, **External Website - James Edition**, while retaining `feed_tier: PORTAL` and deduplicating with `JamesEdition:PORTAL:<MLS ID>`. This is a distinct channel from ELITE and must not use its secret, state file, or keys.
 
 ## Verification Standard
 
