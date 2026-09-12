@@ -91,6 +91,69 @@
     </agent>
   </agents>
   <adverts>
+    <advert reference="LXER12666" category="real estate">
+      <type>sale</type>
+      <price currency="USD">4250000</price>
+      <property_type>House</property_type>
+      <title>Absolute Home @ Valle del Sol</title>
+      <description>On the west side of the Central Valley of Costa Rica, Absolute Home redefines contemporary luxury in Valle del Sol, where architectural artistry meets golf-side living. This exceptional three-level residence merges natural stone and rich wood with seamless craftsmanship to create an atmosphere of warmth and sophistication, featuring top amenities rarely found together in a single residence. From the first glance, its striking façade clad in Niwala stone and floating stone steps framed by manicured gardens set the tone for Absolute Home. The entrance opens into a double-height foyer anchored by a sculptural marble staircase. Throughout the interior, ivory-toned marble floors flow through expansive social areas, connecting the living room, dining area, and kitchen into one fluid, light-filled space designed for modern living. A statement Onyx fireplace enhances the main living area, while the kitchen, equipped with Gaggenau paneled appliances and an oversized island for eight, serves as both a gathering point and a culinary centerpiece. Generous storage, a walk-in pantry, and direct access to the service and laundry quarters make daily life practical. Large sliding glass doors extend the interiors to a covered terrace, seamlessly blending indoor and outdoor living. The terrace includes a built-in BBQ bar with seating for four, ideal for relaxed meals and sunset gatherings. Beyond lies the pool and Jacuzzi area, complete with a sun deck, wet bar with mini-fridge, and a fire pit framed by four cascading water features. The lushly landscaped gardens provide privacy and tranquility, making it a perfect setting for both entertainment and family life. A private elevator connects all three levels of Absolute Home, ensuring accessibility and convenience throughout the home. At the heart of the home’s wellness amenities lies a private spa, offering a sauna, Turkish bath, cold plunge, and massage area. This is a sanctuary of restoration and indulgence rarely found in residential properties. The upper level features a bright family lounge with pool table and terrace overlooking the golf course, creating a relaxed setting for movie nights or social evenings. Three spacious bedrooms, each with air conditioning, en-suite bathroom, and walk-in closet, ensure comfort and privacy. The primary suite is a masterpiece of design, offering double walk-in closets, dual vanities, a soaking tub, and a private balcony framing beautiful views of the golf course. On the main floor, an elegant home cinema and a fully equipped gym with panoramic windows expand the home’s exceptional amenities. The property includes four covered parking spaces with storage and direct access to the pantry and laundry areas. Located within Valle del Sol Residential and Golf Community, one of Santa Ana’s most prestigious addresses, residents enjoy triple-level security, landscaped boulevards, and access to top-tier amenities including a professional 18-hole golf course, tennis courts, restaurant, and scenic walking trails. Just minutes away, Lindora provides fine dining, international schools such as Pan-American and Saint Jude, upscale boutiques, and essential conveniences—making Absolute Home @ Valle del Sol a rare combination of luxury, location, and lifestyle on the west side of San José. Valle del Sol enjoys a privileged location in Santa Ana, one of the most desirable areas in Costa Rica’s western Central Valley. Its strategic position provides direct access to Highway 27, offering quick and convenient connectivity to downtown San José, Lindora, Escazú, and the Pacific Coast. The community is surrounded by essential amenities, including upscale shopping centers, international schools, fine dining, and medical services, all just minutes away. With its exceptional amenities, golf-front setting, and unmatched location, Absolute Home represents one of the finest expressions of modern living in Costa Rica’s</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Pozos</city>
+        <address>Santa Ana</address>
+        <latitude>9.951161</latitude>
+        <longitude>-84.207115</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>5</bedrooms>
+      <bathrooms>6</bathrooms>
+      <living_area unit="sqm">1400</living_area>
+      <land_area unit="sqm">1320</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/yxd86xuoh/1277x640/Facade-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/u5dzhjbpb/1277x640/Aerial-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/71evffebn/1277x640/Elevator-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/03t9g749m/1277x640/Game-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/o1dc013q2/1277x640/Gym-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/qky1t9npj/1277x640/Half-bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/jbesmj8q0/1277x640/Kitchen-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/7msh9s06y/1277x640/Kitchen-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/nyi7kdeau/1277x640/Living-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/l976it9ul/1277x640/Living-room-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/38s9ca0gv/1277x640/Master-Bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/3o0kbw59p/1277x640/Master-bedroom-2.jpg</image_url>
+        </image>
+        <video>
+          <video_url>https://www.youtube.com/watch?v=NB04edNCCds</video_url>
+        </video>
+      </media>
+      <external_url>https://theagency.cr/property/absolute-home-valle-del-sol</external_url>
+      <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
+    </advert>
     <advert reference="LXHR14327" category="real estate">
       <type>sale</type>
       <price currency="USD">4250000</price>
@@ -1989,7 +2052,7 @@
       <location>
         <country>CR</country>
         <region>Alajuela</region>
-        <city>San Rafael</city>
+        <city>Alajuela</city>
         <address>Hacienda Espinal</address>
         <latitude>9.950591</latitude>
         <longitude>-84.247627</longitude>
@@ -2037,7 +2100,7 @@
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iF5HI/zeccv87cg/1277x640/LX-8.jpg</image_url>
         </image>
         <video>
-          <video_url>https://www.youtube.com/watch?v=ZuFD2-a1vUY</video_url>
+          <video_url>https://www.youtube.com/watch?v=FyNdMZtt0DA</video_url>
         </video>
         <video>
           <video_url>https://www.youtube.com/watch?v=_MaKHmzr6E4</video_url>
@@ -2889,9 +2952,6 @@
         <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000gD7yW/1mx1gvr7q/1277x640/LX-1.jpg</image_url>
         </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=dGFPIY0ITU8</video_url>
-        </video>
       </media>
       <external_url>https://theagency.cr/property/friesian-villa-escazu</external_url>
       <agent_reference>tacr-agent-005Qg00000NS8K0IAL</agent_reference>
@@ -2952,6 +3012,9 @@
         <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C1N00000dPFIk/jcwqwj09o/1277x640/LX-Monteran-15.jpg</image_url>
         </image>
+        <video>
+          <video_url>https://www.youtube.com/watch?v=ajww0ItZrGo</video_url>
+        </video>
       </media>
       <external_url>https://theagency.cr/property/secret-garden-home-at-monteran</external_url>
       <agent_reference>tacr-agent-005Qg000000DIGrIAO</agent_reference>
@@ -4211,7 +4274,7 @@
       <hide_address>yes</hide_address>
       <bedrooms>4</bedrooms>
       <bathrooms>3</bathrooms>
-      <living_area unit="sqm">434</living_area>
+      <living_area unit="sqm">414</living_area>
       <land_area unit="sqm">851</land_area>
       <media>
         <image>
@@ -5388,7 +5451,7 @@
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C1N00000bjeiP/6fnh5v13z/1277x640/Master-bedroom-1.jpg</image_url>
         </image>
         <video>
-          <video_url>https://www.youtube.com/watch?v=M_FHfnU--Ro</video_url>
+          <video_url>https://www.youtube.com/watch?v=GlmUp3jKsek</video_url>
         </video>
       </media>
       <external_url>https://theagency.cr/property/casa-serene-cerro-real</external_url>
@@ -6122,54 +6185,6 @@
       </media>
       <external_url>https://theagency.cr/property/the-corner-home-tierras-del-este</external_url>
       <agent_reference>tacr-agent-0051N00000712R8QAI</agent_reference>
-    </advert>
-    <advert reference="LXSL13737" category="real estate">
-      <type>sale</type>
-      <price currency="USD">14000000</price>
-      <property_type>Land</property_type>
-      <title>Distinguished Playa Hermosa Beachfront Lot</title>
-      <description>An unparalleled opportunity awaits with this extraordinary beachfront property, situated in the most coveted enclave of Santa Teresa: Playa Hermosa. This is among the final offerings of its kind—a rare chance to secure direct ownership on one of Costa Rica’s most legendary stretches of coastline. From your doorstep, step directly onto soft sand and into turquoise waters where world-class surf awaits, attracting both beginners and seasoned riders. The beach’s reputation for beauty and vibrancy is matched only by the lifestyle it inspires—laid-back yet refined, private yet connected. Just a short walk away, natural tide pools carve into the coastline, creating unique sanctuaries for exploration. Some are large enough for swimming laps, others perfectly sized for children, and many reveal colorful marine life that feels like a private ocean aquarium. This is more than land—it’s the foundation for a legacy. Ownership here is not simply about property; it’s about claiming a rare place in one of the most exclusive beachfront communities in Costa Rica. With such limited opportunities remaining, this oceanfront lot represents a generational investment and a lifestyle of unmatched privilege.35</description>
-      <location>
-        <country>CR</country>
-        <region>Puntarenas</region>
-        <city>Santa Teresa</city>
-        <address>Playa Hermosa</address>
-        <latitude>9.666585</latitude>
-        <longitude>-85.192494</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <living_area unit="sqm">13000</living_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/08c3w0j0h/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-7.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/s099fxgza/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/x7cyeo5yf/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/p3qo56akg/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/pcqxdfif9/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-4.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/3o0sswx78/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-5.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/mer5ozjvf/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-6.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/exowjtki8/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-8.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008skl9L/nf88qci5j/1277x640/The-Ultimate-Beachfront-Location-in-the-Heart-of-the-Renowned-Playa-Hermosa-9.jpg</image_url>
-        </image>
-      </media>
-      <external_url>https://theagency.cr/property/distinguished-playa-hermosa-beachfront-lot</external_url>
-      <agent_reference>tacr-agent-005Qg00000NS8JzIAL</agent_reference>
     </advert>
   </adverts>
 </jamesedition_feed>

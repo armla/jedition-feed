@@ -1,12 +1,13 @@
 {
-  "generated_at_utc": "2026-09-11T17:35:04.421886+00:00",
+  "generated_at_utc": "2026-09-12T09:03:34.879534+00:00",
   "feed_label": "PORTAL",
   "selection_policy": "exclusive-first; $500,000 USD minimum; 100-listing cap; excluded roster references: 50",
   "reference_count": 100,
   "exclusive_count": 0,
   "nonexclusive_count": 100,
-  "videos": 105,
+  "videos": 106,
   "references": [
+    "LXER12666",
     "LXHR14327",
     "LXER13414",
     "LXGR14163",
@@ -105,8 +106,7 @@
     "LXHR11130",
     "LXER11012",
     "LXER14297",
-    "LXCR14265",
-    "LXSL13737"
+    "LXCR14265"
   ],
-  "source_fingerprint": "d4eef6197e5c68b06f22c2b5670293a3e6b3e4cb2a6d90b5904c70294fc39632"
+  "source_fingerprint": "78fdd6ce4ec1ae9a22f959ac76160d2f5d4feca6efd7030cce0f0b39f1a98e42"
 }
