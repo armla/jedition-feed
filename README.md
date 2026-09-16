@@ -42,13 +42,15 @@ The generator uses the following confirmed JamesEdition policy:
 - residential, land, farm/ranch, and estate inventory only; ambiguous commercial, hotel, restaurant, and store stock is excluded;
 - **exclusive listings exhaust the allocation first**, then non-exclusive listings are selected by source priority;
 - only `isonportalfeed=true` images are eligible, sorted by `sortonportalfeed`, with a hard **12-image maximum**;
-- the primary horizontal video is emitted before supplementary source video fields;
+- Propertybase/S3 images are emitted from the stable **canonical original-object URL**, not the `1277x640` display rendition returned by the inventory API. This preserves the native asset dimensions while retaining source order and URL stability;
+- JamesEdition supports **one** `media/video/video_url` per listing. The generator emits the primary horizontal walkthrough first; a vertical video is used only as a fallback video where no primary walkthrough exists;
+- `media/virtual_tour_link` is emitted only when the source contains a public link from a JamesEdition-supported immersive-tour provider (for example, Matterport, My360, Kuula, CloudPano, or Giraffe360). A YouTube vertical video is not a compliant virtual-tour link and is never put in that field;
 - MLS ID remains the durable JamesEdition listing reference;
 - addresses are hidden (`<hide_address>yes</hide_address>`), while verified map coordinates remain in the XML.
 
 ## Data sources and safeguards
 
-The generator reads the canonical Agency inventory API, the Agency’s public MLS-coordinate map, and the English property description rendered by each branded listing page. It validates 50 unique MLS references, required fields, two or more images, maximum image count, price and currency, description, agent reference, and valid coordinate ranges before replacing the published XML.
+The generator reads the canonical Agency inventory API, the Agency’s public MLS-coordinate map, and the English property description rendered by each branded listing page. It validates the required roster size, unique MLS references, required fields, two or more images, maximum image count, price and currency, description, agent reference, valid coordinate ranges, a maximum of one supported video, and supported virtual-tour URLs before replacing the published XML.
 
 A failed source call, incomplete enrichment, or failed XML validation exits without replacing the current file. The last successfully validated feed therefore remains available to JamesEdition.
 
