@@ -26,11 +26,16 @@ def row(reference: str, *, exclusive: bool, priority: int) -> dict:
         "listing_type": "sale",
         "property_type": "Villa",
         "source_property_type": "House",
+        "country": "CR",
         "address": "Private community",
         "community": "Private community",
         "city": "Tamarindo",
         "region": "Guanacaste",
         "region_description": "Tamarindo",
+        "bedrooms": None,
+        "bathrooms": None,
+        "living_area": None,
+        "land_area": None,
         "latitude": 10.300001,
         "longitude": -85.840001,
         "external_url": f"https://theagency.cr/property/{reference.lower()}",
@@ -97,4 +102,28 @@ with tempfile.TemporaryDirectory() as directory:
     assert posted[0]["is_test"] is True
     assert not state.exists()
 
-print("PASS: portal roster excludes ELITE references and uses isolated activity identity.")
+propertybase_rendition = "https://s3.amazonaws.com/propertybase-clients/org/property/media/1277x640/hero.jpg"
+assert feed.canonical_image_url(propertybase_rendition) == "https://s3.amazonaws.com/propertybase-clients/org/property/media/hero.jpg"
+assert feed.canonical_image_url("https://images.example/hero.jpg") == "https://images.example/hero.jpg"
+
+property_record = {
+    "virtual_tour_video_url": "https://www.youtube.com/embed/HORIZONTAL",
+    "virtual_tour_url": "https://my.matterport.com/show/?m=VALID",
+}
+listing_record = {
+    "live_tour_url": "https://www.youtube.com/embed/SECONDARY",
+    "vertical_video_1": "https://www.youtube.com/embed/VERTICAL",
+}
+assert feed.source_videos(property_record, listing_record) == ["https://www.youtube.com/watch?v=HORIZONTAL"]
+assert feed.source_virtual_tour(property_record, listing_record) == "https://my.matterport.com/show/?m=VALID"
+assert feed.supported_virtual_tour_url("https://www.youtube.com/watch?v=VERTICAL") is None
+
+media_row = row("MEDIA-001", exclusive=True, priority=1)
+media_row.update({
+    "videos": feed.source_videos(property_record, listing_record),
+    "virtual_tour": feed.source_virtual_tour(property_record, listing_record),
+})
+xml = feed.build_xml([media_row])
+assert feed.validate_xml(xml, 1) == {"adverts": 1, "videos": 1, "virtual_tours": 1}
+
+print("PASS: portal roster, activity identity, canonical images, and compliant media rules verified.")

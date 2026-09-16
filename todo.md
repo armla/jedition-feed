@@ -5,7 +5,9 @@
 - [x] Create an isolated public repository for the JamesEdition feed.
 - [x] Generate and validate a 50-listing XML 3.9 feed with an exclusive-first allocation.
 - [x] Restrict feed images to the first 12 `isonportalfeed` items ordered by `sortonportalfeed`.
-- [x] Include all available primary and supplementary source video links.
+- [x] Enforce JamesEdition's one-video limit: retain the primary horizontal walkthrough and use a vertical clip only as fallback.
+- [x] Audit all emitted images and replace the low-resolution `1277x640` display renditions with reachable canonical Propertybase/S3 original-object URLs.
+- [x] Add compliant virtual-tour-link support for JamesEdition-approved immersive-tour providers; source virtual-tour fields currently contain YouTube URLs only and therefore emit no invalid virtual-tour links.
 - [x] Populate verified English descriptions and authoritative coordinates.
 - [x] Add a safe-failure generator design that retains the last known-good feed.
 - [x] Prepare a nightly workflow for 10:58 PM Costa Rica time (04:58 UTC).
@@ -25,6 +27,6 @@
 
 ## Maintenance
 
-- [ ] Review the 50-listing selection, prices, availability, agent contact data, location precision, and media quality monthly.
+- [ ] Review the 50-listing selection, prices, availability, agent contact data, location precision, and media quality monthly; replace any sub-1024×641 original images in the source CMS before the next refresh.
 - [ ] Review repository collaborators and GitHub Actions workflow changes quarterly.
 - [ ] Rotate the random delivery URL and inform JamesEdition if the URL is disclosed or materially abused.

@@ -38,6 +38,29 @@ BRANDED_PROPERTY_ROOT = "https://theagency.cr/property/"
 MIN_PRICE_USD = 500_000
 DEFAULT_MAX_LISTINGS = 50
 MAX_IMAGES = 12
+PROPERTYBASE_S3_HOST = "s3.amazonaws.com"
+PROPERTYBASE_S3_PREFIX = "/propertybase-clients/"
+SUPPORTED_VIRTUAL_TOUR_HOSTS = (
+    "matterport.com",
+    "my360.com",
+    "youriguide.com",
+    "realistico.com",
+    "nodalview.com",
+    "3dvista.com",
+    "h4life.com",
+    "virtea.com",
+    "cloudpano.com",
+    "buymeproperty.com",
+    "egorealestate.com",
+    "kuula.co",
+    "valedolobo.com",
+    "theasys.io",
+    "istaging.com",
+    "virtualinkcy.com",
+    "giraffe360.com",
+    "floorfy.com",
+    "arxftpserver.com",
+)
 REQUEST_HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
     "Accept-Language": "en-US,en;q=0.9",
@@ -94,6 +117,19 @@ def fetch_json(url: str) -> Any:
     return json.loads(fetch_bytes(url).decode("utf-8"))
 
 
+def canonical_image_url(url: str) -> str:
+    """Use Propertybase's original object rather than its 1277×640 display rendition.
+
+    The direct object URL is a stable, public, higher-resolution version of the same image.
+    Other hosts are retained exactly as provided by the source API.
+    """
+    parts = urlsplit(url)
+    if parts.netloc != PROPERTYBASE_S3_HOST or not parts.path.startswith(PROPERTYBASE_S3_PREFIX):
+        return url
+    original_path = re.sub(r"/\d+x\d+/", "/", parts.path, count=1)
+    return urlunsplit((parts.scheme, parts.netloc, original_path, parts.query, ""))
+
+
 def source_images(property_record: dict[str, Any]) -> list[str]:
     ordered: list[tuple[float, int, str]] = []
     for index, item in enumerate(property_record.get("media") or []):
@@ -103,7 +139,7 @@ def source_images(property_record: dict[str, Any]) -> list[str]:
         if not isinstance(url, str) or not url.startswith(("https://", "http://")):
             continue
         order = numeric(item.get("sortonportalfeed"))
-        ordered.append((order if order is not None else 9_999_999, index, url))
+        ordered.append((order if order is not None else 9_999_999, index, canonical_image_url(url)))
     ordered.sort(key=lambda entry: (entry[0], entry[1], entry[2]))
     seen: set[str] = set()
     return [url for _, _, url in ordered if not (url in seen or seen.add(url))]
@@ -120,19 +156,43 @@ def normalise_video(value: Any) -> str | None:
 
 
 def source_videos(property_record: dict[str, Any], listing: dict[str, Any]) -> list[str]:
-    # Horizontal/primary tour first, followed by other populated video fields.
+    # JamesEdition accepts one supported video URL per listing. Prefer the primary horizontal tour;
+    # vertical clips remain a valid fallback video, not a virtual-tour substitute.
     priority_fields = (
         property_record.get("virtual_tour_video_url"),
         listing.get("live_tour_url"),
         listing.get("vertical_video_1"),
         listing.get("vertical_video_2"),
     )
-    videos: list[str] = []
     for raw in priority_fields:
         url = normalise_video(raw)
-        if url and url not in videos:
-            videos.append(url)
-    return videos
+        if url:
+            return [url]
+    return []
+
+
+def supported_virtual_tour_url(value: Any) -> str | None:
+    """Return a compliant JamesEdition virtual-tour share URL, never a video URL."""
+    url = clean(value)
+    if not url.startswith(("https://", "http://")):
+        return None
+    host = urlsplit(url).netloc.lower().removeprefix("www.")
+    return url if any(host == provider or host.endswith(f".{provider}") for provider in SUPPORTED_VIRTUAL_TOUR_HOSTS) else None
+
+
+def source_virtual_tour(property_record: dict[str, Any], listing: dict[str, Any]) -> str | None:
+    # The source's live-tour fields may eventually contain a Matterport or other supported tour.
+    # YouTube walkthroughs, including vertical videos, must remain in media/video/video_url.
+    for raw in (
+        listing.get("live_tour_url"),
+        property_record.get("live_tour_url"),
+        property_record.get("virtual_tour_url"),
+        property_record.get("virtual_tour_video_url"),
+    ):
+        url = supported_virtual_tour_url(raw)
+        if url:
+            return url
+    return None
 
 
 def jamesedition_type(source_type: Any, property_type: Any) -> str | None:
@@ -251,6 +311,7 @@ def candidate_rows(inventory: list[Any]) -> list[dict[str, Any]]:
                 "land_area": numeric(first_value(property_record, "lotsize", "lot_size", "land_area") or first_value(listing, "lotsize", "lot_size", "land_area")),
                 "images": images[:MAX_IMAGES],
                 "videos": source_videos(property_record, listing),
+                "virtual_tour": source_virtual_tour(property_record, listing),
                 "permalink": permalink,
                 "external_url": BRANDED_PROPERTY_ROOT + permalink.lstrip("/"),
                 "agent_id": clean(first_value(agent, "id", "reference")) or "office",
@@ -394,6 +455,8 @@ def build_xml(records: list[dict[str, Any]]) -> bytes:
         for video_url in row["videos"]:
             video = ET.SubElement(media, "video")
             text_element(video, "video_url", video_url)
+        if row.get("virtual_tour"):
+            text_element(media, "virtual_tour_link", row["virtual_tour"])
         text_element(advert, "external_url", row["external_url"])
         text_element(advert, "agent_reference", f"tacr-agent-{row['agent_id']}")
     ET.indent(root, space="  ")
@@ -407,6 +470,7 @@ def validate_xml(xml_content: bytes, expected_count: int) -> dict[str, int]:
         raise ValueError(f"Expected exactly {expected_count} adverts; generated {len(adverts)}.")
     references: set[str] = set()
     videos = 0
+    virtual_tours = 0
     for advert in adverts:
         reference = advert.attrib.get("reference", "")
         if not reference or reference in references:
@@ -424,8 +488,17 @@ def validate_xml(xml_content: bytes, expected_count: int) -> dict[str, int]:
         longitude = float(advert.findtext("location/longitude", "nan"))
         if not -90 <= latitude <= 90 or not -180 <= longitude <= 180:
             raise ValueError(f"{reference} has invalid coordinates.")
-        videos += len(advert.findall("./media/video"))
-    return {"adverts": len(adverts), "videos": videos}
+        video_urls = [clean(node.findtext("video_url")) for node in advert.findall("./media/video")]
+        if len(video_urls) > 1:
+            raise ValueError(f"{reference} exceeds JamesEdition's one-video limit.")
+        if any(not url for url in video_urls):
+            raise ValueError(f"{reference} has an empty video URL.")
+        tour_url = clean(advert.findtext("./media/virtual_tour_link"))
+        if tour_url and supported_virtual_tour_url(tour_url) != tour_url:
+            raise ValueError(f"{reference} has an unsupported virtual-tour URL.")
+        videos += len(video_urls)
+        virtual_tours += int(bool(tour_url))
+    return {"adverts": len(adverts), "videos": videos, "virtual_tours": virtual_tours}
 
 
 def load_json_object(path: Path) -> dict[str, Any]:
@@ -690,6 +763,7 @@ def main() -> int:
         "exclusive_count": sum(row["exclusive"] for row in selected),
         "nonexclusive_count": sum(not row["exclusive"] for row in selected),
         "videos": stats["videos"],
+        "virtual_tours": stats["virtual_tours"],
         "references": [row["reference"] for row in selected],
         "source_fingerprint": hashlib.sha256("|".join(f"{row['reference']}:{row['last_modified']}" for row in selected).encode()).hexdigest(),
     }
