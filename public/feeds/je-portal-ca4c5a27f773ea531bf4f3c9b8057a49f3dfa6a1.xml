@@ -1270,6 +1270,54 @@
       <external_url>https://theagency.cr/property/golden-dreams-home-santa-ana</external_url>
       <agent_reference>tacr-agent-0053m00000AobQfAAJ</agent_reference>
     </advert>
+    <advert reference="LXER14340" category="real estate">
+      <type>sale</type>
+      <price currency="USD">2485000</price>
+      <property_type>House</property_type>
+      <title>Vela Home at Villa Real</title>
+      <description>Vela at Villa Real is a brand new contemporary residence in Costa Rica defined by dramatic mountain views, generous proportions, and an architectural concept that gives the home the feeling of being suspended above the landscape. Set on a 1,495 m² homesite within the established Villa Real gated community, the approximately 850 m² residence opens toward Escazú, Santa Ana, and the western mountains, placing changing light and sunset views at the center of the experience. The architecture is modern and linear, combining strong structural lines with a restrained palette of wood, steel, natural stone, and neutral finishes. Expansive glazing creates a continuous visual connection with the surrounding mountains, while warm timber surfaces and integrated lighting soften the contemporary character of the interiors. The result is a home that feels substantial yet composed, with materials and proportions doing much of the architectural work. At the center of Vela, the living room, dining area, and kitchen come together within a dramatic double height social space. Floor to ceiling glass extends across the mountain facing side of the residence, drawing the landscape into the interiors and creating a striking sense of elevation. The openness of the layout is balanced by warm finishes and carefully defined architectural elements, giving the main living areas a sophisticated but comfortable atmosphere. Indoor and outdoor spaces are designed to read as one continuous experience. Broad openings orient the principal living areas toward the views, allowing the surrounding mountains, shifting cloud cover, and western light to become part of the interior environment throughout the day. The elevated position reinforces the sensation of openness without distracting from the clean architectural composition. The residence includes five en suite bedrooms, with the private spaces designed to maintain the same relationship with the landscape. The primary suite is generously proportioned and oriented toward uninterrupted mountain views, creating a more private counterpoint to the expansive social areas. Full service quarters provide additional functionality within the overall layout. A dedicated multifunctional room adds another layer to the home. Conceived for use as a wine cellar, private lounge, game room, or entertainment area, the space allows the future owner to shape it around individual preferences. It offers a warmer, more intimate atmosphere here, with integrated wood cabinetry, ambient lighting, and large openings that continue to frame the mountains beyond. Currently under construction with estimated completion in early 2027, Vela offers the opportunity to acquire a newly built residence within Villa Real, combining contemporary architecture, substantial interior volume, five en suite bedrooms, flexible entertainment space, and extensive western mountain views. Villa Real is an established gated community between Escazú and Santa Ana, with direct access to Route 27 and convenient connectivity to the west side of San José. Its landscaped setting and proximity to a natural reserve create a residential environment closely connected to greenery. With its elevated setting, linear architecture, warm natural materials, and panoramic outlook, Vela at Villa Real presents a refined interpretation of contemporary residential living in</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Santa Ana</city>
+        <address>Villa Real</address>
+        <latitude>9.947970</latitude>
+        <longitude>-84.170723</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>5</bedrooms>
+      <bathrooms>6</bathrooms>
+      <living_area unit="sqm">850</living_area>
+      <land_area unit="sqm">1495</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DqE1RL/uafuadp3w/TACR-7.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DqE1RL/ahogol0rf/TACR-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DqE1RL/wmcbp8v36/TACR-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DqE1RL/ayshs15u3/TACR-4.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DqE1RL/44ij8f5v0/TACR-5.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DqE1RL/b119x23xk/TACR-6.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DqE1RL/89307wyzm/TACR-8.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DqE1RL/9ryu73jsr/TACR-2.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/vela-home-villa-real</external_url>
+      <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
+    </advert>
     <advert reference="LXER13478" category="real estate">
       <type>sale</type>
       <price currency="USD">2400000</price>
@@ -1809,6 +1857,69 @@
         </video>
       </media>
       <external_url>https://theagency.cr/property/villa-lumina-los-laureles</external_url>
+      <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
+    </advert>
+    <advert reference="LXER10099" category="real estate">
+      <type>sale</type>
+      <price currency="USD">1990000</price>
+      <property_type>House</property_type>
+      <title>The Grandview Home in Cerro Alto</title>
+      <description>The Grandview Home is a 650 m² residence set on a 1,373 m² property in Cerro Alto, Escazú, Costa Rica, combining panoramic city views with generous family spaces, refined finishes, and a three level layout designed for both privacy and entertaining. Marble floors, wood detailing, expansive European windows, private balconies, gardens, and a swimming pool shape a home with a warm, classic character, while its elevated position within Cerro Alto keeps the views present throughout the residence. The top level centers on an open living and dining area framed by floor to ceiling European windows. Panoramic city views become part of the interior experience, while exquisite marble flooring establishes a polished backdrop for the main social spaces. The kitchen is located on this level as well, with state of the art appliances, a walk in pantry, and a balcony that extends the living space outdoors. Privacy defines the middle level, where central air conditioning and solid almendro wood floors create a distinct atmosphere from the social floor above. This level includes three bedrooms and the primary suite. Each bedroom features a private bathroom, walk in closet, balcony, and panoramic views, while the primary suite offers two walk in closets. A separate TV room provides an additional space for time with family. The garden level shifts the focus toward indoor and outdoor entertaining. Gardens surround the swimming pool, complemented by a pool house social area with an open dining space and two additional bathrooms. The connection between the pool, gardens, and gathering areas gives this floor a relaxed function while remaining integrated with the rest of the residence. Additional spaces include an area for a private gym, two storage areas, laundry and service rooms, and a four car garage. Together, these functional areas support the scale of the home without competing with its principal living and entertaining spaces. Cerro Alto adds a substantial residential setting to the property, with two clubhouses, swimming pools, gyms, tennis courts, soccer facilities, a basketball court, playground, and social areas. The community is located in Escazú near Distrito 4 and Multiplaza, with access to the broader commercial and service offerings of the area. With its panoramic city views, four bedroom layout, pool and garden level, generous social spaces, and refined mix of marble and wood finishes, The Grandview Home presents a substantial family residence within Cerro Alto in</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Escazú</city>
+        <address>Cerro Alto</address>
+        <latitude>9.941120</latitude>
+        <longitude>-84.160010</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>4</bedrooms>
+      <bathrooms>5</bathrooms>
+      <living_area unit="sqm">650</living_area>
+      <land_area unit="sqm">1373</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/m1uuoaqdg/28.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/80qt13hzo/1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/f1j7myhi4/12.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/7ns3itc2f/14.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/irirft953/17.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/zuihlqvir/19.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/bi9k8vm1r/20.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/lnmdilbjw/22.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/eov1505e2/25.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/31y11pigu/26.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/4v1dc7a1a/27.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0Co0000005r4BF/658776imb/34.jpg</image_url>
+        </image>
+        <video>
+          <video_url>https://www.youtube.com/watch?v=dFBFIBtHs3E</video_url>
+        </video>
+      </media>
+      <external_url>https://theagency.cr/property/grandview-cerro-alto</external_url>
       <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
     </advert>
     <advert reference="LXER10386" category="real estate">
@@ -2772,69 +2883,6 @@
       </media>
       <external_url>https://theagency.cr/property/modern-flow-apartment-solaris</external_url>
       <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
-    </advert>
-    <advert reference="LXCR13023" category="real estate">
-      <type>sale</type>
-      <price currency="USD">1590000</price>
-      <property_type>Condo</property_type>
-      <title>Monterán Greenside Home</title>
-      <description>Elegant serenity blending luxury and nature in Monterán's prestigious community. Situated on a level plot in an elevated position within Monterán on the east side of San José, the Monterán Greenside Home boasts an extraordinary view of the community's Golf course, visible from all areas of the property. The home was crafted with careful attention to detail, featuring elegant finishes and wooden beams, almond wood coffered ceilings, and marble flooring, all contributing to a welcoming and warm atmosphere. The design of the home thoughtfully blends its interior spaces with the natural environment. The exterior of Monterán Greenside Home showcases inviting design, incorporating water features and stone work that harmonize with the surrounding greenery, creating a refined and inviting appearance. A cobblestone path lined with palm trees leads to the double wooden door entry, set within a stone arch that enhances the architectural beauty. Upon entry, the remarkable view offered by the home is immediately evident. The entrance hall of Monterán Greenside Home flows openly into the living room, where the intricate design of beams and coffered ceilings catch the eye. From the foyer, the space transitions seamlessly into the living and dining areas, which are distinct yet harmoniously connected. The spacious living room extends to a private terrace and is adorned with wooden columns and almond wood detailing, adding warmth to the area. The dining room is equally spacious, featuring a passage leading to the garden. Each social area in Monterán Greenside Home opens onto individual terraces through full-length windows, offering diverse and private panoramic views. The property's elevated position, coupled with the terrace height, provides a boundless and secluded visual experience of tranquility and nature. The design allows for an immersive appreciation of the scenic lake and golf course views, as if they were natural extensions of the garden. Adjacent to the dining area, a raised stone pathway over an elegant water feature leads to a separate social space. This enchanting area, surrounded by lush vegetation and water, creates a sensation of being amidst nature. It serves ideally as a gazebo and includes a convenient half-bathroom. The separate kitchen in Monterán Greenside Home is expansive and airy, featuring a central island and views towards the main entrance. Next to the kitchen is a charming, independent vivarium, perfect for those passionate about planting and gardening. The private quarters of Monterán Greenside Home commence on the first floor, including a commodious TV room with large sliding doors and picturesque views of the golf course. There are two additional bedrooms in this section, each boasting a walk-in closet, full bathroom, and almond wood flooring. The master bedroom is situated on the second floor, offering a balcony with stunning views of the golf course and sunsets. This spacious room includes a cozy reading nook, a bathroom with elegant marble finishes, and a generously sized walk-in closet. Monterán Greenside Home also features a well-ventilated service area and a substantial attic for storage. Conveniently located near the main entrance is a guest bathroom, elegantly finished with marble and wood. Its position in the eastern part of Costa Rica's Central Valley ensures proximity to a variety of commercial, educational, and dining options, all set in a cool and pleasant climate. Monterán Greenside Home is an ideal choice for those seeking serenity and a refreshi</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Curridabat</city>
-        <address>Monterán</address>
-        <latitude>9.921296</latitude>
-        <longitude>-84.017258</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>3</bedrooms>
-      <bathrooms>3</bathrooms>
-      <living_area unit="sqm">680</living_area>
-      <land_area unit="sqm">2611</land_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/4jfnbkws4/Facade-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/f4stbxqu5/Living-Room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/oqdnn9uwr/Aerial-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/64q0jsfek/Dining-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/2d66brfuh/Aerial-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/p9l1uag6a/Garden-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/bib7lmp76/Garden-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/w7megid4z/Half-bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/ga344mjrl/Hallway-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/xthdibx9y/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/gysp2h3a2/Living-Room-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00000LHwuk/okk9sb9bi/Master-Bathroom-1.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=ux3NN9uyR2I</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/monteran-greenside-home</external_url>
-      <agent_reference>tacr-agent-0051N00000712R8QAI</agent_reference>
     </advert>
     <advert reference="LXER10977" category="real estate">
       <type>sale</type>
@@ -6017,69 +6065,6 @@
       </media>
       <external_url>https://theagency.cr/property/marble-breeze-apartment</external_url>
       <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
-    </advert>
-    <advert reference="LXCR14265" category="real estate">
-      <type>sale</type>
-      <price currency="USD">570000</price>
-      <property_type>House</property_type>
-      <title>The Corner Home @ Tierras del Este</title>
-      <description>Corner Home at Tierras del Este is a classic family residence in Curridabat, Costa Rica, designed with a calm sense of proportion and an easy connection between indoor and outdoor living. Set within Condominio Tierras del Este, the home offers generous social areas, natural light, and a layout that supports both everyday family life and relaxed entertaining, all within one of the most established residential areas on the east side of San José. The home presents an elegant corner facade with a classic design that offers a timeless feel. A front stairway framed by gardens leads to the main entrance, while large windows bring abundant natural light into the interiors. Upon entry, a stone clad wall creates a graceful vestibule that adds both character and privacy before opening into the main living room. The living area is spacious and welcoming, with high ceilings, porcelain floors, a decorative stone wall, and an open layout designed for family living or receiving guests. Adjacent to this space is a versatile game room with a bar area, sink, and direct access to the terrace, creating a natural extension for informal gatherings. Beside it, a sliding door opens to a large office with excellent natural light, offering a comfortable setting for working from home. On the other side of the living room, the dining area and kitchen can be connected through a sliding door or kept as separate environments. The kitchen is generous and functional, featuring a central island, dark wood cabinetry, and white quartz countertops. From the kitchen, there is also access to the terrace, which includes a sink and BBQ area and opens toward the rear garden for outdoor meals and time with family. A broad staircase leads to the second level, where two secondary bedrooms are located, one with an additional space suitable for a study area or reading corner. This level also includes a full bathroom and balcony. The primary bedroom offers a comfortable walk-in closet and private bathroom. All bedrooms benefit from strong natural light, creating warm and comfortable private spaces. Condominio Tierras del Este in Curridabat offers a calm residential setting with fresh climate, mountain views, and convenient access to shops and services. The community includes 24/7 security, controlled access, green areas, walking trails, BBQ rancho, clubhouse, playground, coworking space, tennis and basketball courts, and a pet-friendly environment. Curridabat is one of the most desired residential areas along the eastern corridor of San José, known for established neighborhoods, a high quality of life, and proximity to key urban services. Access through Circunvalación, San Pedro, and Tres Ríos connects residents with central San José and the historic city of Cartago. The area also offers a fresh, temperate climate and access to respected private schools such as Anglo American, SEK, and Saint Clare, as well as universities including UCR, UACA, Universidad Latina, and Santa Paula. Corner Home at Tierras del Este brings together classic design, family focused spaces, and the convenience of Curridabat, Costa Rica, in a residence well suited for comfortable daily living within an established</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Curridabat</city>
-        <address>Tierras del Este</address>
-        <latitude>9.925850</latitude>
-        <longitude>-84.040340</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>3</bedrooms>
-      <bathrooms>2</bathrooms>
-      <living_area unit="sqm">363</living_area>
-      <land_area unit="sqm">522</land_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/oihr8eknx/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/4qfnczytk/Dining-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/3ab0nyzxo/Facade-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/76l90q3bc/Game-Room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/g17hb5okx/Game-Room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/vr9f2aryl/Garden-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/l5tslvhda/Half-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/x5971ngoa/Hallway-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/33am8ppk7/Kitchen-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/iledvc9mx/Living-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/w20tyxdcz/Living-room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000D4xBbR/m9vanwqec/Living-room-3.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=tQKDo1735hQ</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/the-corner-home-tierras-del-este</external_url>
-      <agent_reference>tacr-agent-0051N00000712R8QAI</agent_reference>
     </advert>
   </adverts>
 </jamesedition_feed>
