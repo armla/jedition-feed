@@ -91,6 +91,15 @@ def numeric(value: Any) -> float | None:
         return None
 
 
+def positive_integer(value: Any, maximum: int | None = None) -> int | None:
+    """Return a positive whole number or None; never emit fractional XML int fields."""
+    number = numeric(value)
+    if number is None or number <= 0 or not number.is_integer():
+        return None
+    result = int(number)
+    return result if maximum is None or result <= maximum else None
+
+
 def first_value(record: dict[str, Any], *keys: str) -> Any:
     for key in keys:
         if key in record and present(record[key]):
@@ -307,6 +316,15 @@ def candidate_rows(inventory: list[Any]) -> list[dict[str, Any]]:
                 "region_description": clean(listing.get("region_description") or property_record.get("region_description")),
                 "bedrooms": numeric(property_record.get("bedrooms") or listing.get("bedrooms")),
                 "bathrooms": numeric(first_value(property_record, "fullbathrooms", "bathrooms") or first_value(listing, "fullbathrooms", "bathrooms")),
+                # Salesforce Propertybase custom field: Stories__c (Number 2,0). The public API
+                # currently omits it, but mapping it here makes floors publish automatically as
+                # soon as the API serializer exposes the source field. Standard aliases keep this
+                # bridge tolerant of a future API field-name normalization.
+                "floors": positive_integer(
+                    first_value(property_record, "Stories__c", "stories", "floors")
+                    or first_value(listing, "Stories__c", "stories", "floors"),
+                    maximum=99,
+                ),
                 "living_area": numeric(first_value(property_record, "totalarea", "area_m2", "living_area") or first_value(listing, "totalarea", "area_m2", "living_area")),
                 "land_area": numeric(first_value(property_record, "lotsize", "lot_size", "land_area") or first_value(listing, "lotsize", "lot_size", "land_area")),
                 "images": images[:MAX_IMAGES],
@@ -444,6 +462,8 @@ def build_xml(records: list[dict[str, Any]]) -> bytes:
             text_element(advert, "bedrooms", str(int(row["bedrooms"])))
         if row["bathrooms"] and row["bathrooms"] > 0:
             text_element(advert, "bathrooms", str(int(row["bathrooms"])))
+        if row.get("floors"):
+            text_element(advert, "floors", str(row["floors"]))
         if row["living_area"] and row["living_area"] > 0:
             text_element(advert, "living_area", str(int(row["living_area"])), {"unit": "sqm"})
         if row["land_area"] and row["land_area"] > 0:
@@ -488,6 +508,9 @@ def validate_xml(xml_content: bytes, expected_count: int) -> dict[str, int]:
         longitude = float(advert.findtext("location/longitude", "nan"))
         if not -90 <= latitude <= 90 or not -180 <= longitude <= 180:
             raise ValueError(f"{reference} has invalid coordinates.")
+        floors = clean(advert.findtext("floors"))
+        if floors and (not floors.isdigit() or not 1 <= int(floors) <= 99):
+            raise ValueError(f"{reference} has an invalid floors value: {floors!r}.")
         video_urls = [clean(node.findtext("video_url")) for node in advert.findall("./media/video")]
         if len(video_urls) > 1:
             raise ValueError(f"{reference} exceeds JamesEdition's one-video limit.")

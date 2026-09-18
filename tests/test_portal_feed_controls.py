@@ -6,6 +6,7 @@ import importlib.util
 import json
 import tempfile
 from pathlib import Path
+from xml.etree import ElementTree as ET
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "generate_jamesedition_feed.py"
 spec = importlib.util.spec_from_file_location("jamesedition_feed", MODULE_PATH)
@@ -34,6 +35,7 @@ def row(reference: str, *, exclusive: bool, priority: int) -> dict:
         "region_description": "Tamarindo",
         "bedrooms": None,
         "bathrooms": None,
+        "floors": None,
         "living_area": None,
         "land_area": None,
         "latitude": 10.300001,
@@ -126,4 +128,39 @@ media_row.update({
 xml = feed.build_xml([media_row])
 assert feed.validate_xml(xml, 1) == {"adverts": 1, "videos": 1, "virtual_tours": 1}
 
-print("PASS: portal roster, activity identity, canonical images, and compliant media rules verified.")
+assert feed.positive_integer("2", maximum=99) == 2
+assert feed.positive_integer(2.5, maximum=99) is None
+assert feed.positive_integer(100, maximum=99) is None
+stories_property = {"Stories__c": 3}
+stories_row = row("STORIES-001", exclusive=True, priority=1)
+stories_row["floors"] = feed.positive_integer(stories_property["Stories__c"], maximum=99)
+stories_xml = feed.build_xml([stories_row])
+stories_advert = ET.fromstring(stories_xml).find("./adverts/advert")
+assert stories_advert is not None and stories_advert.findtext("floors") == "3"
+assert feed.validate_xml(stories_xml, 1) == {"adverts": 1, "videos": 0, "virtual_tours": 0}
+
+stories_source = {
+    "id": "PROPERTY-STORIES-001",
+    "country": "Costa Rica",
+    "Stories__c": 2,
+    "media": [
+        {"isonportalfeed": True, "sortonportalfeed": 1, "url": "https://images.example/first.jpg"},
+        {"isonportalfeed": True, "sortonportalfeed": 2, "url": "https://images.example/second.jpg"},
+    ],
+    "listings": [{
+        "lx_mls_id": "SOURCE-STORIES-001",
+        "listingtype": "Sale",
+        "status": "Active",
+        "publish": True,
+        "listingprice": 2_000_000,
+        "priority": "1",
+        "property_subtype": "House",
+        "propertytype": "House",
+        "name": "Stories mapping residence",
+        "permalink": "stories-mapping-residence",
+        "agent": {"id": "agent-1", "firstname": "The", "lastname": "Agency", "email": "team@example.test"},
+    }],
+}
+assert feed.candidate_rows([stories_source])[0]["floors"] == 2
+
+print("PASS: roster, activity identity, canonical images, compliant media, and Stories mapping verified.")
