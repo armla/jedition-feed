@@ -45,12 +45,13 @@ The generator uses the following confirmed JamesEdition policy:
 - Propertybase/S3 images are emitted from the stable **canonical original-object URL**, not the `1277x640` display rendition returned by the inventory API. This preserves the native asset dimensions while retaining source order and URL stability;
 - JamesEdition supports **one** `media/video/video_url` per listing. The generator emits the primary horizontal walkthrough first; a vertical video is used only as a fallback video where no primary walkthrough exists;
 - `media/virtual_tour_link` is emitted only when the source contains a public link from a JamesEdition-supported immersive-tour provider (for example, Matterport, My360, Kuula, CloudPano, or Giraffe360). A YouTube vertical video is not a compliant virtual-tour link and is never put in that field;
+- `<floors>` is populated from the Salesforce Propertybase `Stories__c` custom field (or a normalized `stories` / `floors` API alias), only when it is a whole number from 1–99. JamesEdition defines this as the total number of storeys in the property, not the unit's floor number;
 - MLS ID remains the durable JamesEdition listing reference;
 - addresses are hidden (`<hide_address>yes</hide_address>`), while verified map coordinates remain in the XML.
 
 ## Data sources and safeguards
 
-The generator reads the canonical Agency inventory API, the Agency’s public MLS-coordinate map, and the English property description rendered by each branded listing page. It validates the required roster size, unique MLS references, required fields, two or more images, maximum image count, price and currency, description, agent reference, valid coordinate ranges, a maximum of one supported video, and supported virtual-tour URLs before replacing the published XML.
+The generator reads the canonical Agency inventory API, the Agency’s public MLS-coordinate map, and the English property description rendered by each branded listing page. It validates the required roster size, unique MLS references, required fields, two or more images, maximum image count, price and currency, description, agent reference, valid coordinate ranges, valid floor counts where supplied, a maximum of one supported video, and supported virtual-tour URLs before replacing the published XML.
 
 A failed source call, incomplete enrichment, or failed XML validation exits without replacing the current file. The last successfully validated feed therefore remains available to JamesEdition.
 

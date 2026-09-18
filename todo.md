@@ -8,6 +8,7 @@
 - [x] Enforce JamesEdition's one-video limit: retain the primary horizontal walkthrough and use a vertical clip only as fallback.
 - [x] Audit all emitted images and replace the low-resolution `1277x640` display renditions with reachable canonical Propertybase/S3 original-object URLs.
 - [x] Add compliant virtual-tour-link support for JamesEdition-approved immersive-tour providers; source virtual-tour fields currently contain YouTube URLs only and therefore emit no invalid virtual-tour links.
+- [x] Add safe JamesEdition `<floors>` mapping for the Salesforce `Stories__c` property field and normalized source aliases.
 - [x] Populate verified English descriptions and authoritative coordinates.
 - [x] Add a safe-failure generator design that retains the last known-good feed.
 - [x] Prepare a nightly workflow for 10:58 PM Costa Rica time (04:58 UTC).
@@ -23,6 +24,7 @@
 - [ ] Confirm whether the four exclusive listings with a commercial source classification should be eligible for JamesEdition; they are excluded under the current conservative policy.
 - [ ] Establish an approved coordinate precision policy for high-profile or owner-occupied residences.
 - [ ] Add the dedicated `JAMESEDITION_PUBLISH_WEBHOOK_URL` secret and activate the JamesEdition Zapier-to-Salesforce mapping; this will backfill the current feed roster once.
+- [ ] Expose `Stories__c` as `stories` (or `Stories__c`) in the public Agency listing API; the current bulk and detail payloads omit the field, so no live `<floors>` values can yet be published.
 - [x] Publish and validate the 100-record portal feed on `jamesedition-portal-live`, using `JAMESEDITION_PUBLISH_WEBHOOK_URL_PORTAL` for its separate Salesforce activity channel. The initial validated roster created 100 distinct portal activities; its reconciled state prevents replay, and later runs are incremental.
 
 ## Maintenance
