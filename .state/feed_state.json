@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-18T09:15:41.886731+00:00",
+  "generated_at_utc": "2026-09-19T09:01:52.914797+00:00",
   "feed_label": "ELITE",
   "selection_policy": "exclusive-first; $500,000 USD minimum; 50-listing cap; excluded roster references: 0",
   "reference_count": 50,
@@ -59,5 +59,5 @@
     "LXGR14010",
     "LXER11158"
   ],
-  "source_fingerprint": "1eebcb727f8ca314e24c98b98cb88cce3f73407a7df4c197532829d0dd752672"
+  "source_fingerprint": "6923358f0f0a28bbe0af483881cb9b3277c877a280f35a7d5a9013de18d0601a"
 }
