@@ -5352,6 +5352,66 @@
       <external_url>https://theagency.cr/property/modern-oasis-single-level-home-santa-ana</external_url>
       <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
     </advert>
+    <advert reference="LXER14368" category="real estate">
+      <type>sale</type>
+      <price currency="USD">835000</price>
+      <property_type>House</property_type>
+      <title>Casa Vetta en Cerro Alto</title>
+      <description>Set within the prestigious community of Cerro Alto in Escazú, on the west side of Costa Rica's Central Valley, Casa Vetta combines generous living spaces, abundant natural light, and spectacular views over San José and the surrounding mountains. Its classic architecture is complemented by thoughtfully updated interiors, including a remodeled kitchen and renovated bathrooms that give the home a fresh and contemporary feel. The main living level welcomes you with bright social areas designed for comfortable everyday living and entertaining. Large windows allow natural light to fill the living and dining spaces while opening to impressive panoramic views of the city and mountain landscape beyond. Warm wood floors and detailing add character throughout, creating an appealing contrast with the home's lighter, updated finishes. The remodeled kitchen continues this balance with light wood cabinetry, white countertops, generous work surfaces, and a large window overlooking the greenery outside. Its connection to the social areas allows the home to feel cohesive while still maintaining clearly defined spaces. The upper level is dedicated to the home's main private quarters. A comfortable TV room serves as the central family space, connecting to two secondary bedrooms that share a full bathroom, as well as the primary suite. The bedrooms enjoy the same exceptional views toward San José and the surrounding mountains, bringing a sense of openness and connection to the landscape throughout the private areas of the home. The primary bedroom offers generous proportions, abundant natural light, two walk-in closets, and its own renovated ensuite bathroom. One of the distinctive features of this residence is its additional lower level. This floor opens directly onto the terrace and garden, creating a natural extension of the home's indoor and outdoor living areas. It also includes the fourth bedroom, making it a flexible space for guests, an older child, a private office, or a more independent bedroom suite. Outside, the landscaped garden includes a covered area surrounded by greenery, providing a comfortable setting for outdoor dining, entertaining, or simply enjoying Escazú's pleasant climate. Additional spaces include service quarters, storage areas, and convenient parking, supporting the practical needs of a full time residence. Located in Cerro Alto, one of Escazú's most established residential communities, the property benefits from controlled access, extensive security, and a complete offering of amenities including tennis courts, swimming pools, clubhouses, and recreational areas. Its strategic location places residents within minutes of Distrito 4, shopping, restaurants, international schools, medical centers, and the main business districts of western San José, while also providing convenient connectivity to Route 27. With its remodeled interiors, four bedroom layout, additional garden level, and exceptional city and mountain views, Casa Vetta offers a versatile and comfortable residence within Cerro Alto in Es</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Escazú</city>
+        <address>Cerro Alto</address>
+        <latitude>9.941481</latitude>
+        <longitude>-84.160380</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>4</bedrooms>
+      <bathrooms>3</bathrooms>
+      <living_area unit="sqm">381</living_area>
+      <land_area unit="sqm">629</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/g7f5nbpp4/Living-room-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/t733o8m3b/Garden-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/h4p2zvj3u/Garden-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/c9ztpapxz/Half-Bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/vnw3ymen8/Kitchen-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/l11wv62sp/Living-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/fn62wzuvu/Living-room-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/80q2lj4p7/Master-Bedroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/h1uimzlem/Secondary-Bathroom-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/qs4v07x2o/Secondary-Bedroom-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/sr1r9sek2/Terrace-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DyVgWP/24xee7n7s/Terrace-2.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/casa-vetta-cerro-alto</external_url>
+      <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
+    </advert>
     <advert reference="LXER10775" category="real estate">
       <type>sale</type>
       <price currency="USD">790000</price>
@@ -5413,68 +5473,6 @@
         </video>
       </media>
       <external_url>https://theagency.cr/property/casa-serene-cerro-real</external_url>
-      <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
-    </advert>
-    <advert reference="LXER14149" category="real estate">
-      <type>sale</type>
-      <price currency="USD">780000</price>
-      <property_type>Apartment</property_type>
-      <title>RetroModern Apartment</title>
-      <description>RetroModern Apartment in Rohrmoser offers a spacious single level layout, park views, and a strong design identity in one of the most established residential sectors on the west side of San José, Costa Rica. Located directly across from Parque del Café in Torre UNO, this residence combines generous social spaces, refined finishes, and a boutique vertical setting that adds context and convenience to daily living. The apartment opens through a vestibule that immediately sets the tone for the home. To the right is the guest bathroom, followed by a very expansive social area with an integrated Miton kitchen. Wood cabinetry, a tiled accent wall in green tones, and exposed concrete finishes on select walls and throughout the ceilings give the interiors a composed, contemporary character. A balcony wraps around the social area and frames views of Parque del Café, while engineered wood flooring runs throughout the apartment and brings warmth to the overall design. Also to the right of the social area is the primary bedroom, accessed through a wood clad wall that creates a more private transition. The room is spacious and benefits from park views, a large walk-in closet, and a generous bathroom with a wood vanity and white countertop. The material palette remains consistent here, reinforcing the apartment’s original industrial expression with a more residential sense of comfort. To the left of the entry vestibule are the secondary bedrooms, which share a bathroom finished with white and blue green tile, a wood vanity, and a white quartz countertop. Along this hallway there is also a linen closet, and at the end, a service room with a full bathroom. The overall layout separates the private bedroom wing from the main entertaining spaces in a way that feels practical and well resolved. Torre UNO is a boutique residential tower in the heart of Rohrmoser, directly facing Parque del Café. Residents enjoy a sky gym with panoramic views, lounge, and a large social terrace. As a residence, this apartment stands out for its scale, materiality, and position within Rohrmoser, offering a distinctive home in a well regarded part of San José, Cost</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Sabana</city>
-        <address>Rohrmoser</address>
-        <latitude>9.940477</latitude>
-        <longitude>-84.116457</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>3</bedrooms>
-      <bathrooms>2</bathrooms>
-      <living_area unit="sqm">215</living_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/r5znh21dk/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/st3znm9rv/Half-bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/b3kulqveq/Kitchen-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/53anb553o/Kitchen-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/yrfh9z326/Kitchen-4.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/ffrljvoii/Living-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/ggxwsi89t/Living-room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/wk1vg3bj0/Master-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/fq96wvs61/Master-bedroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/6pqkedoby/Master-bedroom-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/fq9e21zno/Secondary-bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BdrlhR/4snhslw7c/Secondary-bedroom-1.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=0gZ_95F1oV8</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/retromodern-apartment</external_url>
       <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
     </advert>
     <advert reference="LXCR14172" category="real estate">
