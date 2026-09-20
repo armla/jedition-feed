@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-19T09:12:07.133001+00:00",
+  "generated_at_utc": "2026-09-20T09:36:06.955071+00:00",
   "feed_label": "PORTAL",
   "selection_policy": "exclusive-first; $500,000 USD minimum; 100-listing cap; excluded roster references: 50",
   "reference_count": 100,
@@ -109,5 +109,5 @@
     "LXER11012",
     "LXER14297"
   ],
-  "source_fingerprint": "ad7f67b61e3ee14f16abb1c1b1a7d419b2222fdc914067f9ba407dab2f8fdce9"
+  "source_fingerprint": "34d794ea59eec1a9b90df9096ae7ad72bed34c65d11b249377d40118f9c7ae53"
 }
