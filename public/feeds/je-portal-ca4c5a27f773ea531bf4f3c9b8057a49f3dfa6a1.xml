@@ -91,69 +91,6 @@
     </agent>
   </agents>
   <adverts>
-    <advert reference="LXER12666" category="real estate">
-      <type>sale</type>
-      <price currency="USD">4250000</price>
-      <property_type>House</property_type>
-      <title>Absolute Home @ Valle del Sol</title>
-      <description>On the west side of the Central Valley of Costa Rica, Absolute Home redefines contemporary luxury in Valle del Sol, where architectural artistry meets golf-side living. This exceptional three-level residence merges natural stone and rich wood with seamless craftsmanship to create an atmosphere of warmth and sophistication, featuring top amenities rarely found together in a single residence. From the first glance, its striking façade clad in Niwala stone and floating stone steps framed by manicured gardens set the tone for Absolute Home. The entrance opens into a double-height foyer anchored by a sculptural marble staircase. Throughout the interior, ivory-toned marble floors flow through expansive social areas, connecting the living room, dining area, and kitchen into one fluid, light-filled space designed for modern living. A statement Onyx fireplace enhances the main living area, while the kitchen, equipped with Gaggenau paneled appliances and an oversized island for eight, serves as both a gathering point and a culinary centerpiece. Generous storage, a walk-in pantry, and direct access to the service and laundry quarters make daily life practical. Large sliding glass doors extend the interiors to a covered terrace, seamlessly blending indoor and outdoor living. The terrace includes a built-in BBQ bar with seating for four, ideal for relaxed meals and sunset gatherings. Beyond lies the pool and Jacuzzi area, complete with a sun deck, wet bar with mini-fridge, and a fire pit framed by four cascading water features. The lushly landscaped gardens provide privacy and tranquility, making it a perfect setting for both entertainment and family life. A private elevator connects all three levels of Absolute Home, ensuring accessibility and convenience throughout the home. At the heart of the home’s wellness amenities lies a private spa, offering a sauna, Turkish bath, cold plunge, and massage area. This is a sanctuary of restoration and indulgence rarely found in residential properties. The upper level features a bright family lounge with pool table and terrace overlooking the golf course, creating a relaxed setting for movie nights or social evenings. Three spacious bedrooms, each with air conditioning, en-suite bathroom, and walk-in closet, ensure comfort and privacy. The primary suite is a masterpiece of design, offering double walk-in closets, dual vanities, a soaking tub, and a private balcony framing beautiful views of the golf course. On the main floor, an elegant home cinema and a fully equipped gym with panoramic windows expand the home’s exceptional amenities. The property includes four covered parking spaces with storage and direct access to the pantry and laundry areas. Located within Valle del Sol Residential and Golf Community, one of Santa Ana’s most prestigious addresses, residents enjoy triple-level security, landscaped boulevards, and access to top-tier amenities including a professional 18-hole golf course, tennis courts, restaurant, and scenic walking trails. Just minutes away, Lindora provides fine dining, international schools such as Pan-American and Saint Jude, upscale boutiques, and essential conveniences—making Absolute Home @ Valle del Sol a rare combination of luxury, location, and lifestyle on the west side of San José. Valle del Sol enjoys a privileged location in Santa Ana, one of the most desirable areas in Costa Rica’s western Central Valley. Its strategic position provides direct access to Highway 27, offering quick and convenient connectivity to downtown San José, Lindora, Escazú, and the Pacific Coast. The community is surrounded by essential amenities, including upscale shopping centers, international schools, fine dining, and medical services, all just minutes away. With its exceptional amenities, golf-front setting, and unmatched location, Absolute Home represents one of the finest expressions of modern living in Costa Rica’s</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Pozos</city>
-        <address>Santa Ana</address>
-        <latitude>9.951161</latitude>
-        <longitude>-84.207115</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>5</bedrooms>
-      <bathrooms>6</bathrooms>
-      <living_area unit="sqm">1400</living_area>
-      <land_area unit="sqm">1320</land_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/yxd86xuoh/Facade-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/u5dzhjbpb/Aerial-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/71evffebn/Elevator-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/03t9g749m/Game-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/o1dc013q2/Gym-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/qky1t9npj/Half-bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/jbesmj8q0/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/7msh9s06y/Kitchen-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/nyi7kdeau/Living-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/l976it9ul/Living-room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/38s9ca0gv/Master-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFwcz/3o0kbw59p/Master-bedroom-2.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=NB04edNCCds</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/absolute-home-valle-del-sol</external_url>
-      <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
-    </advert>
     <advert reference="LXHR14327" category="real estate">
       <type>sale</type>
       <price currency="USD">4250000</price>
@@ -424,6 +361,12 @@
       <land_area unit="sqm">8237</land_area>
       <media>
         <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/5z2uoc15x/TACR-26.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/hy10fgmgw/TACR-21.jpg</image_url>
+        </image>
+        <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/f5zlygezw/TACR-1.jpg</image_url>
         </image>
         <image>
@@ -433,9 +376,6 @@
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/np9knrqk2/TACR-20.jpg</image_url>
         </image>
         <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/hy10fgmgw/TACR-21.jpg</image_url>
-        </image>
-        <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/trf5xhkvu/TACR-22.jpg</image_url>
         </image>
         <image>
@@ -443,9 +383,6 @@
         </image>
         <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/9d2548dge/TACR-25.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/5z2uoc15x/TACR-26.jpg</image_url>
         </image>
         <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BFoy0Z/t1ernsfee/TACR-27.jpg</image_url>
@@ -585,6 +522,69 @@
       </media>
       <external_url>https://theagency.cr/property/art-estate-santa-ana</external_url>
       <agent_reference>tacr-agent-0053m00000AobQfAAJ</agent_reference>
+    </advert>
+    <advert reference="LXER12675" category="real estate">
+      <type>sale</type>
+      <price currency="USD">3400000</price>
+      <property_type>House</property_type>
+      <title>Designers Dream Home @ Villa Real</title>
+      <description>Elegance, mountain views and impeccable attention to detail. Designer’s Dream is a two-level luxury home featuring a unique style in Villa Real, on the coveted west side of San José, Costa Rica. Ample areas perfect for entertainment, carefully selected finishes and thoughtful design combine to create an elegant and refreshing home with plenty of natural light and ventilation. The home enjoys stunning mountain views to the east and south of the city amidst the lush green areas of Villa Real, the exclusive community strategically located between Escazú and Santa Ana. Cobbled streets guide to the Designer Dream Home entrance. A U-shaped driveway surrounded by manicured gardens with tall palm trees introduce the modern architecture with clean lines, high ceilings and perfectly balanced black and white contrasts. The large main door welcomes opens onto an ample, open space with double-height ceilings and marble floors imported from Italy, credit to the renowned interior designer Ileana Palacios. Beautiful mountain and garden views from the terrace imbue the entire social area with a refreshing air. Designer Dream Home’s main living area is integrated with the dining area, both offering spacious areas radiating white elegance and equipped with low energy consumption air conditioning. Next to the dining area, glass sliding doors open to the climate-controlled wine room, boasting two walls for wines, a round central table and a beautiful Baccarat lamp. The guest bathroom boasts onyx detailing imported from Brazil. The living room also extends to the kitchen and family TV areas. The Designer Dream Home Kitchen boasts black panels with white furniture and countertops, creating an elegant and inviting design. The main central counter offers plenty of preparation space, a sink and a Milton kitchen. The black panels hide Sub-Zero and Wolf appliances and, like the rest of the home, the kitchen is equipped with Lutron and Sonos smart lighting and sound systems. Both the TV room and kitchen areas open through a set of glass sliding doors to the terrace, boasting a decked floor with an open yet covered distribution with transparent roof that adds natural illumination. Perfect for weekend BBQ’s and celebrations, this area connects to the patio, a flat space with landscaped gardens and clear mountain views. One of Designer’s Dream most unique features is its private area on the first floor. The master suite offers a spacious area with double-height ceilings, electric curtains and sliding glass doors that open to the garden, incorporating natural ventilation. The master ensuite bathroom offers a bathtub and continues the elegant style with black and white blends. Two secondary bedrooms are also offered on the first floor, each with walk-in closet, air conditioning and double-height ceilings, and private bathroom. Back near the wine area, a black staircase with glass railing and steel detailing guides guests to the upper floor, where an office or fourth bedroom is included. It has a walk-in closet, bathroom and views to the east of the city. By being the only room in the upper floor it has plenty of privacy. Designer’s Dream Home offers a two-car garage and outside space for several more. Near the garage, a multi-purpose room is offered, ideal for a gym, movie theater or an office, with the advantage of having an additional entrance outside the house. The laundry area connects to a secondary kitchen with black quartz countertops. Villa Real is an exclusive community known for its cobbled streets and wide array of amenities. The social area offers a BBQ clubhouse beside a kid’s playground and a lap pool. A covered tennis court, turf soccer field and a basketball court are distributed nearby. For more formal occasions, an indoor social area is available for celebrations or any other event. Villa Real is equipped with triple-level security, hiking trails and a direct access to Route 27, minutes away from the top-quality schools, services, and restaurants Escazú a</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Santa Ana</city>
+        <address>Villa Real</address>
+        <latitude>9.946575</latitude>
+        <longitude>-84.173276</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>4</bedrooms>
+      <bathrooms>5</bathrooms>
+      <living_area unit="sqm">819</living_area>
+      <land_area unit="sqm">1291</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/x3d1hto9u/Master-Bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/0vlothxqv/Kitchen-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/68eu5wtxl/LX-64.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/zby8ofmul/LX-48.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/nop00p488/LX-46.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/z901io9fn/Dining-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/yrj33xwof/Living-room-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/o3njbcqd5/Living-room-4.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/9jv8nl49l/Living-room-5.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/pqig3ci8m/LX-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/vbawt9b3j/Master-Bedroom-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iFy5l/ocdcov054/Master-Bathroom-2.jpg</image_url>
+        </image>
+        <video>
+          <video_url>https://www.youtube.com/watch?v=K2Yaig2bYLk</video_url>
+        </video>
+      </media>
+      <external_url>https://theagency.cr/property/designers-dream-home-villareal</external_url>
+      <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
     </advert>
     <advert reference="LXER12819" category="real estate">
       <type>sale</type>
@@ -2513,6 +2513,66 @@
       </media>
       <external_url>https://theagency.cr/property/contemporary-3-bedroom-elementto-apartment</external_url>
       <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
+    </advert>
+    <advert reference="LXHR14194" category="real estate">
+      <type>sale</type>
+      <price currency="USD">1750000</price>
+      <property_type>House</property_type>
+      <title>Casa Elemento @ Hacienda Espinal</title>
+      <description>Casa Elemento is a six bedroom contemporary residence in Hacienda Espinal, San Rafael de Alajuela, Central Valley, designed around light, greenery and a strong connection between indoor and outdoor living. Built across two lots in a particularly private yet central position within the community, the home places most of its living spaces and bedrooms on a single level. Expansive windows, landscaped views and cross ventilation shape an atmosphere that feels fresh, open and closely connected to the garden from the moment you enter. The architecture has a confident contemporary character without feeling severe. Clean horizontal lines, exposed concrete surfaces, dark framed glazing and warm wood toned details are softened by mature landscaping visible throughout the interiors. Large panes of glass repeatedly frame the greenery outside, while an interior garden introduces another layer of nature into the central living spaces. The result is a home where the architecture and landscape remain visually connected rather than treated as separate elements. From the entrance, the garden immediately becomes part of the view. To the left is the formal living room, where sliding doors open directly outside and continue the sense of connection to the landscape. A guest bathroom serves this area. Beyond it is the principal bedroom wing, composed of three secondary bedrooms with closets and the primary suite. One secondary bedroom has a private bathroom, while the other two share a bathroom. The primary bedroom includes a walk-in closet and private bath. Each bedroom has direct access to the garden, giving even the more private areas of the home a relationship with the outdoors. To the right of the entrance, the formal dining room leads toward one of the defining spaces of Casa Elemento: a broad covered social terrace overlooking the garden and swimming pool. The pool incorporates a dedicated swim lane, while the adjoining BBQ area and additional guest bathroom support both relaxed daily use and larger gatherings. Built-in cabinetry adds practicality to the social area, while the wood toned ceiling treatment, generous proportions and wide openings create a warm transition between the interior and exterior spaces. The second level is reserved for additional flexible spaces, including an office, TV room and two guest bedrooms sharing a full bathroom. One of these rooms can also be adapted as a gym. The garage includes substantial storage and covered parking for three vehicles, with room for three additional vehicles outdoors. Throughout the residence, extensive glazing and cross ventilation contribute to the natural brightness and freshness that define the experience of the home. Hacienda Espinal is a residential community in San Rafael de Alajuela in Costa Rica’s Central Valley, offering a planned setting with a strong emphasis on an active and family oriented lifestyle. Country Day School has its campus within Hacienda Espinal, while supermarkets including Auto Mercado and Vindi are available nearby. The community provides an alternative residential setting to areas such as Escazú and Santa Ana while maintaining access to the services found in those parts of the Central Valley. Casa Elemento brings together privacy, predominantly single level living, generous social spaces and a close visual relationship with its gardens, creating a distinctive contemporary home within Hacienda Espinal in San Rafael de</description>
+      <location>
+        <country>CR</country>
+        <region>Alajuela</region>
+        <city>San Rafael</city>
+        <address>Hacienda Espinal</address>
+        <latitude>9.951616</latitude>
+        <longitude>-84.249720</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>6</bedrooms>
+      <bathrooms>5</bathrooms>
+      <living_area unit="sqm">762</living_area>
+      <land_area unit="sqm">1390</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/0siisn4h2/Living-room-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/obz4nillj/Dining-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/49pdh0zus/Dining-room-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/lmhk3898b/Entrance-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/qild1i322/Garden-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/95ghr96wq/Garden-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/32rm6nhbt/Gym-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/o6qnoq3br/Half-Bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/1iy3cgeak/Hallway-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/4uns9t5c3/Hallway-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/cugbrz927/Kitchen-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000C2XOQw/3u2fxmap2/Kitchen-2.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/casa-elemento-hacienda-espinal</external_url>
+      <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
     </advert>
     <advert reference="LXSR13804" category="real estate">
       <type>sale</type>
@@ -6001,68 +6061,6 @@
       </media>
       <external_url>https://theagency.cr/property/vistas-montana-apartment-escazu</external_url>
       <agent_reference>tacr-agent-0053m00000AobQfAAJ</agent_reference>
-    </advert>
-    <advert reference="LXER14297" category="real estate">
-      <type>sale</type>
-      <price currency="USD">575000</price>
-      <property_type>Apartment</property_type>
-      <title>Marble Breeze Apartment</title>
-      <description>Marble Breeze Apartment is a bright and spacious residence in El Cortijo, Escazú, on the western side of Costa Rica’s Central Valley. Its generous social area, mountain views, marble flooring, and integrated kitchen create an open and polished setting, while large windows and a light interior palette give the home a fresh, composed character. The apartment was remodeled by incorporating one of the original bedrooms into the social area, resulting in a notably larger living and dining space. The layout now feels open and fluid, with the kitchen positioned as part of the main gathering area rather than separated from it. Black countertops, white cabinetry, and stainless steel appliances give the kitchen a crisp, functional presence. The residence includes two bedrooms, each with its own bathroom and closet. One bedroom features wood flooring and a marble finished bathroom. The principal bedroom offers generous proportions, a spacious bathroom with a Jacuzzi, double vanity, and walk-in closet. Additional features include central air conditioning, a laundry area, staff bedroom and bathroom, two parking spaces, and a storage unit. White doors and baseboards reinforce the apartment’s lighter, more contemporary appearance, while the overall finish remains understated and refined. El Cortijo is an apartment community in the heart of Escazú, with concierge service and a selection of shared amenities. Residents have access to a large swimming pool surrounded by covered ranchos, a gym with exercise equipment, a sauna, a massage room, and a playground for children and pets. The Los Laureles location provides convenient access to Plaza Los Laureles, La Paco, restaurants, shops, Multiplaza, and CIMA Hospital. The area also connects readily with Santa Ana and Route 27, placing the apartment within one of Escazú’s most established and active residential sectors. Marble Breeze Apartment brings together generous interiors, mountain views, practical amenities, and a central location in El Cortijo, Los Laureles, Escaz</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Escazú</city>
-        <address>San Rafael</address>
-        <latitude>9.931072</latitude>
-        <longitude>-84.145961</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>2</bedrooms>
-      <bathrooms>2</bathrooms>
-      <living_area unit="sqm">145</living_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/fo8uggqrt/Dining-room-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/8n6rckogk/Dining-room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/t4tb7edeu/Half-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/7f8dolmug/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/sllfltdu8/Living-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/mmxn7k713/Living-room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/zy47oom4b/Living-room-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/dzlyqv3g7/Living-room-4.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/gdxy23enf/Master-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/x5xuki8tx/Master-Bedroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/p2qd5c2uj/Secondary-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000DQbyEK/5eo3nb97l/Secondary-Bedroom-2.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=OYztk6Z1L1I</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/marble-breeze-apartment</external_url>
-      <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
     </advert>
   </adverts>
 </jamesedition_feed>
