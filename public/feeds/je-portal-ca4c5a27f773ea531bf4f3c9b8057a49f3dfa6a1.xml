@@ -456,6 +456,9 @@
         <image>
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000Dvxr42/o57te161f/Living-room-1.jpg</image_url>
         </image>
+        <video>
+          <video_url>https://www.youtube.com/watch?v=etXKEeLduig</video_url>
+        </video>
       </media>
       <external_url>https://theagency.cr/property/villa-providencia-resort-style-home</external_url>
       <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
@@ -2118,7 +2121,7 @@
       <location>
         <country>CR</country>
         <region>Alajuela</region>
-        <city>Alajuela</city>
+        <city>San Rafael</city>
         <address>Hacienda Espinal</address>
         <latitude>9.950591</latitude>
         <longitude>-84.247627</longitude>
@@ -2166,7 +2169,7 @@
           <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000iF5HI/zeccv87cg/LX-8.jpg</image_url>
         </image>
         <video>
-          <video_url>https://www.youtube.com/watch?v=FyNdMZtt0DA</video_url>
+          <video_url>https://www.youtube.com/watch?v=ZuFD2-a1vUY</video_url>
         </video>
       </media>
       <external_url>https://theagency.cr/property/the-stunning-home-espinal</external_url>
