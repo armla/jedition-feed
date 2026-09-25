@@ -2,7 +2,7 @@
   "portal": "JamesEdition",
   "feed_tier": "PORTAL",
   "activity_name": "External Website - James Edition",
-  "updated_at_utc": "2026-09-24T09:43:01.396821+00:00",
+  "updated_at_utc": "2026-09-25T10:00:47.659940+00:00",
   "current_references": [
     "LXCR10808",
     "LXCR11151",
@@ -53,6 +53,7 @@
     "LXER13571",
     "LXER13591",
     "LXER13622",
+    "LXER13710",
     "LXER13744",
     "LXER13940",
     "LXER13943",
@@ -101,7 +102,6 @@
     "LXSR13302",
     "LXSR13804",
     "LXSR13815",
-    "LXSR13825",
     "LXSR13826",
     "LXSR14222"
   ],

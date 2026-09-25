@@ -2825,66 +2825,6 @@
       <external_url>https://theagency.cr/property/agata-contemporary-home-espinal</external_url>
       <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
     </advert>
-    <advert reference="LXSR13825" category="real estate">
-      <type>sale</type>
-      <price currency="USD">1625000</price>
-      <property_type>Estate</property_type>
-      <title>Breathtaking Home &amp; Bungalows at Playa Hermosa, Santa Teresa</title>
-      <description>Perched in the highly desirable area of Santiago, Puntarenas, this newly built property combines modern design with panoramic valley views that define the essence of tropical living. Set just five minutes from Playa Hermosa and eight minutes from Playa Manzanillo, the home is ideally located for those seeking both tranquility and quick access to Costa Rica’s pristine surf beaches. The property is also conveniently close to the two main international schools in the area — Gaia Waldorf and Hermosa Valley School — making it ideal for families looking to relocate. The main residence features 2 bedrooms and 2 bathrooms, with the possibility to easily add a third ensuite bedroom (Currently under construction). The master suite includes a king-size bed and private bathroom, while the second bedroom features two twin beds and a bathroom that can be accessed both from the bedroom and the common living area. A contemporary open-plan layout maximizes natural light and sweeping views. The spacious living and dining areas open directly onto a large outdoor terrace with a BBQ area, creating a perfect flow between indoor comfort and outdoor living. The modern kitchen faces the private pool, framed by lush greenery for a refined yet relaxed tropical atmosphere. Complementing the main home are two fully equipped studio bungalows, ideal for guests, short-term rentals, or as a home office — offering excellent income-generating potential while maintaining privacy for owners and visitors alike. The property also includes a gated entrance, professionally drilled well, air conditioning, and parking for up to four vehicles. Whether envisioned as a private residence, an income-producing property, or a combination of both, this Santiago estate offers an exceptional opportunity to own in one of the Nicoya Peninsula’s most desirable</description>
-      <location>
-        <country>CR</country>
-        <region>Puntarenas</region>
-        <city>Santa Teresa</city>
-        <address>Playa Hermosa, Santiago</address>
-        <latitude>9.658631</latitude>
-        <longitude>-85.173569</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>4</bedrooms>
-      <bathrooms>4</bathrooms>
-      <living_area unit="sqm">258</living_area>
-      <land_area unit="sqm">1772</land_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/8c42i777k/Bungalows-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/lhjnrrnlg/Bungalows-10.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/qxyy3bff9/Bungalows-11.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/67thaee5t/Bungalows-14.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/usbb7hkg2/Bungalows-16.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/2vwgicr3f/Bungalows-21.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/fefzwy5jo/Bungalows-23.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/9mzr83ngi/Home-12.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/z5440upm7/Home-16.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/g7klnkt6u/Home-15.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/waagn1jt6/Home-17.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00009IAj4N/17oxe8d8f/Home-2.jpg</image_url>
-        </image>
-      </media>
-      <external_url>https://theagency.cr/property/breathtaking-home-and-bungalows-playa-hermosa</external_url>
-      <agent_reference>tacr-agent-005Qg00000NS8JzIAL</agent_reference>
-    </advert>
     <advert reference="LXER13505" category="real estate">
       <type>sale</type>
       <price currency="USD">1600000</price>
@@ -3101,6 +3041,69 @@
       </media>
       <external_url>https://theagency.cr/property/detail-apartment-solaris</external_url>
       <agent_reference>tacr-agent-0053m00000BDbEvAAL</agent_reference>
+    </advert>
+    <advert reference="LXER13710" category="real estate">
+      <type>sale</type>
+      <price currency="USD">1495000</price>
+      <property_type>House</property_type>
+      <title>Villa El Canto en Hacienda Lindora</title>
+      <description>Located in one of the most exclusive gated communities of Santa Ana, Villa El Canto @ Hacienda Lindora is a contemporary residence that blends architecture, nature, and community lifestyle. With fluid indoor-outdoor transitions and bright, open spaces, this home was designed to be lived both inside and out. A striking pivoting entry door opens to soaring ceilings, warm wood and marble finishes, and an open layout perfect for entertaining. The main living room features polished marble floors and a custom-built bar with wood accents that visually anchor the space. This area connects directly to a large covered terrace outfitted with a built-in BBQ, outdoor bar, dining area, and lounge, all overlooking a manicured garden that provides a private and calming backdrop. Sliding glass doors lead from the terrace to a more intimate breakfast nook and a secondary TV lounge. The kitchen, equipped with Monogram stainless steel appliances—including a gas stove and double-door refrigerator—offers a generous quartz island, a walk-in pantry, and abundant natural light. A patterned tile backsplash adds a bold and stylish accent. Also on the main level are a private office, laundry room, full service quarters, and a covered garage for two vehicles, plus outdoor parking for two more. An elegant staircase of marble and wood leads to the second floor, where a spacious family/TV room serves as a central gathering space. This area opens to a second-level terrace with natural grass, integrating the surrounding greenery into the upper floor. Large picture windows frame views of the decorative rock garden and lush exterior, infusing the home with serenity and light. The private wing features three spacious bedroom suites, each with its own bathroom and walk-in closet. A full additional bathroom allows the family room to be converted into a fourth bedroom, if desired, without disrupting the flow of the home. Designed by renowned architect Jean Garnier, Villa El Canto is part of Hacienda Lindora, a secure luxury community with dual access points, triple-level security, and amenities such as a clubhouse, tennis court, swimming pool, and landscaped green areas. Its internal location within the development ensures privacy and peace while remaining close to everything. From here, you’re just minutes from Route 27, connecting you to Escazú, San José, and the Pacific coast. Nearby, you’ll find Terrazas Lindora shopping center, the Forum business parks, the Metropolitan Hospital, fine dining, and premium coffee shops. Top private schools like Pan-American and Saint Jude are also just around the corner. Villa El Canto is a well-balanced residence for families who value location, comfort, and design. Its versatile layout and architectural design make it an ideal choice for your n</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Santa Ana</city>
+        <address>Lindora</address>
+        <latitude>9.955240</latitude>
+        <longitude>-84.195356</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>3</bedrooms>
+      <bathrooms>4</bathrooms>
+      <living_area unit="sqm">715</living_area>
+      <land_area unit="sqm">918</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/g4da4ghwr/Terrace-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/qnbvvj0w0/Bar-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/2yhpjbhdi/Eat-and-kitchen-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/88yc19mq8/Entrance-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/4f87t610r/Garden-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/srxyt956p/Garden-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/su716m0yd/Half-Bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/grq8kwcvw/Kitchen-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/pi4c960x2/Living-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/ymg5w8913/Living-room-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/5yy4ufkhy/Master-bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008brjti/phbxddl0b/Master-bedroom-1.jpg</image_url>
+        </image>
+        <video>
+          <video_url>https://www.youtube.com/watch?v=mZ_buG0L7Yo</video_url>
+        </video>
+      </media>
+      <external_url>https://theagency.cr/property/villa-el-canto-hacienda-lindora</external_url>
+      <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
     </advert>
     <advert reference="LXHR12796" category="real estate">
       <type>sale</type>
