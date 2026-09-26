@@ -3344,6 +3344,69 @@
       <external_url>https://theagency.cr/property/cerro-alto-sun-rays-flat</external_url>
       <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
     </advert>
+    <advert reference="LXHR13232" category="real estate">
+      <type>sale</type>
+      <price currency="USD">1400000</price>
+      <property_type>Condo</property_type>
+      <title>Oasis Home at Hacienda Espinal</title>
+      <description>Spacious contemporary home with great indoor and outdoor spaces. Oasis Home at Hacienda Espinal showcases modern finishes and high ceilings, featuring fine wood finishes throughout the home for a warm contemporary feel. With double and triple-height ceilings, the home is an ideal family setting to share and entertain. Oasis Home is nestled in an excellent location in the prestigious Hacienda Espinal community in Costa Rica's Central Valley. This is a great home retreat for those seeking contemporary comfort in a great family location with easy access to Country Day School and Route 27 connecting San José and Santa Ana to the Pacific Coast. As you step into Oasis Home at Espinal, you are greeted by a grand lobby that immediately sets the tone for the rest of the house: fresh, inviting contemporary style. The entrance on this upper level connects to the private area of the home and guides to a descending the spectacular marble staircase to the main social area. The staircase includes space for a small internal yard at its base preceding the expansive social area on the first floor. This area features a living room, dining room, a half bath for guests, and a spacious kitchen with an island that comfortably seats six people. The living and dining room windows open up to beautiful views of the garden, creating a seamless indoor-outdoor living experience. Oasis Home’s kitchen, equipped with sliding doors, leads out to a large terrace, where a deck with an outdoor jacuzzi and space for sun loungers awaits. The terrace is also outfitted with a pergola and a firepit area, perfect for outdoor entertaining. The expansive and well-lit backyard is adaptable for various activities, with a flat area that can accommodate the construction of a swimming pool. Back on the upper floor is the private area of the home. Here you’ll find four generously sized bedrooms, each with its own en-suite bathroom and walk-in closet. The master bedroom stands out with breathtaking views of the Escazú mountains, while all bedrooms feature large windows that flood the rooms with natural light, including corner windows in some rooms that enhance the modern, immersive connection with the outdoors. A cozy TV room with a balcony complements the upstairs layout, offering a perfect space for family gatherings. The marble flooring extends throughout the entryway and the elegant staircase. Oasis Home also includes a large laundry room and service quarters with a bathroom, ensuring that every need is met. Its garage also has space for up to four cars, offering ample parking. Hacienda Espinal, located in San Rafael de Alajuela, is one of the most sought-after communities in the Central Valley. It offers a beautiful rural setting that distinguishes it from other neighborhoods, providing a peaceful retreat away from the hustle and bustle of areas like Escazú and Santa Ana, yet close enough to enjoy all their amenities. With world-class amenities, sustainable design, top-notch security, and a focus on sports and family living, Hacienda Espinal provides an unparalleled lifestyle. With its elegant design, spacious interiors, and thoughtfully crafted outdoor areas, Oasis Home in the coveted Hacienda Espinal provides the ideal setting for modern indoor/outdoor living in La Guácima, northwest of San José, Costa Rica o</description>
+      <location>
+        <country>CR</country>
+        <region>Alajuela</region>
+        <city>San Rafael</city>
+        <address>Hacienda Espinal</address>
+        <latitude>9.951489</latitude>
+        <longitude>-84.251812</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>4</bedrooms>
+      <bathrooms>4</bathrooms>
+      <living_area unit="sqm">510</living_area>
+      <land_area unit="sqm">1050</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/3x5z8e29d/Entrance-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/80ww2yytx/Aerial-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/kxfu5shqi/Facade-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/sgdcohx7o/garden-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/tdogm5j2p/Half-bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/cl3hcuhf2/Hallway-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/hjp1k4z3f/Jacuzzi-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/4dq06xypv/Kitchen-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/k671hh96n/Kitchen-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/6qucpxqh0/Living-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/dkpp47hdp/Living-room-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00002pgoi7/hqotffwtd/Master-bathroom-1.jpg</image_url>
+        </image>
+        <video>
+          <video_url>https://www.youtube.com/watch?v=-O-kgoXbHJ8</video_url>
+        </video>
+      </media>
+      <external_url>https://theagency.cr/property/oasis-home-hacienda-espinal</external_url>
+      <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
+    </advert>
     <advert reference="LXGR14155" category="real estate">
       <type>sale</type>
       <price currency="USD">1399000</price>
@@ -6032,41 +6095,6 @@
       </media>
       <external_url>https://theagency.cr/property/azaleas-mediterranean-home-la-canada</external_url>
       <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
-    </advert>
-    <advert reference="LXER11012" category="real estate">
-      <type>sale</type>
-      <price currency="USD">575000</price>
-      <property_type>Apartment</property_type>
-      <title>Vistas Montaña Escazú Apartment</title>
-      <description>Vistas Montaña Escazú is a unique two-level apartment with an open naturally-lit layout. Renowned architect Federico Castro’s contemporary style incorporates floor-to-ceiling windows, wonderful balconies and marble floors that create a refreshing and elegant ambience. This inviting home up in the mountains of Escazú offers beautiful views and seclusion in a convenient location minutes away from the center of Escazú. The Vistas Montaña Apartment ’s welcomes you to the fourth floor with an L-shaped greeting area characterized by marble floors. The integrated living, dining and kitchen areas come together as one with floor-to-ceiling windows that incorporate mountain views and natural illumination. Glass sliding doors open onto a balcony featuring glass and steel finishes. The kitchen offers a modern Italian style by Aran Cucine with white quartz countertops, light wood furniture and a breakfast counter. The social area is complemented by a guest bathroom. The apartment private area and bedrooms are located on the lower level. A family TV room greets you first, a cozy space in which to relax. Both the bedrooms offer wood floors, their own private bathroom with marble countertops and access to a balcony through glass sliding doors. The master suite includes an ample layout and walk-in closet. This vertical condominium offers a spacious and covered lounge area that opens to a beautiful deck beside the swimming pool. From here you can gaze at spectacular mountain and city views and make use of the gym. Vistas Montaña Escazú Apartment offers a secluded location surrounded by nature and a refreshing air, with downtown Escazú and everything it offers five minutes a</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Escazú</city>
-        <address>San Rafael</address>
-        <latitude>9.929730</latitude>
-        <longitude>-84.133040</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>2</bedrooms>
-      <bathrooms>2</bathrooms>
-      <living_area unit="sqm">262</living_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000grV39/7nap9304u/LX-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000grV39/jmao39psk/LX-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000grV39/jm8vcso8r/LX-2.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=uW-NktVI_yo</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/vistas-montana-apartment-escazu</external_url>
-      <agent_reference>tacr-agent-0053m00000AobQfAAJ</agent_reference>
     </advert>
   </adverts>
 </jamesedition_feed>
