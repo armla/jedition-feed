@@ -3105,6 +3105,64 @@
       <external_url>https://theagency.cr/property/villa-el-canto-hacienda-lindora</external_url>
       <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
     </advert>
+    <advert reference="LXER14376" category="real estate">
+      <type>sale</type>
+      <price currency="USD">1475000</price>
+      <property_type>Condo</property_type>
+      <title>Casa Panorama @ Escazu</title>
+      <description>Casa Panorama is a contemporary four bedroom home in Escazú, Costa Rica, designed around open spaces, indoor and outdoor connection, and views that become part of the experience from the moment you enter. Set within a community, the residence brings together formal living and dining areas, a spacious kitchen, terrace, gardens, private office, and versatile family spaces in a layout that feels both refined and functional. The main level opens immediately toward the views, establishing the defining perspective of the home. The social area flows from an elegant formal living room into the formal dining room and spacious kitchen, continuing naturally onto a terrace and the gardens surrounding the property. This open concept arrangement keeps the different areas connected while giving each space a clear purpose. Also on the main level, a private office creates a dedicated setting for working from home. A guest half bathroom, laundry area, and service quarters complete this floor, supporting the practical needs of daily life and entertaining without interrupting the principal social spaces. A wood staircase alongside a travertine clad wall leads to the private level. Here, the primary bedroom takes advantage of the home’s views and opens directly onto its own private terrace. The suite also includes a spacious bathroom and walk in closet, creating a well defined retreat within the residence. The upper level also includes secondary bedrooms, along with a TV room or flex room that can respond to changing needs. It can function as an additional private office, television room, playroom, gym, or a separate space for relaxation. With four bedrooms, three full bathrooms, one half bathroom, contemporary architecture, dedicated work space, flexible living areas, and a design centered on its views, Casa Panorama offers a thoughtfully organized residential setting within a community in Esc</description>
+      <location>
+        <country>CR</country>
+        <region>San Jose</region>
+        <city>Escazú</city>
+        <address>Guachipelin</address>
+        <latitude>9.930750</latitude>
+        <longitude>-84.149320</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>4</bedrooms>
+      <bathrooms>3</bathrooms>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/7lf7uwa8g/Facade-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/j106cp9o0/Master-Bathroom-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/qcp50aqxt/Living-room-4.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/260qgrt2e/Living-room-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/xpyzmi96z/Living-room-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/id7akkpoo/Living-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/l55gzl4g3/Kitchen-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/sinxy5s8d/Kitchen-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/fkdw1xkrv/Dining-room-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/tp3fjpssc/Dining-room-2.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/a7p9n5304/Dining-room-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E3aQ7K/sngbwku6v/Dining-room-4.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/casa-panorama-escazu</external_url>
+      <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
+    </advert>
     <advert reference="LXHR12796" category="real estate">
       <type>sale</type>
       <price currency="USD">1450000</price>
@@ -6031,69 +6089,6 @@
         </video>
       </media>
       <external_url>https://theagency.cr/property/one-green-view-apartment-rohrmoser</external_url>
-      <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
-    </advert>
-    <advert reference="LXHR11130" category="real estate">
-      <type>sale</type>
-      <price currency="USD">590000</price>
-      <property_type>Condo</property_type>
-      <title>Azaleas Mediterranean Home @ La Cañada</title>
-      <description>Mediterranean home at La Cañada. Azaleas Mediterranean is a single-level residence with unique Zurcher Architects design featuring brick-detailing and stone floors. The home offers a fresh inviting air with several water features, manicured gardens and cozy social areas in an exclusive location within a residential community in San Rafael de Alajuela, in Costa Rica's Central Valley. The corner property has a stone path lined by landscaped gardens with shrub hedges, refreshing planters and exotic plants that guide up to the entrance. The archway boasts square columns, iron-forged balconies and exposed wood beams before arriving to the main door, introducing the refreshing ambience of the house. The foyer boasts an exquisite brick wall and stone floors, connecting to the private, social and kitchen areas of the home. Directly ahead, the social area features porcelanato floors and double-height, curved ceilings. The dining and living areas are fully integrated, boasting the elegant, brick-detailing that characterizes Azaleas Mediterranean Home. The dining area is framed by a tall, arched window that serves as a skylight. Both areas face the terrace through expansive, curved windows but connect to it through an open arch. The terrace at Azaleas Mediterranean Home’s features a covered distribution with vaulted ceilings and exposed wood beams. The area has stone floors that introduce an informal dining area with a Viking BBQ and smoke extractor. Opposite this space, a living room with a TV is offered, with the space in between both areas opening through glass sliding doors to the swimming pool in the garden. Enclosed by a tall shrub hedge and filled with colorful plants, the design of Azaleas Mediterranean Home’s imbues the garden with peace and a heartwarming air. The rectangular swimming pool includes a waterfall with soothing sounds. To one side, the guest house offers two beds, a full bathroom, air conditioning and a fully equipped and independent place to stay in. Back inside, Azalea’s kitchen connects to the guest bathroom in the foyer and conveniently to the dining room through a double-swing door. Brick detailing and a central, granite counter characterizes this area. The kitchen features wood cabinets, stainless steel appliances and natural ventilation and lighting through expansive windows. The private area offers two secondary bedrooms, each with a closet, wood floors and a bathroom with granite countertops. An office space and TV room with custom-made furniture complement the family quarters. The master bedroom offers a spacious area with walk-in closet and ensuite two-sink bathroom with quartz countertops. In addition, the house includes a maid’s quarters, a garage with two parking spaces and outside space for a couple more, and a wine cellar. The La Cañada Alajuela community where Azaleas Mediterranean is located is an exclusive condominium with green areas, a kid’s playground and security. It is located near Juan Santamaría International Airport, brand new office centers, great schools and delicious restaurants. Comfort, luxury and unique touches await in this heartwarmin</description>
-      <location>
-        <country>CR</country>
-        <region>Alajuela</region>
-        <city>San Rafael</city>
-        <address>Condominio La Cañada</address>
-        <latitude>9.971894</latitude>
-        <longitude>-84.213295</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>4</bedrooms>
-      <bathrooms>4</bathrooms>
-      <living_area unit="sqm">494</living_area>
-      <land_area unit="sqm">1200</land_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/ge94tq444/LX-12.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/826jinreh/LX-26.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/ekprztjhs/LX-28.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/7wcj9i06n/LX-30.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/77vlwu1se/LX-19.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/8kc2xw1u3/LX-4.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/l82wemah2/LX-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/hf0jo5cz0/LX-33.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/g6aaacx8r/LX-23.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/6lvz30crw/LX-17.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/kfadb9bwy/LX-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0C3m00000hD52i/350plli4b/LX-32.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=l3XvHkCrTss</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/azaleas-mediterranean-home-la-canada</external_url>
       <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
     </advert>
   </adverts>
