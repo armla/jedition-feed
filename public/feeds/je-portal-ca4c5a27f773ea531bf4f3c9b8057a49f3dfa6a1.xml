@@ -340,6 +340,66 @@
       <external_url>https://theagency.cr/property/grand-sachi-home-la-hacienda</external_url>
       <agent_reference>tacr-agent-0053m00000AobQfAAJ</agent_reference>
     </advert>
+    <advert reference="LXGR14388" category="real estate">
+      <type>sale</type>
+      <price currency="USD">3925000</price>
+      <property_type>Estate</property_type>
+      <title>The Ocean &amp; Fairway Estate at La Dulce Vida</title>
+      <description>The Ocean &amp; Fairway Estate at La Dulce Vida is a six bedroom residence in Hacienda Pinilla, Costa Rica, designed by architect Richard Muller around expansive Pacific Ocean and golf course views. Set on 0.51 acres, the 6,017 sq ft home combines open interiors, natural stone, custom woodwork, a private pool, tropical gardens, fitness facilities, and multiple outdoor living areas. Its position within Hacienda Pinilla also places the residence close to the coast and the community’s extensive resort amenities. Built in 2018, the home follows an open concept plan that connects the kitchen, main living pavilion, and surrounding outdoor spaces. Natural stone flooring and warm wood ceilings establish the material palette, complemented by custom woodworking and premium Pella electric windows and doors. Large openings frame the landscape while creating a natural transition between the interior and exterior gathering areas. The accommodation was planned to give the principal bedrooms direct engagement with the property’s two defining views. Four suites face the Pacific Ocean and golf course, including two primary suites located on separate levels. Two additional ensuite bedrooms share the same ocean and fairway orientation, while a sixth flexible room is currently configured as a private sauna. Altogether, the residence offers six bedrooms and 6.5 bathrooms. Outside, a private tropical garden surrounds the swimming pool and sun lounge deck. These spaces function as a continuation of the main living areas, with room for afternoons by the pool, sunset drinks, and open air entertaining. Upstairs, a dedicated 350 sq ft fitness gym adds another private amenity, while a two car covered garage provides additional storage and everyday convenience. The residence is also equipped for use as a turnkey luxury vacation rental, offering income generating potential alongside its role as a private home. Within Hacienda Pinilla, residents have access to three miles of coastline, an 18 hole championship golf course, a private Beach Club, the JW Marriott &amp; Spa, tennis courts, an equestrian center, and 24 hour medical facilities. Tamarindo is located just minutes away, adding another dimension to the property’s coastal setting. With its 360 degree ocean and golf course outlook, generous suite configuration, private leisure spaces, and access to Hacienda Pinilla’s amenities, The Ocean &amp; Fairway Estate at La Dulce Vida brings together substantial residential space and flexible ownership potential in Hacienda Pinil</description>
+      <location>
+        <country>CR</country>
+        <region>Guanacaste</region>
+        <city>Tamarindo</city>
+        <address>Hacienda Pinilla</address>
+        <latitude>10.309000</latitude>
+        <longitude>-85.834110</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>6</bedrooms>
+      <bathrooms>6</bathrooms>
+      <living_area unit="sqm">559</living_area>
+      <land_area unit="sqm">2221</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/fld8n4uyw/TACR-35.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/v016b7eo0/TACR-37.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/684a216t7/TACR-4.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/iaansajxj/TACR-7.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/3n29ioo0p/TACR-8.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/rs11t3db7/TACR-9.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/gqwjyp0mh/TACR-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/j307mwfu1/TACR-10.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/kmm1hnh7d/TACR-11.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/xupgo4a2p/TACR-12.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/v219tunlt/TACR-14.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5Vksw/yh2rl5v92/TACR-16.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/the-ocean-fairway-estate-dulce-vida</external_url>
+      <agent_reference>tacr-agent-005Qg00000PQCS9IAP</agent_reference>
+    </advert>
     <advert reference="LXGR14112" category="real estate">
       <type>sale</type>
       <price currency="USD">3900000</price>
@@ -623,6 +683,51 @@
         </image>
       </media>
       <external_url>https://theagency.cr/property/architectural-elegance-steps-ocean</external_url>
+      <agent_reference>tacr-agent-005Qg00000PQCS9IAP</agent_reference>
+    </advert>
+    <advert reference="LXGR14389" category="real estate">
+      <type>sale</type>
+      <price currency="USD">3200000</price>
+      <property_type>Estate</property_type>
+      <title>Single-Level Sanctuary Steps from the Ocean in Exclusive Coralis</title>
+      <description>Single Level Sanctuary Steps from the Ocean in Exclusive Coralis is a contemporary five bedroom residence in Hacienda Pinilla, Costa Rica, designed around single level living, generous social spaces, and a close connection to the outdoors. Set within Coralis, the only gated enclave in Hacienda Pinilla with its own private Beach Club reserved exclusively for 26 homeowners, the home combines clean contemporary architecture, natural light, tropical warmth, and direct access to Playa Avellanas. The residence offers 7,406 sq ft (688 m²) of total construction on a 0.42 acre (1,699.80 m²) lot, including 5,630 sq ft (525 m²) of air conditioned interior space. Floor to ceiling glass frames the main living areas, while the living room, dining room, and gourmet kitchen open directly to covered terraces and a landscaped central courtyard. Outdoor living is organized around a 969 sq ft (90 m²) private swimming pool. An 807 sq ft (75 m²) sun deck provides additional space around the pool, complemented by a covered BBQ lounge and a dedicated pool bathroom. The arrangement creates a natural transition between the home’s interior gathering spaces and its open air areas. Five en suite bedrooms provide private accommodations within the single level floor plan. The primary suite is positioned in a garden setting with direct courtyard access, while each guest bedroom includes its own full private bathroom. A full staff bedroom with private bathroom adds further flexibility to the residence. Service spaces are equally considered, with a dedicated laundry room, guest powder room, locked owner’s closet, and two car covered garage. In total, the property includes 7.5 bathrooms across the five en suite bedrooms, staff quarters, powder room, and pool bathroom. Coralis places the residence steps from the Pacific shores of Playa Avellanas and the Little Hawai’i surf break, while homeowners also have access to the community’s private Beach Club. Located within Costa Rica’s Blue Zone region, the setting brings together the coastline, private community amenities, and the established surroundings of Hacienda Pinilla. Single Level Sanctuary Steps from the Ocean in Exclusive Coralis brings together five en suite bedrooms, expansive indoor and outdoor living, a private pool, and exclusive Beach Club access within Coralis at Hacienda Pinilla, Co</description>
+      <location>
+        <country>CR</country>
+        <region>Guanacaste</region>
+        <city>Santa Cruz</city>
+        <address>Tamarindo</address>
+        <latitude>10.270837</latitude>
+        <longitude>-85.808544</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>6</bedrooms>
+      <bathrooms>6</bathrooms>
+      <living_area unit="sqm">688</living_area>
+      <land_area unit="sqm">1699</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5VCwM/3yqai1p27/TACR-8.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5VCwM/en3nh60b6/TACR-7.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5VCwM/1zvlxdaa5/TACR-6.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5VCwM/43xcj9oim/TACR-5.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5VCwM/0mcm8aku5/TACR-4.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5VCwM/ppm16ihay/TACR-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5VCwM/8gxm6d04c/TACR-2.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/single-level-sanctuary-steps-ocean-coralis</external_url>
       <agent_reference>tacr-agent-005Qg00000PQCS9IAP</agent_reference>
     </advert>
     <advert reference="LXER12819" category="real estate">
@@ -994,6 +1099,45 @@
       </media>
       <external_url>https://theagency.cr/property/golden-sky-penthouse-escazu</external_url>
       <agent_reference>tacr-agent-005o0000000yVDVAA2</agent_reference>
+    </advert>
+    <advert reference="LXGR14387" category="real estate">
+      <type>sale</type>
+      <price currency="USD">2680000</price>
+      <property_type>Estate</property_type>
+      <title>Organic Architectural Elegance Steps from the Ocean</title>
+      <description>Organic Architectural Elegance Steps from the Ocean is a contemporary five bedroom residence in Hacienda Pinilla, Guanacaste, Costa Rica, designed by K10 Studio under the creative direction of architect Andrés Kaune. Across 5,123 sq ft, or 476 m², the two level home brings together organic textures, natural stone, clean architectural lines, generous glass, and a private pool within a setting surrounded by Guanacaste’s biodiversity. Part of an enclave of just three signature residences, the property also has no HOA fees. The main level is organized around a natural connection between the interior and exterior spaces. Wall to wall sliding glass doors open the living room, gourmet kitchen, and dining area directly onto a covered terrace, extending the principal gathering spaces toward the private courtyard and pool. Outdoor living has been given its own distinct place within the architecture. An independent poolside BBQ pavilion provides a dedicated space for cooking and entertaining, while an outdoor bathroom complements the swimming pool and courtyard. Together, these areas create an easy transition between time indoors and life outside. The residence includes five spacious bedrooms plus a private office. Two guest bedrooms are located on the first level, along with a powder room, laundry facilities, garage, and access to the outdoor living and BBQ pavilion. Upstairs, two additional bedrooms and the office or study join the Primary Suite, creating separation between the home’s social spaces and private quarters. In the Primary Suite, floor to ceiling windows frame direct views into the forest canopy. A walk in closet and spa inspired bathroom complete the suite, while the surrounding greenery becomes an integral part of the room’s architectural character. The home is situated steps from the beach within Hacienda Pinilla, with access to the community’s oceanfront Beach Club, 18 hole golf course, tennis courts, equestrian trails, and surfing. This combination of beach proximity, established amenities, and contemporary residential design places the home within one of Guanacaste’s distinctive coastal settings. Organic Architectural Elegance Steps from the Ocean brings together five bedroom living, organic contemporary architecture, private outdoor spaces, and proximity to the beach in Hacienda Pinilla, Guanacaste,</description>
+      <location>
+        <country>CR</country>
+        <region>Guanacaste</region>
+        <city>Santa Cruz</city>
+        <address>Tamarindo</address>
+        <latitude>10.272104</latitude>
+        <longitude>-85.809917</longitude>
+      </location>
+      <hide_address>yes</hide_address>
+      <bedrooms>5</bedrooms>
+      <bathrooms>5</bathrooms>
+      <living_area unit="sqm">669</living_area>
+      <land_area unit="sqm">2134</land_area>
+      <media>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5WAyI/6bbcfkl68/TACR-7.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5WAyI/cjc4evars/TACR-1.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5WAyI/nfrs5n4dy/TACR-3.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5WAyI/4bspfye51/TACR-4.jpg</image_url>
+        </image>
+        <image>
+          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000E5WAyI/ur12uapqb/TACR-6.jpg</image_url>
+        </image>
+      </media>
+      <external_url>https://theagency.cr/property/organic-architectural-elegance-steps-ocean</external_url>
+      <agent_reference>tacr-agent-005Qg00000PQCS9IAP</agent_reference>
     </advert>
     <advert reference="LXCR12865" category="real estate">
       <type>sale</type>
@@ -2085,68 +2229,6 @@
       </media>
       <external_url>https://theagency.cr/property/single-level-mountainview-monteran</external_url>
       <agent_reference>tacr-agent-005Qg000000DIGrIAO</agent_reference>
-    </advert>
-    <advert reference="LXER14128" category="real estate">
-      <type>sale</type>
-      <price currency="USD">1800000</price>
-      <property_type>Apartment</property_type>
-      <title>The Nook Apartment at Solaris</title>
-      <description>The Nook Apartment Solaris is a contemporary three bedroom apartment in Solaris, Costa Rica, positioned in an elevated tower in the western side of the Central Valley between Santa Ana and Escazú. From this setting, the apartment enjoys the broad open views that define this part of the valley, bringing a strong visual connection to the surrounding landscape and cityscape. Its generous terrace, integrated social areas, and direct elevator access create a home that feels both modern and welcoming from the moment you enter. The elevator opens directly into the apartment’s private lobby, where a guest bathroom sits to one side and a wide hallway currently functions as an anteroom before opening into the main social area. This central space brings together the living room, dining area, and kitchen in one cohesive layout. Wood details on the ceiling add warmth and character, while built-in wall furniture provides display space, storage, a TV unit, and a fireplace that anchors the living area with a more intimate feel. One of the defining features of the apartment is its expansive terrace balcony with a spectacular view. The social area opens directly onto this outdoor space, extending the main living zone and giving the apartment a strong sense of openness. It is a natural setting for everyday use as well as for hosting, with enough scale to make the view part of the experience of the home. The kitchen is spacious and designed to serve multiple functions, with an island suited for cooking, working, or gathering. Grey cabinetry and black countertops give it a clean, modern look, and a large pantry adds substantial storage. The overall layout allows the kitchen to remain connected to the social spaces while still offering excellent functionality. The primary bedroom is notably spacious and opens directly to the terrace balcony. Its bathroom enjoys an attractive view and includes a soaking tub, double sinks with a brown vanity and black countertop, and a well sized walk in closet. The apartment also includes two secondary bedrooms, each with its own bathroom. The primary bedroom and one of the secondary bedrooms have air conditioning. In addition, the apartment includes three parking spaces and a 15 m² storage room. Solaris is distinguished by its natural setting and extensive amenities. The community includes 13 hectares of forest, more than 1,000 tree species, and 3 kilometers of walking trails set within professionally designed gardens. Its 900 m² luxury clubhouse offers a recreational pool and a lap pool in a more private upper area, along with a 300 m² event room equipped with a grill, TV, and bar for social gatherings and celebrations. Residents have access to a fully equipped gym with TechnoGym machines and large windows facing the gardens, a movie room with 14 seats and a 119 inch HD screen, a heated jacuzzi, sauna, rooftop, tennis courts, and more. Alto de las Palomas places Solaris between Santa Ana and Escazú, with quick access to Route 27 and the old road to Santa Ana, as well as close proximity to dining, education, shopping, supermarkets, and medical care including Hospital CIMA. Altogether, The Nook Apartment Solaris combines expansive views, well resolved interior spaces, and a full amenity offering in one of the most established residential settings in the wester</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Santa Ana</city>
-        <address>Solaris</address>
-        <latitude>9.925249</latitude>
-        <longitude>-84.167547</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>3</bedrooms>
-      <bathrooms>3</bathrooms>
-      <living_area unit="sqm">460</living_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/njg5xz5ct/Terrace-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/648bzd2q3/Dining-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/4luk6vq0a/Half-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/65rzccild/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/6rhigopse/Living-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/5rphzfcbe/Living-room-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/59501phdw/Lobby-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/amkuidogg/Lobby-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/8wmpg0bjy/Master-bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/y8w3jw0g3/Master-bedroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/07a9kyo20/Master-bedroom-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg0000BRcep8/uggj2yiy0/Master-bedroom-3.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=OjGoNlvsnrg</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/the-nook-apartment-solaris</external_url>
-      <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
     </advert>
     <advert reference="LXHR12407" category="real estate">
       <type>sale</type>
@@ -5952,125 +6034,6 @@
       </media>
       <external_url>https://theagency.cr/property/leaf-house-santa-ana</external_url>
       <agent_reference>tacr-agent-005o0000002GVIeAAO</agent_reference>
-    </advert>
-    <advert reference="LXER13744" category="real estate">
-      <type>sale</type>
-      <price currency="USD">660000</price>
-      <property_type>House</property_type>
-      <title>Lucent Home @ Espavel</title>
-      <description>Located atop a gentle hill within the exclusive Espavel residential community in La Guácima, Alajuela, Lucent Home is a modern, light-filled residence that perfectly combines comfort, sophistication, and connection with nature. Its double-height ceilings and open floor plan create a fresh, spacious atmosphere, ideal for contemporary living in the heart of the western Central Valley. A short set of stairs leads up to the main entrance, where open, flowing spaces immediately define the home’s design. The main living area features soaring ceilings and large windows that fill the space with natural light. The dining area and kitchen integrate seamlessly into this layout, forming the home’s social hub. The kitchen is sleek, featuring white quartz countertops, warm-toned cabinetry, and a large central island with seating for four, ideal for casual meals or cooking with company. Glass sliding doors open fully to connect the indoor living spaces with the terrace and backyard. This partially covered outdoor area is perfect for dining al fresco or lounging while enjoying the natural breeze and lush surroundings. On this same level, there’s a comfortable guest bedroom with an en-suite bathroom, a laundry area, and a cozy bar nook ideal for relaxed evenings. An elegant staircase beside the living room wall leads to the second floor, where two spacious secondary bedrooms with built-in closets share a modern bathroom. The primary suite is a serene retreat, featuring scenic views, a large walk-in closet, and a luxurious en-suite bathroom with a soaking tub, double vanity, and sliding glass doors that open to a private terrace, perfect for morning coffee or unwinding at sunset. The home also includes a covered two-car garage, with additional space on this same level to create a service bedroom and full bathroom if desired. Its elevated position gives the house a striking façade and allows for open views, abundant light, and natural ventilation. Espavel offers one of the most complete residential lifestyles in the western Central Valley, blending nature, luxury, and wellness. Residents enjoy two clubhouses, semi-Olympic and recreational pools, a fully equipped gym, yoga dome, tennis and multi-use courts, a cinema room, and elegant social lounges. Families benefit from kid-friendly spaces such as a children’s pool, playgrounds, treehouse, and BBQ terraces perfect for gatherings. Security and infrastructure are key pillars of the community. Espavel is fully gated with 24/7 surveillance, controlled access, and a perimeter wall with an electric fence. Underground wiring preserves open views, while wide cobblestone boulevards and landscaped greenways enhance the neighborhood’s beauty and sense of serenity. Lucent Home @ Espavel is a unique opportunity to own a bright, elegant, and contemporary home in one of La Guácima’s most desirable gated</description>
-      <location>
-        <country>CR</country>
-        <region>Alajuela</region>
-        <city>La Guacima</city>
-        <address>Hacienda Espavel</address>
-        <latitude>9.964550</latitude>
-        <longitude>-84.248060</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>4</bedrooms>
-      <bathrooms>3</bathrooms>
-      <living_area unit="sqm">409</living_area>
-      <land_area unit="sqm">747</land_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/fsqm2wxvb/Living-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/nfi9kpx5y/Balcony-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/w130fz6d9/Dining-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/khpuud0ae/Half-bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/3rlq4ccmb/Hallway-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/ekfnrlj7y/Hallway-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/a3w7czr61/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/rajkdzn79/Kitchen-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/ta7q2yhfd/Master-Bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/xt3nj8gwm/Master-Bedroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/3v7qc95o5/Master-Bedroom-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00008wz8n0/b0jfd1lmd/Master-Bedroom-3.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=AwmiB2DOFkU</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/lucent-home-espavel</external_url>
-      <agent_reference>tacr-agent-0053m000009Y3yYAAS</agent_reference>
-    </advert>
-    <advert reference="LXER13389" category="real estate">
-      <type>sale</type>
-      <price currency="USD">630000</price>
-      <property_type>Apartment</property_type>
-      <title>Altus Apartment Cerro Alto Escazú</title>
-      <description>Elevated design, urban vistas and the perfect location. Set within the sought-after Cerro Alto gated community in Escazú, Cerro Alto Altus Apartment is a stunning two-bedroom, two-level apartment offering sweeping views of the city skyline and surrounding mountain ranges of Costa Rica's capital city of San José. The apartment features meticulously chosen upgrades and detailing throughout, all framed by expansive windows and private terraces. From the moment you enter, Altus Apartment welcomes you with a formal foyer that leads to open-concept social areas, where the living and dining rooms share the space, bathed in natural light. Floor-to-ceiling windows not only showcase breathtaking views but open to a private terrace, ideal for enjoying the cool mountain air. An illuminated accent wall adds architectural interest and the perfect setting to highlight artwork or design pieces. The kitchen is a showpiece, featuring exquisite Spanish cabinetry, high-end finishes, and top-tier appliances, including Sub-Zero refrigerators. A breakfast bar offers a casual space for everyday meals, and the American-made Carrier Inverter A/C system ensures year-round comfort throughout the home. The Altus Apartment features two spacious bedrooms with their own terrace, offering a tranquil escape with magnificent vistas. One of the rooms includes a wrap-around terrace, enhancing the sense of space and outdoor connection. Contemporary finishes and custom detailing continue throughout the private areas, designed to create a serene, elevated lifestyle. Each room is designed with care, offering a peaceful retreat in the heart of an upscale urban setting. Altus Apartment includes significant infrastructure upgrades such as a high-quality security entry door, a state-of-the-art water filtration system, and the full replacement of internal services for improved functionality and to ensure a higher standard of living. For added convenience, ample storage rooms are thoughtfully integrated into the layout, ensuring that all your belongings are neatly organized and easily accessible. These rooms are designed with practicality in mind, offering plenty of space for everything you need to store, making it ideal for those who value a tidy and functional living environment. Residents of Altus enjoy the unparalleled benefits of Cerro Alto, one of the most prestigious communities in Escazú. The gated neighborhood features triple-level security, lush landscaping, and outstanding recreational facilities, including two clubhouses, heated pools, gyms, tennis courts, a soccer field, and social lounges for events and barbecues. Located just minutes from Distrito 4, Multiplaza Escazú, Plaza Roble, and top international schools, Cerro Alto provides convenient access to fine dining, shopping, business hubs, and more—while maintaining a peaceful and exclusive residential environment. With its combination of design, practicality, and prime location, Cerro Alto Altus Apartment represents the pinnacle of modern living with every detail thou</description>
-      <location>
-        <country>CR</country>
-        <region>San Jose</region>
-        <city>Escazú</city>
-        <address>Cerro Alto</address>
-        <latitude>9.941693</latitude>
-        <longitude>-84.159071</longitude>
-      </location>
-      <hide_address>yes</hide_address>
-      <bedrooms>2</bedrooms>
-      <bathrooms>2</bathrooms>
-      <living_area unit="sqm">281</living_area>
-      <media>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/zgbvgd109/Dining-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/b62puq2ml/Kitchen-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/hu287u5me/Kitchen-3.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/ydbqjwbvl/Living-room-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/5siaa8ybh/Master-bedroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/yip6kwcli/Master-bedroom-2.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/rvh2mor8s/Secondary-bedroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/6kklslgu5/Secondary-bathroom-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/3n17iv9si/View-1.jpg</image_url>
-        </image>
-        <image>
-          <image_url>https://s3.amazonaws.com/propertybase-clients/00Do0000000aICGEA2/a0CQg00005AkdZ7/2yxltkbyr/Half-bathroom-1.jpg</image_url>
-        </image>
-        <video>
-          <video_url>https://www.youtube.com/watch?v=7UMqR7JYWpY</video_url>
-        </video>
-      </media>
-      <external_url>https://theagency.cr/property/altus-apartment-escazu-cerro-alto</external_url>
-      <agent_reference>tacr-agent-0053m00000AobQfAAJ</agent_reference>
     </advert>
   </adverts>
 </jamesedition_feed>
